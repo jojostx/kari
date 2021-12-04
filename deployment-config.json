@@ -1,0 +1,9 @@
+[{
+    "name": "hostinger-kari-server-1",
+    "ip": "153.92.210.99",
+    "username": "admin",
+    "port": "22",
+    "beforeHooks": "",
+    "afterHooks": "",
+    "path": ""
+}]
