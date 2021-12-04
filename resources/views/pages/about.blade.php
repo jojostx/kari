@@ -65,7 +65,7 @@
             <img src="{{ asset('images/co-founder.jpg') }}" alt="roomee's founder" class="mb-4">
             <div class="items-center justify-between lg:flex">
               <div class="mb-2">
-                <h2 class="text-lg font-bold">Grace Ubamara</h2>
+                <h2 class="text-lg font-bold">Grace Ubamara j</h2>
                 <p class="text-sm">Co-Founder</p>
               </div>
               <x-social-link class="text-gray-800 cursor-pointer hover:text-blue-500">
