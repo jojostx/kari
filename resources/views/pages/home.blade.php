@@ -8,13 +8,13 @@
 			<div class="absolute top-0 left-0 w-full h-full opacity-60 bg-gradient-to-r from-gray-800 to-blue-900">
 			</div>
 			<div class="relative z-20 pt-10">
-				<h1 class="mb-2 text-3xl font-bold tracking-wide text-white md:text-4xl font-vesp lg:text-5xl lg:tracking-wider">
-					Find Your Dream Home</h1>
+				<h1 style="line-height: 4rem;" class="mb-2 text-3xl font-bold tracking-wide text-white md:text-4xl font-vesp lg:text-5xl lg:tracking-wider">
+					Invest In One of the World's Largest and Stable Economy</h1>
 			</div>
 
 			<div class="relative z-20">
-				<p class="max-w-sm mb-8 text-white lg:text-lg">Lorem ipsum dolor sit, amet consectetur adipisicing
-					elit.
+				<p class="max-w-sm mb-8 text-white lg:text-lg">
+					Start investing in real estate with a stable ROI
 				</p>
 			</div>
 
@@ -26,13 +26,75 @@
 
 		<section class="container py-16">
 			<div class="flex justify-center w-full py-12 mb-10 text-center lg:mb-14">
+				<h1 class="text-3xl font-bold tracking-wide text-black md:text-4xl font-vesp lg:tracking-wider">Why You Should Invest With Us</h1>
+			</div>
+			<article class="flex flex-row flex-wrap justify-center w-full lg:mb-24 md:justify-center">
+				<div class="flex flex-col justify-center order-2 w-full py-10 text-center lg:w-1/2 md:text-left">
+					<p class="font-semibold text-gray-400 uppercase opacity-75">Stable and Transparant</p>
+					<h2 class="mt-6 mb-2 text-2xl font-extrabold text-gray-900 font-vesp lg:mt-2">Currency Hedging</h2>
+					<p class="max-w-md text-gray-600">Investing in the UK; one of the world’s largest economies ensures the security of investment funds. The rate fluctuation in the foreign market does not have an impact on your funds. We developed measures to mitigate volatility.</p>
+					<a href="/how-it-works" class="inline-flex py-2 text-blue-900 uppercase hover:text-blue-700">
+						Learn More
+						<svg version="1.1" viewBox="0 0 16 16" class="w-4 ml-2">
+							<g stroke="currentColor" fill="none" fill-rule="evenodd">
+								<path pid="0" d="M15 6.5H0M12 10l3-3.446L12 3"></path>
+							</g>
+						</svg></a>
+				</div>
+				<div class="max-w-lg sm:pr-12">
+					<img class="w-full" src="{{ asset('images/london-desk.jpg') }}" alt="">
+				</div>
+			</article>
+
+			<article class="flex flex-row-reverse flex-wrap justify-center w-full lg:mb-24 md:justify-center">
+				<div class="flex flex-col justify-center order-2 w-full py-10 text-center lg:w-1/2 md:text-left">
+					<p class="font-semibold text-gray-400 uppercase opacity-75">Integrity and Openness </p>
+					<h2 class="mt-6 mb-2 text-2xl font-extrabold text-gray-900 font-vesp lg:mt-2">Security of Funds</h2>
+					<p class="max-w-md text-gray-600">
+					Kari Properties Limited operates with integrity and openness following the UK government compliance standards.
+					We assure top safety of all investors’ funds under our investment cycle.
+					</p>
+					<a href="/how-it-works" class="inline-flex py-2 text-blue-900 uppercase hover:text-blue-700">
+						Learn More
+						<svg version="1.1" viewBox="0 0 16 16" class="w-4 ml-2">
+							<g stroke="currentColor" fill="none" fill-rule="evenodd">
+								<path pid="0" d="M15 6.5H0M12 10l3-3.446L12 3"></path>
+							</g>
+						</svg></a>
+				</div>
+				<div class="max-w-lg sm:pr-12">
+					<img class="w-full" src="{{ asset('images/house-1.jpg') }}" alt="">
+				</div>
+			</article>
+
+			<article class="flex flex-row flex-wrap justify-center w-full lg:mb-24 md:justify-center">
+				<div class="flex flex-col justify-center order-2 w-full py-10 text-center lg:w-1/2 md:text-left">
+					<p class="font-semibold text-gray-400 uppercase opacity-75">Guaranteed and Safe</p>
+					<h2 class="mt-6 mb-2 text-2xl font-extrabold text-gray-900 font-vesp lg:mt-2">7% Annual Returns</h2>
+					<p class="max-w-md text-gray-600">Unlike most private real estate investment companies, we offer our investors 7% annual ROI and bonus payout.</p>
+					<a href="/how-it-works" class="inline-flex py-2 text-blue-900 uppercase hover:text-blue-700">
+						Learn More
+						<svg version="1.1" viewBox="0 0 16 16" class="w-4 ml-2">
+							<g stroke="currentColor" fill="none" fill-rule="evenodd">
+								<path pid="0" d="M15 6.5H0M12 10l3-3.446L12 3"></path>
+							</g>
+						</svg></a>
+				</div>
+				<div class="max-w-lg sm:pr-12">
+					<img class="w-full" src="{{ asset('images/graph-desk.jpg') }}" alt="">
+				</div>
+			</article>
+		</section>
+		
+		<!-- <section class="container py-16">
+			<div class="flex justify-center w-full py-12 mb-10 text-center lg:mb-14">
 				<h1 class="text-3xl font-bold tracking-wide text-black md:text-4xl font-vesp lg:text-5xl lg:tracking-wider">What We Offer You</h1>
 			</div>
 			<article class="flex flex-row flex-wrap justify-center w-full lg:mb-24 md:justify-center">
 				<div class="flex flex-col justify-center order-2 w-full py-10 text-center lg:w-1/2 md:text-left">
 					<p class="font-semibold text-gray-400 uppercase opacity-75">Professional and hands-on</p>
-					<h2 class="mt-6 mb-2 text-2xl font-extrabold text-gray-900 font-vesp lg:mt-2">24/7/365 Chat Support</h2>
-					<p class="max-w-md text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident neque adipisci tempore dolorem velit, harum optio sapiente sit id vitae laudantium dolores Our team of experts will solve technical issues to get your websites up and running. Anytime.</p>
+					<h2 class="mt-6 mb-2 text-2xl font-extrabold text-gray-900 font-vesp lg:mt-2">7% Annual Returns</h2>
+					<p class="max-w-md text-gray-600">Unlike most private real estate investment companies, we offer our investors 7% annual ROI and bonus payout.</p>
 					<a href="/how-it-works" class="inline-flex py-2 text-blue-900 uppercase hover:text-blue-700">
 						Learn More
 						<svg version="1.1" viewBox="0 0 16 16" class="w-4 ml-2">
@@ -81,29 +143,26 @@
 					<img class="w-full" src="{{ asset('images/graph-desk.jpg') }}" alt="">
 				</div>
 			</article>
-		</section>
+		</section> -->
 
 
 
 		<!-- Feature Property -->
 		<section class="px-4 py-4 bg-gray-200 lg:px-32 lg:py-20">
 			<div class="">
-				<h1 class="text-2xl font-bold text-center text-blue-600 font-vesp lg:text-4xl">Feature Property</h1>
-				<div class="flex justify-center">
+				<h1 class="text-2xl font-bold text-center text-blue-600 font-vesp lg:text-4xl">Investment Plans</h1>
+				<div class="flex justify-center mb-2">
 					<div class="w-40 h-1 bg-indigo-400 rounded"></div>
 				</div>
+				<h1 class="text-2xl font-medium text-center text-gray-700 lg:text-lg">Premium investments at a friendly price</h1>
 			</div>
 			<div class="mt-4 space-x-0 space-y-2 lg:flex lg:flex-nowrap lg:space-x-4 lg:space-y-0 lg:mt-20">
 				<div class="p-4 bg-white rounded-lg">
 					<img src="https://images.unsplash.com/photo-1601760562234-9814eea6663a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmVhbGVzdGF0ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="property">
-
 					<div class="p-6">
-						<h4 class="text-2xl font-bold cursor-pointer">Modern Design villa</h4>
-						<!-- <div>
-                                2 beds &bull; 2 baths
-                            </div> -->
-						<div class="mt-2">
-							<span class="text-xl font-extrabold text-blue-600">$3000.00</span> /M
+						<h4 class="text-2xl font-bold cursor-pointer">Basic <span class="text-lg text-gray-500">(6.5%)</span></h4>
+						<div class="mt-6 mb-4">
+							<span class="text-xl font-extrabold text-blue-600">$25,000.00</span> Principal
 						</div>
 						<div class="flex mt-2">
 							<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -124,34 +183,17 @@
 							<!-- 4/5 starts (based on 13 reviews) -->
 						</div>
 					</div>
-					<div class="flex justify-between p-4 text-gray-700 border-t border-gray-300">
-						<div class="flex items-center">
-							<svg class="w-6 h-6 mr-3 text-gray-600 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-								<path d="M0 16L3 5V1a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v4l3 11v5a1 1 0 0 1-1 1v2h-1v-2H2v2H1v-2a1 1 0 0 1-1-1v-5zM19 5h1V1H4v4h1V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1h2V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1zm0 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V6h-2v2a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6H3.76L1.04 16h21.92L20.24 6H19zM1 17v4h22v-4H1zM6 4v4h4V4H6zm8 0v4h4V4h-4z">
-								</path>
-							</svg>
-							<p><span class="font-bold text-gray-900">3</span> Bedrooms</p>
-						</div>
-						<div class="flex items-center">
-							<svg class="w-6 h-6 mr-3 text-gray-600 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-								<path fill-rule="evenodd" d="M17.03 21H7.97a4 4 0 0 1-1.3-.22l-1.22 2.44-.9-.44 1.22-2.44a4 4 0 0 1-1.38-1.55L.5 11h7.56a4 4 0 0 1 1.78.42l2.32 1.16a4 4 0 0 0 1.78.42h9.56l-2.9 5.79a4 4 0 0 1-1.37 1.55l1.22 2.44-.9.44-1.22-2.44a4 4 0 0 1-1.3.22zM21 11h2.5a.5.5 0 1 1 0 1h-9.06a4.5 4.5 0 0 1-2-.48l-2.32-1.15A3.5 3.5 0 0 0 8.56 10H.5a.5.5 0 0 1 0-1h8.06c.7 0 1.38.16 2 .48l2.32 1.15a3.5 3.5 0 0 0 1.56.37H20V2a1 1 0 0 0-1.74-.67c.64.97.53 2.29-.32 3.14l-.35.36-3.54-3.54.35-.35a2.5 2.5 0 0 1 3.15-.32A2 2 0 0 1 21 2v9zm-5.48-9.65l2 2a1.5 1.5 0 0 0-2-2zm-10.23 17A3 3 0 0 0 7.97 20h9.06a3 3 0 0 0 2.68-1.66L21.88 14h-7.94a5 5 0 0 1-2.23-.53L9.4 12.32A3 3 0 0 0 8.06 12H2.12l3.17 6.34z">
-								</path>
-							</svg>
-							<p><span class="font-bold text-gray-900">2</span> Bathrooms</p>
-						</div>
+					<div class="flex justify-between text-gray-700 border-t border-gray-300">
+						<button class="w-full px-6 py-2 text-lg text-white bg-gray-900 border-0 rounded focus:outline-none hover:bg-gray-700">Learn More</button>
 					</div>
-
 				</div>
+				
 				<div class="p-4 bg-white rounded-lg">
-					<img src="https://images.unsplash.com/photo-1600992045264-136a22de917e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmVhbGVzdGF0ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="property">
-
+					<img src="https://images.unsplash.com/photo-1601760562234-9814eea6663a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmVhbGVzdGF0ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="property">
 					<div class="p-6">
-						<h4 class="text-2xl font-bold cursor-pointer">Modern Design villa</h4>
-						<!-- <div>
-                                2 beds &bull; 2 baths
-                            </div> -->
-						<div class="mt-2">
-							<span class="text-xl font-extrabold text-blue-600">$3000.00</span> /M
+						<h4 class="text-2xl font-bold cursor-pointer">Standard <span class="text-lg text-gray-500">(7%)</span></h4>
+						<div class="mt-6 mb-4">
+							<span class="text-xl font-extrabold text-blue-600">$40,000.00</span> Principal
 						</div>
 						<div class="flex mt-2">
 							<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -172,34 +214,17 @@
 							<!-- 4/5 starts (based on 13 reviews) -->
 						</div>
 					</div>
-					<div class="flex justify-between p-4 text-gray-700 border-t border-gray-300">
-						<div class="flex items-center">
-							<svg class="w-6 h-6 mr-3 text-gray-600 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-								<path d="M0 16L3 5V1a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v4l3 11v5a1 1 0 0 1-1 1v2h-1v-2H2v2H1v-2a1 1 0 0 1-1-1v-5zM19 5h1V1H4v4h1V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1h2V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1zm0 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V6h-2v2a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6H3.76L1.04 16h21.92L20.24 6H19zM1 17v4h22v-4H1zM6 4v4h4V4H6zm8 0v4h4V4h-4z">
-								</path>
-							</svg>
-							<p><span class="font-bold text-gray-900">3</span> Bedrooms</p>
-						</div>
-						<div class="flex items-center">
-							<svg class="w-6 h-6 mr-3 text-gray-600 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-								<path fill-rule="evenodd" d="M17.03 21H7.97a4 4 0 0 1-1.3-.22l-1.22 2.44-.9-.44 1.22-2.44a4 4 0 0 1-1.38-1.55L.5 11h7.56a4 4 0 0 1 1.78.42l2.32 1.16a4 4 0 0 0 1.78.42h9.56l-2.9 5.79a4 4 0 0 1-1.37 1.55l1.22 2.44-.9.44-1.22-2.44a4 4 0 0 1-1.3.22zM21 11h2.5a.5.5 0 1 1 0 1h-9.06a4.5 4.5 0 0 1-2-.48l-2.32-1.15A3.5 3.5 0 0 0 8.56 10H.5a.5.5 0 0 1 0-1h8.06c.7 0 1.38.16 2 .48l2.32 1.15a3.5 3.5 0 0 0 1.56.37H20V2a1 1 0 0 0-1.74-.67c.64.97.53 2.29-.32 3.14l-.35.36-3.54-3.54.35-.35a2.5 2.5 0 0 1 3.15-.32A2 2 0 0 1 21 2v9zm-5.48-9.65l2 2a1.5 1.5 0 0 0-2-2zm-10.23 17A3 3 0 0 0 7.97 20h9.06a3 3 0 0 0 2.68-1.66L21.88 14h-7.94a5 5 0 0 1-2.23-.53L9.4 12.32A3 3 0 0 0 8.06 12H2.12l3.17 6.34z">
-								</path>
-							</svg>
-							<p><span class="font-bold text-gray-900">2</span> Bathrooms</p>
-						</div>
+					<div class="flex justify-between text-gray-700 border-t border-gray-300">
+						<button class="w-full px-6 py-2 text-lg text-white bg-gray-900 border-0 rounded focus:outline-none hover:bg-gray-700">Learn More</button>
 					</div>
-
 				</div>
+				
 				<div class="p-4 bg-white rounded-lg">
-					<img src="https://images.unsplash.com/photo-1507086182422-97bd7ca2413b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHJlYWxlc3RhdGV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="property">
-
+					<img src="https://images.unsplash.com/photo-1601760562234-9814eea6663a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmVhbGVzdGF0ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="property">
 					<div class="p-6">
-						<h4 class="text-2xl font-bold cursor-pointer">Modern Design villa</h4>
-						<!-- <div>
-                                2 beds &bull; 2 baths
-                            </div> -->
-						<div class="mt-2">
-							<span class="text-xl font-extrabold text-blue-600">$3000.00</span> /M
+						<h4 class="text-2xl font-bold cursor-pointer">Premium <span class="text-lg text-gray-500">(7.5%)</span></h4>
+						<div class="mt-6 mb-4">
+							<span class="text-xl font-extrabold text-blue-600">$80,000.00</span> Principal
 						</div>
 						<div class="flex mt-2">
 							<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -220,24 +245,12 @@
 							<!-- 4/5 starts (based on 13 reviews) -->
 						</div>
 					</div>
-					<div class="flex justify-between p-4 text-gray-700 border-t border-gray-300">
-						<div class="flex items-center">
-							<svg class="w-6 h-6 mr-3 text-gray-600 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-								<path d="M0 16L3 5V1a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v4l3 11v5a1 1 0 0 1-1 1v2h-1v-2H2v2H1v-2a1 1 0 0 1-1-1v-5zM19 5h1V1H4v4h1V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1h2V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1zm0 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V6h-2v2a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6H3.76L1.04 16h21.92L20.24 6H19zM1 17v4h22v-4H1zM6 4v4h4V4H6zm8 0v4h4V4h-4z">
-								</path>
-							</svg>
-							<p><span class="font-bold text-gray-900">3</span> Bedrooms</p>
-						</div>
-						<div class="flex items-center">
-							<svg class="w-6 h-6 mr-3 text-gray-600 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-								<path fill-rule="evenodd" d="M17.03 21H7.97a4 4 0 0 1-1.3-.22l-1.22 2.44-.9-.44 1.22-2.44a4 4 0 0 1-1.38-1.55L.5 11h7.56a4 4 0 0 1 1.78.42l2.32 1.16a4 4 0 0 0 1.78.42h9.56l-2.9 5.79a4 4 0 0 1-1.37 1.55l1.22 2.44-.9.44-1.22-2.44a4 4 0 0 1-1.3.22zM21 11h2.5a.5.5 0 1 1 0 1h-9.06a4.5 4.5 0 0 1-2-.48l-2.32-1.15A3.5 3.5 0 0 0 8.56 10H.5a.5.5 0 0 1 0-1h8.06c.7 0 1.38.16 2 .48l2.32 1.15a3.5 3.5 0 0 0 1.56.37H20V2a1 1 0 0 0-1.74-.67c.64.97.53 2.29-.32 3.14l-.35.36-3.54-3.54.35-.35a2.5 2.5 0 0 1 3.15-.32A2 2 0 0 1 21 2v9zm-5.48-9.65l2 2a1.5 1.5 0 0 0-2-2zm-10.23 17A3 3 0 0 0 7.97 20h9.06a3 3 0 0 0 2.68-1.66L21.88 14h-7.94a5 5 0 0 1-2.23-.53L9.4 12.32A3 3 0 0 0 8.06 12H2.12l3.17 6.34z">
-								</path>
-							</svg>
-							<p><span class="font-bold text-gray-900">2</span> Bathrooms</p>
-						</div>
+					<div class="flex justify-between text-gray-700 border-t border-gray-300">
+						<button class="w-full px-6 py-2 text-lg text-white bg-gray-900 border-0 rounded focus:outline-none hover:bg-gray-700">Learn More</button>
 					</div>
 
 				</div>
+				
 			</div>
 		</section>
 
@@ -253,43 +266,21 @@
 
 				<div class="grid gap-8 mt-10 md:grid-cols-2 lg:grid-cols-3">
 					<div class="px-6 py-8 bg-white rounded-md shadow-md">
-						<h2 class="text-xl font-medium text-gray-800">Rent</h2>
-						<p class="max-w-md mt-4 text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing Ac
-							aliquam ac
-							volutpat, viverra magna risus aliquam massa.</p>
-					</div>
-
-					<div class="px-6 py-8 bg-white rounded-md shadow-md">
-						<h2 class="text-xl font-medium text-gray-800">Sell</h2>
-						<p class="max-w-md mt-4 text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing Ac
-							aliquam ac
-							volutpat,
-							viverra magna risus aliquam massa.</p>
-					</div>
-
-					<div class="px-6 py-8 bg-white rounded-md shadow-md">
-						<h2 class="text-xl font-medium text-gray-800">Sell</h2>
+						<h2 class="text-xl font-medium text-gray-800">Coming Soon</h2>
 						<p class="max-w-md mt-4 text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing Ac
 							aliquam ac
 							volutpat,
 							viverra magna risus aliquam massa.</p>
 					</div>
 					<div class="px-6 py-8 bg-white rounded-md shadow-md">
-						<h2 class="text-xl font-medium text-gray-800">Resell</h2>
+						<h2 class="text-xl font-medium text-gray-800">Coming Soon</h2>
 						<p class="max-w-md mt-4 text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing Ac
 							aliquam ac
 							volutpat,
 							viverra magna risus aliquam massa.</p>
 					</div>
 					<div class="px-6 py-8 bg-white rounded-md shadow-md">
-						<h2 class="text-xl font-medium text-gray-800">Resell</h2>
-						<p class="max-w-md mt-4 text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing Ac
-							aliquam ac
-							volutpat,
-							viverra magna risus aliquam massa.</p>
-					</div>
-					<div class="px-6 py-8 bg-white rounded-md shadow-md">
-						<h2 class="text-xl font-medium text-gray-800">Buy</h2>
+						<h2 class="text-xl font-medium text-gray-800">Coming Soon</h2>
 						<p class="max-w-md mt-4 text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing Ac
 							aliquam ac
 							volutpat,

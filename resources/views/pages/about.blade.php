@@ -49,11 +49,11 @@
         </div>
         <div class="grid max-w-4xl grid-flow-row grid-cols-2 gap-6 mx-auto mt-8 mb-6 sm:grid-cols-3 gap-y-12">
           <div>
-            <img src="{{ asset('images/founder.jpg') }}" alt="roomee's founder" class="mb-4">
+            <img src="{{ asset('images/ceo.jpg') }}" alt="roomee's founder" class="mb-4">
             <div class="items-center justify-between lg:flex">
               <div class="mb-2">
-                <h2 class="text-lg font-bold">Ikuru John</h2>
-                <p class="text-sm">CEO & Founder</p>
+                <h2 class="text-lg font-bold">Satoshi Tomura</h2>
+                <p class="text-sm">CEO</p>
               </div>
               <x-social-link class="text-gray-800 cursor-pointer hover:text-blue-500">
                 <path fill="currentColor" fill-rule="evenodd" stroke="none" d="M10 0C4.48565 0 0 4.48565 0 10C0 15.5143 4.48565 20 10 20C15.5143 20 20 15.5143 20 10C20 4.48565 15.5143 0 10 0L10 0ZM14.8865 8.05383C14.8908 8.15644 14.8934 8.26078 14.8934 8.36557C14.8934 11.5473 12.4704 15.2173 8.04037 15.2173C6.68037 15.2173 5.41385 14.8186 4.34863 14.1351C4.53689 14.1577 4.72776 14.1686 4.92298 14.1686C6.05168 14.1686 7.09037 13.7843 7.91385 13.1382C6.85994 13.119 5.97124 12.4212 5.66385 11.4656C5.81124 11.4938 5.96211 11.509 6.11776 11.509C6.33733 11.509 6.55037 11.4799 6.75168 11.4243C5.65081 11.2021 4.82081 10.2299 4.82081 9.06252C4.82081 9.05209 4.82081 9.04209 4.82081 9.03209C5.14559 9.21252 5.51646 9.32122 5.91168 9.33383C5.26472 8.90122 4.84037 8.1647 4.84037 7.32905C4.84037 6.88774 4.95863 6.47426 5.16602 6.11774C6.35428 7.5747 8.12907 8.53339 10.1304 8.63426C10.0891 8.45774 10.0673 8.27426 10.0673 8.08557C10.0673 6.75557 11.1456 5.67731 12.476 5.67731C13.1686 5.67731 13.7943 5.96948 14.2334 6.43774C14.7817 6.32992 15.2978 6.12948 15.763 5.85383C15.5834 6.41557 15.2012 6.88774 14.7034 7.186C15.1912 7.12687 15.6547 6.99818 16.0873 6.80644C15.7647 7.28948 15.3565 7.71426 14.8865 8.05383L14.8865 8.05383Z" />
@@ -65,8 +65,8 @@
             <img src="{{ asset('images/co-founder.jpg') }}" alt="roomee's founder" class="mb-4">
             <div class="items-center justify-between lg:flex">
               <div class="mb-2">
-                <h2 class="text-lg font-bold">Grace Ubamara j</h2>
-                <p class="text-sm">Co-Founder</p>
+                <h2 class="text-lg font-bold">Grace Ikuru</h2>
+                <p class="text-sm">CTO</p>
               </div>
               <x-social-link class="text-gray-800 cursor-pointer hover:text-blue-500">
                 <path fill="currentColor" fill-rule="evenodd" stroke="none" d="M10 0C4.4775 0 0 4.50057 0 10.0515C0 15.0907 3.69333 19.252 8.505 19.9791L8.505 12.7152L6.03083 12.7152L6.03083 10.0733L8.505 10.0733L8.505 8.31512C8.505 5.40436 9.91583 4.12698 12.3225 4.12698C13.475 4.12698 14.085 4.21326 14.3733 4.25179L14.3733 6.55778L12.7317 6.55778C11.71 6.55778 11.3533 7.53194 11.3533 8.62923L11.3533 10.0733L14.3475 10.0733L13.9417 12.7152L11.3533 12.7152L11.3533 20C16.2342 19.3349 20 15.1401 20 10.0515C20 4.50057 15.5225 0 10 0L10 0Z" />
