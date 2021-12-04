@@ -8,7 +8,7 @@
 			<div class="absolute top-0 left-0 w-full h-full opacity-60 bg-gradient-to-r from-gray-800 to-blue-900">
 			</div>
 			<div class="relative z-20 pt-10">
-				<h1 style="line-height: 4rem;" class="mb-2 text-3xl font-bold tracking-wide text-white md:text-4xl font-vesp lg:text-5xl lg:tracking-wider">
+				<h1 class="mb-2 text-3xl font-bold tracking-wide text-white md:text-4xl font-vesp lg:text-5xl lg:tracking-wider">
 					Invest In One of the World's Largest and Stable Economy</h1>
 			</div>
 
