@@ -10,21 +10,29 @@ module.exports = {
     ],
 
     theme: {
-        extend: {
-            fontFamily: {
-                sans: ["'Source Sans Pro'"],
-                mont: 'Montserrat',
+        container: {
+            center: true,
+            padding: {
+                DEFAULT: '1rem',
+                sm: '2rem',
+                lg: '4rem',
+                xl: '5rem',
+                '2xl': '6rem',
             },
         },
-        fontSize: {
-            'xs': ['14px', { lineHeight: '24px', letterSpacing: '-0.01em' }],
-            'sm': ['16px', { lineHeight: '28px', letterSpacing: '-0.01em' }],
-            'lg': ['18px', { lineHeight: '28px', letterSpacing: '-0.01em' }],
-            'xl': ['24px', { lineHeight: '36px', letterSpacing: '-0.01em' }],
-            '2xl': ['36px', { lineHeight: '48px', letterSpacing: '-0.032em' }],
-            '3xl': ['48px', { lineHeight: '56px', letterSpacing: '-0.032em' }],
-            '4xl': ['56px', { lineHeight: '64px', letterSpacing: '-0.032em' }],
-            '5xl': ['80px', { lineHeight: '80px', letterSpacing: '-0.032em' }],
+        extend: {
+            fontFamily: {
+                sans: ["'Montserrat'"],
+                // mont: '',
+                vesp: 'bely-display'
+            },
+            backgroundImage: {
+                'pent': "url('/images/bg-penthouse.jpg')",
+                'pent-mobile': "url('/images/bg-penthouse-mobile.jpg')",
+                'point': "url('/images/bg-point-mobile.jpg')",
+                'point-mobile': "url('/images/bg-point-mobile.jpg')",
+                'prism': "url('/images/subtle-prism.svg')",
+            }
         },
     },
 
@@ -34,5 +42,9 @@ module.exports = {
         },
     },
 
-    plugins: [require('@tailwindcss/forms')],
+    plugins: [
+        require('@tailwindcss/forms'),
+        require('daisyui'),
+    ],
+
 };
