@@ -4,6 +4,6 @@
     "username": "kari",
     "port": "22",
     "beforeHooks": "",
-    "afterHooks": "cd ${RELEASE_PATH} && php artisan migrate && php artisan config:cache && php artisan route:cache && php artisan view:cache",
+    "afterHooks": "cd ${RELEASE_PATH} && php artisan session:table && php artisan migrate && php artisan config:cache && php artisan route:cache && php artisan view:cache",
     "path": "/var/www/html"
 }]
