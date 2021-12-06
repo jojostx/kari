@@ -296,7 +296,7 @@
 			<div class="container px-5 py-24 mx-auto">
 				<div class="flex flex-col w-full mb-12 text-center">
 					<h1 class="mb-4 text-2xl font-medium text-gray-900 sm:text-3xl title-font">Join Our NewsLetter</h1>
-					<p class="max-w-md mx-auto text-base leading-relaxed lg:w-2/3">Recieve well curated information and news about investment oppurtunities when you sign up for our newsletter </p>
+					<p class="max-w-md mx-auto text-base leading-relaxed lg:w-2/3">Recieve well curated information and news about investment opportunities when you sign up for our newsletter </p>
 				</div>
 				<div class="flex flex-col items-end w-full px-8 mx-auto space-y-4 lg:w-2/3 sm:flex-row sm:space-x-4 sm:space-y-0 sm:px-0">
 					<div class="relative flex-grow w-full">
