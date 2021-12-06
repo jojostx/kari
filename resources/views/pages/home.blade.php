@@ -31,9 +31,9 @@
 			<article class="flex flex-row flex-wrap justify-center w-full lg:mb-24 md:justify-center">
 				<div class="flex flex-col justify-center order-2 w-full py-10 text-center lg:w-1/2 md:text-left">
 					<p class="font-semibold text-gray-400 uppercase opacity-75">Stable and Transparant</p>
-					<h2 class="mt-6 mb-2 text-2xl font-extrabold text-gray-900 font-vesp lg:mt-2">Currency Hedging</h2>
+					<h2 class="mt-6 text-2xl font-extrabold text-gray-900 font-vesp lg:mt-2">Currency Hedging</h2>
 					<p class="max-w-md text-gray-600">Investing in the UK; one of the world’s largest economies ensures the security of investment funds. The rate fluctuation in the foreign market does not have an impact on your funds. We developed measures to mitigate volatility.</p>
-					<a href="/how-it-works" class="inline-flex py-2 text-blue-900 uppercase hover:text-blue-700">
+					<a href="/how-it-works" class="inline-flex justify-center py-2 text-blue-900 uppercase lg:justify-start hover:text-blue-700">
 						Learn More
 						<svg version="1.1" viewBox="0 0 16 16" class="w-4 ml-2">
 							<g stroke="currentColor" fill="none" fill-rule="evenodd">
@@ -49,12 +49,12 @@
 			<article class="flex flex-row-reverse flex-wrap justify-center w-full lg:mb-24 md:justify-center">
 				<div class="flex flex-col justify-center order-2 w-full py-10 text-center lg:w-1/2 md:text-left">
 					<p class="font-semibold text-gray-400 uppercase opacity-75">Integrity and Openness </p>
-					<h2 class="mt-6 mb-2 text-2xl font-extrabold text-gray-900 font-vesp lg:mt-2">Security of Funds</h2>
+					<h2 class="mt-6 text-2xl font-extrabold text-gray-900 font-vesp lg:mt-2">Security of Funds</h2>
 					<p class="max-w-md text-gray-600">
 					Kari Properties Limited operates with integrity and openness following the UK government compliance standards.
 					We assure top safety of all investors’ funds under our investment cycle.
 					</p>
-					<a href="/how-it-works" class="inline-flex py-2 text-blue-900 uppercase hover:text-blue-700">
+					<a href="/how-it-works" class="inline-flex justify-center py-2 text-blue-900 uppercase lg:justify-start hover:text-blue-700">
 						Learn More
 						<svg version="1.1" viewBox="0 0 16 16" class="w-4 ml-2">
 							<g stroke="currentColor" fill="none" fill-rule="evenodd">
@@ -70,9 +70,9 @@
 			<article class="flex flex-row flex-wrap justify-center w-full lg:mb-24 md:justify-center">
 				<div class="flex flex-col justify-center order-2 w-full py-10 text-center lg:w-1/2 md:text-left">
 					<p class="font-semibold text-gray-400 uppercase opacity-75">Guaranteed and Safe</p>
-					<h2 class="mt-6 mb-2 text-2xl font-extrabold text-gray-900 font-vesp lg:mt-2">7% Annual Returns</h2>
+					<h2 class="mt-6 text-2xl font-extrabold text-gray-900 font-vesp lg:mt-2">7% Annual Returns</h2>
 					<p class="max-w-md text-gray-600">Unlike most private real estate investment companies, we offer our investors 7% annual ROI and bonus payout.</p>
-					<a href="/how-it-works" class="inline-flex py-2 text-blue-900 uppercase hover:text-blue-700">
+					<a href="/how-it-works" class="inline-flex justify-center py-2 text-blue-900 uppercase lg:justify-start hover:text-blue-700">
 						Learn More
 						<svg version="1.1" viewBox="0 0 16 16" class="w-4 ml-2">
 							<g stroke="currentColor" fill="none" fill-rule="evenodd">
@@ -86,67 +86,6 @@
 			</article>
 		</section>
 		
-		<!-- <section class="container py-16">
-			<div class="flex justify-center w-full py-12 mb-10 text-center lg:mb-14">
-				<h1 class="text-3xl font-bold tracking-wide text-black md:text-4xl font-vesp lg:text-5xl lg:tracking-wider">What We Offer You</h1>
-			</div>
-			<article class="flex flex-row flex-wrap justify-center w-full lg:mb-24 md:justify-center">
-				<div class="flex flex-col justify-center order-2 w-full py-10 text-center lg:w-1/2 md:text-left">
-					<p class="font-semibold text-gray-400 uppercase opacity-75">Professional and hands-on</p>
-					<h2 class="mt-6 mb-2 text-2xl font-extrabold text-gray-900 font-vesp lg:mt-2">7% Annual Returns</h2>
-					<p class="max-w-md text-gray-600">Unlike most private real estate investment companies, we offer our investors 7% annual ROI and bonus payout.</p>
-					<a href="/how-it-works" class="inline-flex py-2 text-blue-900 uppercase hover:text-blue-700">
-						Learn More
-						<svg version="1.1" viewBox="0 0 16 16" class="w-4 ml-2">
-							<g stroke="currentColor" fill="none" fill-rule="evenodd">
-								<path pid="0" d="M15 6.5H0M12 10l3-3.446L12 3"></path>
-							</g>
-						</svg></a>
-				</div>
-				<div class="max-w-lg sm:pr-12">
-					<img class="w-full" src="{{ asset('images/house-1.jpg') }}" alt="">
-				</div>
-			</article>
-
-			<article class="flex flex-row-reverse flex-wrap justify-center w-full lg:mb-24 md:justify-center">
-				<div class="flex flex-col justify-center order-2 w-full py-10 text-center lg:w-1/2 md:text-left">
-					<p class="font-semibold text-gray-400 uppercase opacity-75">Professional and hands-on</p>
-					<h2 class="mt-6 mb-2 text-2xl font-extrabold text-gray-900 font-vesp lg:mt-2">24/7/365 Chat Support</h2>
-					<p class="max-w-md text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident neque adipisci tempore dolorem velit, harum optio sapiente sit id vitae laudantium dolores Our team of experts will solve technical issues to get your websites up and running. Anytime.</p>
-					<a href="/how-it-works" class="inline-flex py-2 text-blue-900 uppercase hover:text-blue-700">
-						Learn More
-						<svg version="1.1" viewBox="0 0 16 16" class="w-4 ml-2">
-							<g stroke="currentColor" fill="none" fill-rule="evenodd">
-								<path pid="0" d="M15 6.5H0M12 10l3-3.446L12 3"></path>
-							</g>
-						</svg></a>
-				</div>
-				<div class="max-w-lg sm:pr-12">
-					<img class="w-full" src="{{ asset('images/london-desk.jpg') }}" alt="">
-				</div>
-			</article>
-
-			<article class="flex flex-row flex-wrap justify-center w-full lg:mb-24 md:justify-center">
-				<div class="flex flex-col justify-center order-2 w-full py-10 text-center lg:w-1/2 md:text-left">
-					<p class="font-semibold text-gray-400 uppercase opacity-75">Professional and hands-on</p>
-					<h2 class="mt-6 mb-2 text-2xl font-extrabold text-gray-900 font-vesp lg:mt-2">24/7/365 Chat Support</h2>
-					<p class="max-w-md text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident neque adipisci tempore dolorem velit, harum optio sapiente sit id vitae laudantium dolores Our team of experts will solve technical issues to get your websites up and running. Anytime.</p>
-					<a href="/how-it-works" class="inline-flex py-2 text-blue-900 uppercase hover:text-blue-700">
-						Learn More
-						<svg version="1.1" viewBox="0 0 16 16" class="w-4 ml-2">
-							<g stroke="currentColor" fill="none" fill-rule="evenodd">
-								<path pid="0" d="M15 6.5H0M12 10l3-3.446L12 3"></path>
-							</g>
-						</svg></a>
-				</div>
-				<div class="max-w-lg sm:pr-12">
-					<img class="w-full" src="{{ asset('images/graph-desk.jpg') }}" alt="">
-				</div>
-			</article>
-		</section> -->
-
-
-
 		<!-- Feature Property -->
 		<section class="px-4 py-4 bg-gray-200 lg:px-32 lg:py-20">
 			<div class="">

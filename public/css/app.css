@@ -2062,10 +2062,6 @@ html {
 .menu :where(li).disabled>a,.menu :where(li).disabled>span {
 	cursor: auto;
 }
-.radio:focus {
-	outline: 2px solid transparent;
-	outline-offset: 2px;
-}
 .select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -2118,16 +2114,6 @@ html {
 }
 .stats.grid-flow-row {
 	grid-auto-rows: minmax(0,1fr);
-}
-.table {
-	position: relative;
-	text-align: left;
-}
-.table th:first-child {
-	position: sticky;
-	position: -webkit-sticky;
-	left: 0;
-	z-index: 10;
 }
 .textarea {
 	flex-shrink: 1;
@@ -2625,36 +2611,6 @@ html {
 	border-radius: 40px;
 	margin-top: -25px;
 }
-.radio {
-	--chkbg: var(--bc);
-	--focus-shadow: 0 0 0;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	--tw-border-opacity: 1;
-	--tw-border-opacity: 0.2;
-	border-color: hsla(var(--bc)/var(--tw-border-opacity,1));
-	border-radius: 9999px;
-	border-width: 1px;
-	cursor: pointer;
-	height: 1.5rem;
-	width: 1.5rem;
-	transition: background,box-shadow var(--animation-input,.2s) ease-in-out;
-}
-.radio:focus-visible {
-	--focus-shadow: 0 0 0 2px hsl(var(--b1)),0 0 0 4px hsl(var(--bc));
-}
-.radio:checked {
-	--tw-bg-opacity: 1;
-	background-color: hsla(var(--bc)/var(--tw-bg-opacity,1));
-	-webkit-animation: radiomark var(--animation-input,.2s) ease-in-out;
-	animation: radiomark var(--animation-input,.2s) ease-in-out;
-	box-shadow: 0 0 0 4px hsl(var(--b1)) inset,0 0 0 4px hsl(var(--b1)) inset,var(--focus-shadow);
-}
-.radio:disabled {
-	cursor: not-allowed;
-	opacity: .2;
-}
 @-webkit-keyframes radiomark {
 
 	0% {
@@ -2715,43 +2671,9 @@ html {
 	border-left-width: 0;
 	border-top-width: 1px;
 }
-.table td,.table th {
-	padding: 1rem;
-	vertical-align: middle;
-	white-space: nowrap;
-}
 .table tr.active:nth-child(2n) td,.table tr.active:nth-child(2n) th,.table tr.active td,.table tr.active th {
 	--tw-bg-opacity: 1;
 	background-color: hsla(var(--b3)/var(--tw-bg-opacity,1));
-}
-.table tr.hover:hover td,.table tr.hover:hover th,.table tr.hover:nth-child(2n):hover td,.table tr.hover:nth-child(2n):hover th {
-	--tw-bg-opacity: 1;
-	background-color: hsla(var(--b3)/var(--tw-bg-opacity,1));
-}
-.table:not(.table-zebra) tbody tr:not(:last-child) td,.table:not(.table-zebra) tbody tr:not(:last-child) th,.table:not(.table-zebra) tfoot tr:not(:last-child) td,.table:not(.table-zebra) tfoot tr:not(:last-child) th,.table:not(.table-zebra) thead tr:not(:last-child) td,.table:not(.table-zebra) thead tr:not(:last-child) th {
-	--tw-border-opacity: 1;
-	border-color: hsla(var(--b2)/var(--tw-border-opacity,1));
-	border-bottom-width: 1px;
-}
-.table tfoot td,.table tfoot th,.table thead td,.table thead th {
-	--tw-bg-opacity: 1;
-	background-color: hsla(var(--b2)/var(--tw-bg-opacity,1));
-	font-weight: 700;
-	font-size: .75rem;
-	line-height: 1rem;
-	text-transform: uppercase;
-}
-.table tfoot td:first-child,.table tfoot th:first-child,.table thead td:first-child,.table thead th:first-child {
-	border-top-left-radius: .5rem;
-	border-bottom-left-radius: .5rem;
-}
-.table tfoot td:last-child,.table tfoot th:last-child,.table thead td:last-child,.table thead th:last-child {
-	border-top-right-radius: .5rem;
-	border-bottom-right-radius: .5rem;
-}
-.table tbody td,.table tbody th {
-	--tw-bg-opacity: 1;
-	background-color: hsla(var(--b1)/var(--tw-bg-opacity,1));
 }
 .textarea-disabled,.textarea[disabled] {
 	--tw-bg-opacity: 1;
@@ -2956,10 +2878,6 @@ a:hover:after {
 	margin-top: 3rem;
 	margin-bottom: 3rem;
 }
-.my-6 {
-	margin-top: 1.5rem;
-	margin-bottom: 1.5rem;
-}
 .ml-3 {
 	margin-left: 0.75rem;
 }
@@ -3050,9 +2968,6 @@ a:hover:after {
 .mt-12 {
 	margin-top: 3rem;
 }
-.ml-auto {
-	margin-left: auto;
-}
 .block {
 	display: block;
 }
@@ -3064,9 +2979,6 @@ a:hover:after {
 }
 .inline-flex {
 	display: inline-flex;
-}
-.table {
-	display: table;
 }
 .grid {
 	display: grid;
@@ -3158,9 +3070,6 @@ a:hover:after {
 .w-10\/12 {
 	width: 83.333333%;
 }
-.w-10 {
-	width: 2.5rem;
-}
 .max-w-7xl {
 	max-width: 80rem;
 }
@@ -3190,9 +3099,6 @@ a:hover:after {
 }
 .flex-grow {
 	flex-grow: 1;
-}
-.table-auto {
-	table-layout: auto;
 }
 .origin-top-left {
 	transform-origin: top left;
@@ -3327,9 +3233,6 @@ a:hover:after {
 	margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
 	margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
-.overflow-auto {
-	overflow: auto;
-}
 .overflow-hidden {
 	overflow: hidden;
 }
@@ -3353,18 +3256,6 @@ a:hover:after {
 .rounded-r-none {
 	border-top-right-radius: 0px;
 	border-bottom-right-radius: 0px;
-}
-.rounded-tl {
-	border-top-left-radius: 0.25rem;
-}
-.rounded-bl {
-	border-bottom-left-radius: 0.25rem;
-}
-.rounded-tr {
-	border-top-right-radius: 0.25rem;
-}
-.rounded-br {
-	border-bottom-right-radius: 0.25rem;
 }
 .border {
 	border-width: 1px;
@@ -3395,9 +3286,6 @@ a:hover:after {
 }
 .border-l-2 {
 	border-left-width: 2px;
-}
-.border-t-2 {
-	border-top-width: 2px;
 }
 .border-dashed {
 	border-style: dashed;
@@ -3484,10 +3372,6 @@ a:hover:after {
 .bg-gray-300 {
 	--tw-bg-opacity: 1;
 	background-color: rgba(209, 213, 219, var(--tw-bg-opacity));
-}
-.bg-indigo-500 {
-	--tw-bg-opacity: 1;
-	background-color: rgba(99, 102, 241, var(--tw-bg-opacity));
 }
 .bg-opacity-50 {
 	--tw-bg-opacity: 0.5;
@@ -3652,12 +3536,6 @@ a:hover:after {
 }
 .pt-6 {
 	padding-top: 1.5rem;
-}
-.pl-4 {
-	padding-left: 1rem;
-}
-.text-left {
-	text-align: left;
 }
 .text-center {
 	text-align: center;
@@ -3994,10 +3872,6 @@ a:hover:after {
 	--tw-bg-opacity: 1;
 	background-color: rgba(209, 213, 219, var(--tw-bg-opacity));
 }
-.hover\:bg-indigo-600:hover {
-	--tw-bg-opacity: 1;
-	background-color: rgba(79, 70, 229, var(--tw-bg-opacity));
-}
 .hover\:text-gray-500:hover {
 	--tw-text-opacity: 1;
 	color: rgba(107, 114, 128, var(--tw-text-opacity));
@@ -4268,11 +4142,6 @@ a:hover:after {
 		font-size: 1.875rem;
 		line-height: 2.25rem;
 	}
-
-	.sm\:text-4xl {
-		font-size: 2.25rem;
-		line-height: 2.5rem;
-	}
 }
 @media (min-width: 768px) {
 
@@ -4298,10 +4167,6 @@ a:hover:after {
 
 	.md\:mt-12 {
 		margin-top: 3rem;
-	}
-
-	.md\:mb-2 {
-		margin-bottom: 0.5rem;
 	}
 
 	.md\:flex {
@@ -4474,10 +4339,6 @@ a:hover:after {
 		margin-top: 0px;
 	}
 
-	.lg\:mb-0 {
-		margin-bottom: 0px;
-	}
-
 	.lg\:flex {
 		display: flex;
 	}
@@ -4508,6 +4369,10 @@ a:hover:after {
 
 	.lg\:items-center {
 		align-items: center;
+	}
+
+	.lg\:justify-start {
+		justify-content: flex-start;
 	}
 
 	.lg\:justify-end {

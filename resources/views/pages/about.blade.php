@@ -52,7 +52,7 @@
             <img src="{{ asset('images/ceo.jpg') }}" alt="roomee's founder" class="mb-4">
             <div class="items-center justify-between lg:flex">
               <div class="mb-2">
-                <h2 class="text-lg font-bold">Satoshi Tomura</h2>
+                <h2 class="text-lg font-bold">Coming soon</h2>
                 <p class="text-sm">CEO</p>
               </div>
               <x-social-link class="text-gray-800 cursor-pointer hover:text-blue-500">
@@ -65,7 +65,7 @@
             <img src="{{ asset('images/co-founder.jpg') }}" alt="roomee's founder" class="mb-4">
             <div class="items-center justify-between lg:flex">
               <div class="mb-2">
-                <h2 class="text-lg font-bold">Grace Ikuru</h2>
+                <h2 class="text-lg font-bold">Coming soon</h2>
                 <p class="text-sm">CTO</p>
               </div>
               <x-social-link class="text-gray-800 cursor-pointer hover:text-blue-500">
@@ -78,7 +78,7 @@
             <img src="{{ asset('images/fullstack.jpg') }}" alt="roomee's founder" class="mb-4">
             <div class="items-center justify-between lg:flex">
               <div class="mb-2">
-                <h2 class="text-lg font-bold">Phillip Colt</h2>
+                <h2 class="text-lg font-bold">Coming soon</h2>
                 <p class="text-sm">Full-Stack Developer</p>
               </div>
               <x-social-link class="text-gray-800 cursor-pointer hover:text-blue-500">
