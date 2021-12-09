@@ -51,7 +51,7 @@
             <textarea id="message" name="message" class="w-full h-32 px-3 py-1 text-base leading-6 text-gray-700 transition-colors duration-200 ease-in-out bg-white border border-gray-300 rounded outline-none resize-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"></textarea>
           </div>
           <button class="px-6 py-2 text-lg text-white bg-gray-900 border-0 rounded focus:outline-none hover:bg-gray-700">Submit</button>
-          <p class="mt-3 text-xs text-gray-500">For more information about Kari investments visit <a href="{{ route('faqs') }}" class="underline">our FAQs</a> page.</p>
+          <p class="mt-3 text-xs text-gray-500">For more information about Kari investments visit <a href="{{ route('help') }}#help" class="underline">our FAQs</a> page.</p>
         </div>
       </div>
     </section>

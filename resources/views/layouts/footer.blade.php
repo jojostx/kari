@@ -1,11 +1,20 @@
 <div class="">
   <div class="overflow-hidden rounded-box">
     <footer class="p-10 bg-gray-200 footer text-base-content">
-      <div><span class="footer-title">Products</span> 
-      <a href="{{ route('assets') }}">Assets</a>
+      <div><span class="footer-title">Products</span>
+        <a href="{{ route('investments') }}">Investment Plans</a>
       </div>
-      <div><span class="footer-title">Company</span> <a href="{{ route('about') }}" class="link link-hover">About us</a> <a class="link link-hover" href="{{ route('contact') }}">Contact</a> <a class="link link-hover">Jobs</a> <a class="link link-hover">Press kit</a></div>
-      <div><span class="footer-title">Legal</span> <a class="link link-hover">Terms of use</a> <a class="link link-hover">Privacy policy</a> <a class="link link-hover">Cookie policy</a></div>
+      <div><span class="footer-title">Company</span>
+        <a href="{{ route('about') }}" class="link link-hover">About us</a>
+        <a href="{{ route('contact') }}" class="link link-hover">Contact</a>
+        <a href="{{ route('help') }}" class="link link-hover">Help Center</a>
+        <a class="link link-hover">Jobs</a>
+      </div>
+      <div><span class="footer-title">Legal</span>
+        <a href="{{ route('terms') }}" class="link link-hover">Terms of use</a>
+        <a href="{{ route('privacy') }}" class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+      </div>
     </footer>
     <footer class="px-10 py-4 bg-gray-200 border-t border-gray-500 footer text-base-content">
       <div class="items-center grid-flow-col"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="fill-current">
