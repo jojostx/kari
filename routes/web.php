@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Static\HelpCenterController;
+use App\Http\Controllers\Static\SeenCookiePolicyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,44 +15,44 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.home');
-})->name('home');
+Route::middleware(['seenCookiePolicyAlert'])->group(function () {
+    Route::get('/', function () {
+        return view('pages.home');
+    })->name('home');
 
-Route::get('/about', function () {
-    return view('pages.about');
-})->name('about');
+    Route::get('/about', function () {
+        return view('pages.about');
+    })->name('about');
 
-Route::get('/investments', function () {
-    return view('pages.investments');
-})->name('investments');
+    Route::get('/investments', function () {
+        return view('pages.investments');
+    })->name('investments');
 
-Route::get('/contact', function () {
-    return view('pages.contact');
-})->name('contact');
+    Route::get('/contact', function () {
+        return view('pages.contact');
+    })->name('contact');
 
+    Route::get('/terms-and-conditions', function () {
+        return view('pages.terms-and-conditions');
+    })->name('terms');
 
-Route::get('/terms-of-use', function () {
-    return view('pages.terms-of-use');
-})->name('terms');
+    Route::get('/privacy-policy', function () {
+        return view('pages.privacy-policy');
+    })->name('privacy');
 
-Route::get('/privacy-policy', function () {
-    return view('pages.privacy-policy');
-})->name('privacy');
+    Route::get('/cookie-policy', function () {
+        return view('pages.cookie-policy');
+    })->name('cookie');
 
-Route::get('/cookie-policy', function () {
-    return view('pages.cookie-policy');
-})->name('cookie');
-
-Route::get('/help-center', [HelpCenterController::class, 'index'])->name('help');
+    Route::get('/help-center', [HelpCenterController::class, 'index'])->name('help');
+});
 
 Route::middleware(['throttle:xhrFormRequest'])->group(function () {
-    Route::post('/contact-us', [ContactsController::class, 'store']);
-    Route::post('/faqs', [FaqsController::class, 'store']);
+    Route::post('cookie/accept', [SeenCookiePolicyController::class, 'accept'])->name('cookie.accept');
 });
 
 Route::get('/dashboard', function () {
     return view('pages.dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
