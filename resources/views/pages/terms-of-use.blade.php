@@ -200,7 +200,7 @@
                   All notices or other correspondence to <a href="{{ route('home') }}" class="font-semibold">Kari Investment</a> under this Agreement must be sent to the following electronic mail address for such purpose: <br>
 
                   <p class="my-4">
-                    <span><a class="font-medium text-blue-600 hover:underline" target="_blank" href="mailto:support@KariInvestment.com.ng">support@Kariinvestment.com</a></span>
+                    <span><a class="font-medium text-blue-600 hover:underline" target="_blank" href="mailto:support@Kariinvestment.com">support@Kariinvestment.com</a></span>
                   </p>
                   <p class="my-4">
                     Or the following physical address:

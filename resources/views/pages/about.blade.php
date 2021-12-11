@@ -9,7 +9,7 @@
       <div class="relative z-20 flex flex-col items-center justify-between w-11/12 py-10 mb-20 md:mt-20 md:flex-row md:h-80">
         <div class="mb-16 text-center md:mb-0 md:mr-16 sm:text-left">
           <p class="mt-10 mb-6 text-3xl font-extrabold text-white font-vesp md:text-4xl lg:text-5xl">Who are we?</p>
-          <p class="max-w-md px-8 text-base font-medium text-white sm:px-0 md:text-lg lg:text-xl"><span class="font-bold">KARI</span> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus laborum blanditiis quisquam atque velit provident. Founded in 2020, by <span class="font-bold">Ikuru John</span>, we are based in London, UK.</p>
+          <p class="max-w-md px-8 text-base font-medium text-white sm:px-0 md:text-lg lg:text-xl"><span class="font-bold">KARI</span> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus laborum blanditiis quisquam atque velit provident. Founded in 2020, by <span class="font-bold">Coming Soon</span>, we are based in London, UK.</p>
         </div>
       </div>
     </div>

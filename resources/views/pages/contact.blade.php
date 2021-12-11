@@ -17,7 +17,7 @@
             </div>
             <div class="px-6 mt-4 lg:w-1/2 lg:mt-0">
               <h2 class="text-xs font-semibold tracking-widest text-gray-900 title-font">EMAIL</h2>
-              <a class="leading-relaxed text-indigo-500">support@kariinvestments.com</a>
+              <a class="font-medium text-blue-600 hover:underline" target="_blank" href="mailto:support@Kariinvestment.com">support@Kariinvestment.com</a>
               <h2 class="mt-4 text-xs font-semibold tracking-widest text-gray-900 title-font">PHONE</h2>
               <p class="leading-relaxed">+447725948803</p>
             </div>
@@ -30,7 +30,7 @@
           </div>
           <div class="px-6 mt-4 lg:w-1/2 lg:mt-0">
             <h2 class="text-xs font-semibold tracking-widest text-gray-900 title-font">EMAIL</h2>
-            <a class="leading-relaxed text-indigo-500">support@kariinvestments.com</a>
+            <a class="font-medium text-blue-600 hover:underline" target="_blank" href="mailto:support@Kariinvestment.com">support@Kariinvestment.com</a>
             <h2 class="mt-4 text-xs font-semibold tracking-widest text-gray-900 title-font">PHONE</h2>
             <p class="leading-relaxed">+447725948803</p>
           </div>
