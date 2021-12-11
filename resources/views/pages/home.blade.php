@@ -86,7 +86,7 @@
 			</article>
 		</section>
 
-		<!-- Feature Investments -->
+		<!-- Investments -->
 		<section class="px-4 py-12 bg-gray-200 md:py-12 lg:px-32 lg:py-20">
 			<div class="pb-6">
 				<h1 class="text-3xl font-bold text-center text-blue-600 font-vesp lg:text-4xl">Investment Plans</h1>
