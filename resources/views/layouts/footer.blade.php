@@ -13,7 +13,7 @@
       <div><span class="footer-title">Legal</span>
         <a href="{{ route('terms') }}" class="link link-hover">Terms of use</a>
         <a href="{{ route('privacy') }}" class="link link-hover">Privacy policy</a>
-        <a class="link link-hover">Cookie policy</a>
+        <a href="{{ route('cookie') }}" class="link link-hover">Cookie policy</a>
       </div>
     </footer>
     <footer class="px-10 py-4 bg-gray-200 border-t border-gray-500 footer text-base-content">
