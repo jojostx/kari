@@ -23,6 +23,8 @@
     <div class="text-sm antialiased text-gray-900 font-mont">
         {{ $slot }}
     </div>
+
+    <x-alert-toast-cookie/>
 </body>
 
 </html>

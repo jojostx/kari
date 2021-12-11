@@ -51,8 +51,8 @@
 					<p class="font-semibold text-gray-400 uppercase opacity-75">Integrity and Openness </p>
 					<h2 class="mt-6 text-2xl font-extrabold text-gray-900 font-vesp lg:mt-2">Security of Funds</h2>
 					<p class="max-w-md text-gray-600">
-					Kari Properties Limited operates with integrity and openness following the UK government compliance standards.
-					We assure top safety of all investors’ funds under our investment cycle.
+						Kari Properties Limited operates with integrity and openness following the UK government compliance standards.
+						We assure top safety of all investors’ funds under our investment cycle.
 					</p>
 					<a href="/how-it-works" class="inline-flex justify-center py-2 text-blue-900 uppercase lg:justify-start hover:text-blue-700">
 						Learn More
@@ -85,7 +85,7 @@
 				</div>
 			</article>
 		</section>
-		
+
 		<!-- Feature Investments -->
 		<section class="px-4 py-12 bg-gray-200 md:py-12 lg:px-32 lg:py-20">
 			<div class="pb-6">
@@ -126,7 +126,7 @@
 						<button class="w-full px-6 py-2 text-lg text-white bg-gray-900 border-0 rounded focus:outline-none hover:bg-gray-700">Learn More</button>
 					</div>
 				</div>
-				
+
 				<div class="p-4 bg-white rounded-lg">
 					<img src="https://images.unsplash.com/photo-1601760562234-9814eea6663a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmVhbGVzdGF0ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="property">
 					<div class="px-2 py-6">
@@ -157,7 +157,7 @@
 						<button class="w-full px-6 py-2 text-lg text-white bg-gray-900 border-0 rounded focus:outline-none hover:bg-gray-700">Learn More</button>
 					</div>
 				</div>
-				
+
 				<div class="p-4 bg-white rounded-lg">
 					<img src="https://images.unsplash.com/photo-1601760562234-9814eea6663a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmVhbGVzdGF0ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="property">
 					<div class="px-2 py-6">
@@ -189,7 +189,7 @@
 					</div>
 
 				</div>
-				
+
 				<div class="p-4 bg-white rounded-lg">
 					<img src="https://images.unsplash.com/photo-1601760562234-9814eea6663a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmVhbGVzdGF0ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="property">
 					<div class="px-2 py-6">
@@ -221,7 +221,7 @@
 					</div>
 
 				</div>
-				
+
 			</div>
 		</section>
 
@@ -281,7 +281,7 @@
 					<button class="px-8 py-2 text-lg text-white bg-gray-900 border-0 rounded focus:outline-none hover:bg-gray-700">Submit</button>
 				</div>
 			</div>
-		</section>
+		</section>	
 
 		<!-- footer -->
 		@include('layouts.footer')

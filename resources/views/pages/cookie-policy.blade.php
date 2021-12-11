@@ -3,22 +3,10 @@
     <!-- nav -->
     @include('layouts.guest-nav')
 
-    <section class="relative flex flex-col p-12 bg-center bg-cover md:items-center md:text-center py-28 md:py-36 bg-pent-mobile lg:bg-pent lg:p-36 lg:py-48">
-      <div class="absolute top-0 left-0 w-full h-full opacity-60 bg-gradient-to-r from-gray-800 to-blue-900">
-      </div>
-      <div class="relative z-20 pt-10">
-        <h1 class="mb-2 text-3xl font-bold tracking-wide text-white md:text-4xl font-vesp lg:text-5xl lg:tracking-wider">
-          Invest In One of the World's Largest and Stable Economy</h1>
-      </div>
-
-      <div class="relative z-20">
-        <p class="max-w-sm mb-8 text-white lg:text-lg">
-          Start investing in real estate with a stable ROI
-        </p>
-      </div>
-
-      <div class="relative z-20 flex items-center space-x-2 md:justify-center">
-        <x-animated-button href="{{ route('register') }}" class="border-2 border-white">Get Started</x-animated-button>
+    <section class="relative flex flex-col p-12 bg-prism py-28 md:py-36">
+      <div class="relative z-20 pt-4">
+        <h1 class="mb-2 text-4xl font-bold tracking-wide text-black font-vesp lg:text-8xl lg:tracking-wider">
+          Cookie <br> Policy</h1>
       </div>
     </section>
 

@@ -11,7 +11,7 @@
         <a class="link link-hover">Jobs</a>
       </div>
       <div><span class="footer-title">Legal</span>
-        <a href="{{ route('terms') }}" class="link link-hover">Terms of use</a>
+        <a href="{{ route('terms') }}" class="link link-hover">Terms and Conditions</a>
         <a href="{{ route('privacy') }}" class="link link-hover">Privacy policy</a>
         <a href="{{ route('cookie') }}" class="link link-hover">Cookie policy</a>
       </div>
