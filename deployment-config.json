@@ -4,6 +4,6 @@
     "username": "kari",
     "port": "22",
     "beforeHooks": "",
-    "afterHooks": "cd ${RELEASE_PATH} && php artisan migrate && php artisan config:cache && php artisan route:cache && php artisan view:cache && composer install --optimize-autoloader --no-dev",
+    "afterHooks": "cd ${RELEASE_PATH} && php artisan migrate:fresh --force && php artisan config:cache && php artisan route:cache && php artisan view:cache && composer install --optimize-autoloader --no-dev",
     "path": "/var/www/html"
 }]
