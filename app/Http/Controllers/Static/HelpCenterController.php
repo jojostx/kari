@@ -13,7 +13,7 @@ class HelpCenterController extends Controller
             "General" => [
                 "What is kari?" => "kari is a property search and recommendation service.",
                 "Is kari a real estate service?" => "Although kari provides ease of accesing a property, kari is not a typical real estate service.",
-                "Is kari a rental platform?" => "No, kari does not provide rental and romantic match-making services.",
+                "Is kari a rental platform?" => "No, kari does not provide rental services.",
                 "Is kari a network platform?" => "No, kari is not a network platform.",
                 "Is kari owned by any higher educational institution?" => "No, kari is an independent and free-to-use e-service.",
                 "Is kari owned by any higher educational institution?" => "No, kari is an independent property finder e-service.",

@@ -91,7 +91,7 @@
 }
 
 .accordion-input:checked~.accordion-label {
-    background-color: rgba(147, 197, 253);
+    @apply bg-gray-200;
 }
 
 .accordion-input:checked~.accordion-label>.plus-icon {
