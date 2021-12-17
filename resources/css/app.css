@@ -4,7 +4,6 @@
 @layer components {
     .animated-a {
         @apply text-white;
-        letter-spacing: 2px;
         text-align: center;
         position: relative;
         transition: all .35s;

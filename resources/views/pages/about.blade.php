@@ -75,39 +75,11 @@
     </div>
 
     <!-- call to action //links to contact page -->
-    <div class="flex justify-center bg-prism">
-      <div class="flex flex-col items-center justify-between w-10/12 my-12 py-14 md:flex-row">
-        <div class="max-w-lg p-8 border-2 border-gray-800 sm:p-10 md:mb-0">
-          <p class="text-2xl font-bold md:text-3xl">We are always happy to hear from you. Reach out to us and we will make sure to assist you.</p>
-        </div>
+    <x-get-in-touch>
+      We are always happy to hear from you. Reach out to us and we will make sure to assist you.
+    </x-get-in-touch>
 
-        <div class="w-1 h-12 border-l-2 border-gray-900 border-dashed md:border-t-2 md:w-full md:h-1"></div>
-
-        <button class="flex-shrink-0 transition-all duration-100 hover:shadow-md">
-          <x-animated-button href="{{ route('contact') }}" class="inline-block px-4 py-2 text-xl font-bold text-black border-2 border-black lg:px-6 lg:py-4 md:text-2xl hover:text-black animated-a">Get Started</x-animated-button>
-        </button>
-      </div>
-    </div>
-
-    <section class="text-gray-600 body-font">
-      <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-col w-full mb-12 text-center">
-          <h1 class="mb-4 text-2xl font-medium text-gray-900 sm:text-3xl title-font">Join Our NewsLetter</h1>
-          <p class="max-w-md mx-auto text-base leading-relaxed lg:w-2/3">Recieve well curated information and news about investment oppurtunities when you sign up for our newsletter </p>
-        </div>
-        <div class="flex flex-col items-end w-full px-8 mx-auto space-y-4 lg:w-2/3 sm:flex-row sm:space-x-4 sm:space-y-0 sm:px-0">
-          <div class="relative flex-grow w-full">
-            <label for="full-name" class="text-sm leading-7 text-gray-600">Full Name</label>
-            <input type="text" id="full-name" name="full-name" class="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200">
-          </div>
-          <div class="relative flex-grow w-full">
-            <label for="email" class="text-sm leading-7 text-gray-600">Email</label>
-            <input type="email" id="email" name="email" class="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200">
-          </div>
-          <button class="px-8 py-2 text-lg text-white bg-gray-900 border-0 rounded focus:outline-none hover:bg-gray-700">Submit</button>
-        </div>
-      </div>
-    </section>
+    <livewire:static.forms.subscribe-to-newsfeed />
 
     <!-- footer -->
     @include('layouts.footer')
