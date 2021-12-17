@@ -13,16 +13,13 @@ jobs:
         with:
           php-version: "8.0"
       
-      - uses: actions/checkout@v2
-      
       - name: actions-setup-mysql
-        uses: shogo82148/actions-setup-mysql@v1.4.1
+      - uses: actions/checkout@v2
+      - uses: shogo82148/actions-setup-mysql@v1.4.1
         with:
           mysql-version: '8.0'
           user: 'user'
           password: 'secret'
-  
-      - name: Verify MySQL connection
       - run: 
           mysql --version
           mysql --host 127.0.0.1 -uuser -psecret -e "SHOW DATABASES"
