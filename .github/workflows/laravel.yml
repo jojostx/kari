@@ -37,7 +37,9 @@ jobs:
 
     - name: Execute Feature test via PHPUnit
       env:
+        DB_USERNAME: root
         DB_PASSWORD: root
+        DB_DATABASE: mysql_testing
       run: vendor/bin/phpunit
 
   create-deployment-artifacts:
