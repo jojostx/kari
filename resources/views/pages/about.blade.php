@@ -9,7 +9,7 @@
       <div class="relative z-20 flex flex-col items-center justify-between w-11/12 py-10 mb-20 md:mt-20 md:flex-row md:h-80">
         <div class="mb-16 text-center md:mb-0 md:mr-16 sm:text-left">
           <p class="mt-10 mb-6 text-3xl font-extrabold text-white font-vesp md:text-4xl lg:text-5xl">Who are we?</p>
-          <p class="max-w-md px-8 text-base font-medium text-white sm:px-0 md:text-lg lg:text-xl"><span class="font-bold">KARI</span> is a real estate investment company based in London, that provide high quality investment portfolios in the UK to investors. Founded in 2020, by <span class="font-bold">Richard Keshi.</span></p>
+          <p class="max-w-md px-8 text-base font-medium text-white sm:px-0 md:text-lg lg:text-xl"><span class="font-bold">KARI</span> is a real estate investment company based in London, that provides high quality investments. Founded by <span class="font-bold">Richard E. Keshi.</span></p>
         </div>
       </div>
     </div>
@@ -20,7 +20,7 @@
         <div class="flex flex-col items-center justify-between w-full my-2 md:mt-12 md:flex-row">
           <div class="max-w-md p-8 border-2 border-gray-800 sm:p-8 md:mb-0">
             <h2 class="mb-4 text-xl font-bold font-vesp">OUR MOTIVATION</h2>
-            <p class="font-normal">The insatiable urge to be of help to people and the drive to create solutions to common problems as a way to build a better world for the next generation.</p>
+            <p class="font-normal">The insatiable urge to be of help to people and the drive to create investment solutions. Ensuring a wealthy future for the next generation.</p>
           </div>
           <div class="w-1 h-12 border-l-2 border-gray-900 border-dashed md:border-t-2 md:w-full md:h-1"></div>
           <div class="flex-shrink-0 w-full md:max-w-md">
@@ -34,7 +34,7 @@
           <div class="w-1 h-12 border-l-2 border-gray-900 border-dashed md:border-t-2 md:w-full md:h-1"></div>
           <div class="max-w-md p-8 border-2 border-gray-800 sm:p-8 md:mb-0">
             <h2 class="mb-4 text-xl font-bold font-vesp">OUR MISSION</h2>
-            <p class="font-normal">Making the lives of Nigerians easier by providing solutions to commons problems through the use of technology. We are focused on creating an encouraging environment for young innovative minds.</p>
+            <p class="font-normal">Providing safe and accesible investment solutions through the use of technology. Our focus is to grow your wealth.</p>
           </div>
         </div>
       </div>

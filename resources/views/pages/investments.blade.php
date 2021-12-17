@@ -23,63 +23,6 @@
       </div>
     </section>
 
-    <!-- property search section -->
-    <div class="m-4 lg:m-0">
-      <div class="p-8 bg-white lg:flex lg:items-center lg:justify-center">
-        <form class="space-y-4 lg:space-y-0 lg:flex lg:space-x-4 lg:flex-nowrap">
-          <div class="">
-            <label class="label">
-              <span class="label-text">Property Type</span>
-            </label>
-            <select class="w-full font-normal select select-bordered">
-              <option>Type</option>
-              <option>Apartment</option>
-              <option>House</option>
-              <option>Villa</option>
-              <option>Hotel</option>
-            </select>
-          </div>
-          <div class="form-control">
-            <label class="label">
-              <span class="label-text">Location</span>
-            </label>
-            <input type="text" placeholder="property location" class="input input-bordered">
-          </div>
-          <div>
-            <!-- <input type="number" class="w-full p-2 border border-gray-400 rounded outline-none focus:ring-2" placeholder="min" /> -->
-            <div class="form-control">
-              <label class="label">
-                <span class="label-text">Minimum budget</span>
-              </label>
-              <div class="relative">
-                <button disabled class="absolute top-0 left-0 px-2 text-gray-800 rounded-r-none btn">GBP</button>
-                <input type="number" placeholder="Minimum" class="w-full pl-16 input input-bordered">
-              </div>
-            </div>
-          </div>
-          <div>
-            <!-- <input type="number" class="w-full p-2 border border-gray-400 rounded outline-none focus:ring-2" placeholder="min" /> -->
-            <div class="form-control">
-              <label class="label">
-                <span class="label-text">Maximum budget</span>
-              </label>
-              <div class="relative">
-                <button disabled class="absolute top-0 left-0 px-2 text-gray-800 rounded-r-none btn">GBP</button>
-                <input type="number" placeholder="Maximum" class="w-full pl-16 input input-bordered">
-              </div>
-            </div>
-          </div>
-
-          <div class="lg:flex lg:flex-col lg:justify-end">
-            <button class="px-8 py-3 text-base text-white bg-gray-900 border-0 rounded focus:outline-none hover:bg-gray-700">
-              Search
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-
-
     <!-- assets -->
     <div class="flex justify-center p-24">
       <div class="max-w-4xl ">

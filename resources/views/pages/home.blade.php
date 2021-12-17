@@ -32,7 +32,7 @@
 				<div class="flex flex-col justify-center order-2 w-full py-10 text-center lg:w-1/2 md:text-left">
 					<p class="font-semibold text-gray-400 uppercase opacity-75">Stable and Transparant</p>
 					<h2 class="mt-6 text-2xl font-extrabold text-gray-900 font-vesp lg:mt-2">Currency Hedging</h2>
-					<p class="max-w-md text-gray-600">Investing in the UK; one of the world’s largest economies ensures the security of investment funds. The rate fluctuation in the foreign market does not have an impact on your funds. We developed measures to mitigate volatility.</p>
+					<p class="max-w-md text-gray-600">Investing in the UK; one of the world’s largest economies ensures the security of investment. The fluctuation in the foreign market does not have an impact on your funds. We have developed measures to mitigate volatility.</p>
 					<a href="/how-it-works" class="inline-flex justify-center py-2 text-blue-900 uppercase lg:justify-start hover:text-blue-700">
 						Learn More
 						<svg version="1.1" viewBox="0 0 16 16" class="w-4 ml-2">
@@ -234,7 +234,7 @@
 						</p>
 					</div>
 					<div class="flex flex-col justify-between col-span-1 row-span-3 row-start-2 py-8 font-medium text-center text-gray-600 border-r-2 border-gray-800">
-						<p class="text-[20px] font-bold"><span class="text-lg font-semibold">£</span> 150,000</p>
+						<p class="text-[20px] font-bold"><span class="text-lg font-semibold">£</span> 100,000</p>
 						<p class="text-lg font-semibold">8%</p>
 						<p class="inline-flex justify-center text-green-500">
 							<svg xmlns="http://www.w3.org/2000/svg" class="w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -372,7 +372,7 @@
 					</div>
 					<div class="grid grid-cols-3 col-span-3 col-start-2 grid-rows-1 row-span-1 pl-1 font-medium text-center text-gray-600">
 						<div class="flex items-center justify-center h-full">
-							<p class="font-bold md:text-lg">150,000</p>
+							<p class="font-bold md:text-lg">100,000</p>
 						</div>
 						<div class="flex items-center justify-center h-full">
 							<p class="font-semibold">8%</p>
@@ -405,7 +405,7 @@
 
 			<p class="mt-6 text-xs font-semibold text-center text-gray-500 md:text-sm">Annual bonus is calculated according to the market performance for the investment year.</p>
 			<div class="flex justify-center mt-6">
-				<a class="px-6 py-2 font-semibold text-white bg-gray-900 border-0 rounded md:text-lg hover:text-white focus:outline-none hover:bg-gray-700" href="{{ route('investments') }}">GET STARTED<a>
+				<a class="px-6 py-2 font-semibold text-white bg-gray-900 border-0 rounded md:text-lg hover:text-white focus:outline-none hover:bg-gray-700" href="{{ route('register') }}">GET STARTED<a>
 			</div>
 		</section>
 
