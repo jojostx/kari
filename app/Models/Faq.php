@@ -11,6 +11,11 @@ class Faq extends Model
 
     protected $table = 'faqs';
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var string[]
+     */
     protected $fillable = [
         'question',
         'answer'

@@ -12,6 +12,11 @@ class FaqCategory extends Model
 
     protected $table = 'faq_categories';
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var string[]
+     */
     protected $fillable = [
         'name',
     ];
