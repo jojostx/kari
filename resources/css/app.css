@@ -163,3 +163,11 @@
         opacity: 0
     }
 }
+
+input[type="radio"]:checked+label.positive-feedback-type {
+    @apply text-blue-600;
+}
+
+input[type="radio"]:checked+label.negative-feedback-type {
+    @apply text-red-600;
+}

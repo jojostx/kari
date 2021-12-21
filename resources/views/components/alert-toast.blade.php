@@ -1,4 +1,4 @@
-<div class="fixed bottom-0 z-20 w-11/12 max-w-sm left-4 alert-toast md:w-full">
+<div class="fixed z-20 w-11/12 max-w-sm bottom-4 md:p-2 right-4 alert-toast md:w-full">
   <input type="checkbox" class="hidden" id="footertoast">
 
   <label class="flex items-start justify-between w-full p-2 text-xs text-white bg-gray-800 rounded shadow-lg cursor-pointer sm:p-4 md:text-sm close" title="close" for="footertoast">

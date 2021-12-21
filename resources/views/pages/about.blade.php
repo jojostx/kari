@@ -3,13 +3,17 @@
     <!-- nav -->
     @include('layouts.guest-nav')
 
-    <div class="relative flex flex-row justify-center bg-center bg-cover py-28 md:py-36 bg-point-mobile lg:bg-point lg:py-16">
-      <div class="absolute top-0 left-0 w-full h-full opacity-60 bg-gradient-to-r from-gray-800 to-blue-900">
+    <div class="relative flex flex-row justify-center bg-center bg-cover pb-14 pt-28 md:py-24 bg-point-mobile md:bg-point">
+      <div class="absolute top-0 left-0 w-full h-full opacity-60 bg-gradient-to-r from-gray-800 to-gray-900">
       </div>
-      <div class="relative z-20 flex flex-col items-center justify-between w-11/12 py-10 mb-20 md:mt-20 md:flex-row md:h-80">
-        <div class="mb-16 text-center md:mb-0 md:mr-16 sm:text-left">
+      <div class="relative z-20 grid w-11/12 grid-cols-1 grid-rows-2 gap-6 py-10 mb-20 md:mt-20 md:grid-cols-2 md:grid-rows-1 md:h-80">
+        <div class="mb-16 text-center md:col-span-1 md:mb-0 md:mr-16 sm:text-left">
           <p class="mt-10 mb-6 text-3xl font-extrabold text-white font-vesp md:text-4xl lg:text-5xl">Who are we?</p>
           <p class="max-w-md px-8 text-base font-medium text-white sm:px-0 md:text-lg lg:text-xl"><span class="font-bold">KARI</span> is a real estate investment company based in London, that provides high quality investments. Founded by <span class="font-bold">Richard E. Keshi.</span></p>
+        </div>
+        <div class="flex flex-col items-center justify-center">
+          <x-application-logo class="w-48 mb-6 text-white fill-current" />
+          <p class="text-xl font-semibold text-white">KARI INVESTMENT</p>
         </div>
       </div>
     </div>

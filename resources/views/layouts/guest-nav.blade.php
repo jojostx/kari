@@ -1,8 +1,14 @@
 <div class="fixed z-50 w-full bg-white border-b border-gray-300" x-data="{ isOpen: false }">
   <nav class="px-6 py-4 mx-auto md:px-10 md:flex md:justify-between md:items-center">
     <div class="flex items-center justify-between">
-      <a class="text-lg font-bold text-gray-800 font-vesp md:text-xl hover:text-blue-400" href="{{ route('home') }}">KARI</a>
-      
+      <a class="flex items-center" href="{{ route('home') }}">
+        <x-application-logo class="w-8 h-8 mr-2 text-gray-900 fill-current md:mr-3" />
+        <div class="flex flex-col">
+          <p class="-mb-2 text-lg font-semibold text-gray-600 font-vesp md:text-xl">Kari</p>
+          <p class="text-sm font-normal">Investment</p>
+        </div>
+      </a>
+
       <!-- Mobile menu button -->
       <div @click="isOpen = !isOpen" class="flex md:hidden">
         <button type="button" class="text-gray-800 hover:text-gray-400 focus:outline-none focus:text-gray-400" aria-label="toggle menu">
