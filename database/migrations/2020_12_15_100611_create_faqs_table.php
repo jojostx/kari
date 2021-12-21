@@ -20,11 +20,6 @@ return new class extends Migration
             $table->fulltext('answer');
             $table->timestamps();
         });
-
-        Artisan::call('db:seed', [
-            '--class' => 'FaqSeeder',
-            '--force' => true
-        ]);
     }
 
     public function down(): void
