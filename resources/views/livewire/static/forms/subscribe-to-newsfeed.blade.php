@@ -7,14 +7,14 @@
         <div class="flex flex-col w-full px-8 mx-auto space-y-4 md:items-end lg:w-2/3 sm:flex-row sm:space-x-4 sm:space-y-0 sm:px-0">
             <div class="relative flex-grow w-full">
                 <label for="fullname" class="text-sm leading-7 text-gray-600">Full Name</label>
-                <input wire:model="fullname" type="text" id="fullname" name="fullname" class="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200">
+                <input wire:model.lazy="fullname" type="text" id="fullname" name="fullname" class="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200">
                 @error('fullname')
                     <x-livewire.error-text>{{ $message }}</x-livewire.error-text>
                 @enderror
             </div>
             <div class="relative flex-grow w-full">
                 <label for="email" class="text-sm leading-7 text-gray-600">Email</label>
-                <input wire:model="email" type="email" id="email" name="email" class="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200">
+                <input wire:model.lazy="email" type="email" id="email" name="email" class="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200">
                 @error('email')
                     <x-livewire.error-text>{{ $message }}</x-livewire.error-text>
                 @enderror

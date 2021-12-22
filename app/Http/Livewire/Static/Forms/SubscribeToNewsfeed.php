@@ -36,6 +36,8 @@ class SubscribeToNewsfeed extends Component
         // @todo add the ability to unsub from newsfeed.
     
         \session()->flash('message', 'Your subscription has been recieved. Thank you');
+        
+        $this->reset();
     }
 
     public function render()

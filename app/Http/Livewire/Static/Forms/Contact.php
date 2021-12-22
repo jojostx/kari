@@ -37,6 +37,8 @@ class Contact extends Component
         //this is where we send an email [queued job] to support containing the saved contactMessage
         
         \session()->flash('message', 'Your message has been recieved. A customer support agent will get in touch with you soon.');
+
+        $this->reset();
     }
 
     public function render()

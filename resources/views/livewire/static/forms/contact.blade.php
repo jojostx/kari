@@ -17,14 +17,14 @@
     </div>
     <div class="relative mb-4">
         <label for="email" class="text-sm leading-7 text-gray-600">Email</label>
-        <input wire:model="email" value="{{ $email }}" type="email" id="email" name="email" class="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-white border border-gray-300 rounded outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200">
+        <input wire:model.lazy="email" value="{{ $email }}" type="email" id="email" name="email" class="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-white border border-gray-300 rounded outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200">
         @error('email')
         <x-livewire.error-text>{{ $message }}</x-livewire.error-text>
         @enderror
     </div>
     <div class="relative mb-4">
         <label for="message" class="text-sm leading-7 text-gray-600">Message</label>
-        <textarea wire:model="message" id="message" value="" name="message" class="w-full h-32 px-3 py-1 text-base leading-6 text-gray-700 transition-colors duration-200 ease-in-out bg-white border border-gray-300 rounded outline-none resize-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"></textarea>
+        <textarea wire:model.lazy="message" id="message" value="" name="message" class="w-full h-32 px-3 py-1 text-base leading-6 text-gray-700 transition-colors duration-200 ease-in-out bg-white border border-gray-300 rounded outline-none resize-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"></textarea>
         @error('message')
         <x-livewire.error-text>{{ $message }}</x-livewire.error-text>
         @enderror

@@ -40,6 +40,8 @@ class Feedback extends Component
         //this is where we send an email [queued job] to support containing the saved feedback
    
         $feedback->type ? \session()->flash('message', 'Thanks for your feedback.') : \session()->flash('message', 'Thanks for your feedback. We will try to update this article to be more helpful to you.');
+    
+        $this->reset();
     }
 
     public function render()
