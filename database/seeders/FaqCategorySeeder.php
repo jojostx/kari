@@ -30,7 +30,7 @@ class FaqCategorySeeder extends Seeder
                 'name' => "kari's policies and reporting",
             ],
             [
-                'name' => "Profile and Account ",
+                'name' => "Profile and Account",
             ],
         ];
 
