@@ -21,6 +21,14 @@ class FaqCategory extends Model
         'name',
     ];
 
+
+    /**
+     * The faqs that belong to this category.
+     * 
+     * @method faqs()
+     *
+     * @return HasMany
+     */
     public function faqs(): HasMany
     {
         return $this->hasMany(Faq::class, 'faq_category_id');

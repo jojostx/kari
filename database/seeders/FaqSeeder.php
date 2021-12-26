@@ -7,8 +7,6 @@ use Illuminate\Database\Seeder;
 
 class FaqSeeder extends Seeder
 {
-
-    //fix issue with seeder (caused by manually constructing relationship instead of using eloquent)
     public function run(): void
     {
         $faqs = collect([
