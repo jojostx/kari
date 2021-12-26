@@ -23,7 +23,6 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ["'Montserrat'"],
-                // mont: '',
                 vesp: 'bely-display'
             },
             backgroundImage: {
@@ -32,7 +31,12 @@ module.exports = {
                 'point': "url('/images/bg-point-mobile.jpg')",
                 'point-mobile': "url('/images/bg-point-mobile.jpg')",
                 'prism': "url('/images/subtle-prism.svg')",
-            }
+            },
+            screens: {
+                xs: '320px',
+                '2xs': '360px',
+                md: '720px'
+            },
         },
     },
 
