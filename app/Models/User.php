@@ -3,14 +3,18 @@
 namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\Concerns\Auth\MustVerifyPhoneNumber;
+use App\Models\Traits\MustVerifyPhoneNumber as TraitsMustVerifyPhoneNumber;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Propaganistas\LaravelPhone\Casts\E164PhoneNumberCast;
 
-class User extends Authenticatable
+
+class User extends Authenticatable implements MustVerifyPhoneNumber, MustVerifyEmail
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable, TraitsMustVerifyPhoneNumber;
 
     /**
      * The attributes that are mass assignable.
@@ -18,7 +22,10 @@ class User extends Authenticatable
      * @var string[]
      */
     protected $fillable = [
-        'name',
+        'first_name',
+        'middle_name',
+        'last_name',
+        'phone_number',
         'email',
         'password',
     ];
@@ -40,5 +47,18 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'phone_verified_at' => 'datetime',
+        'phone_number_e164' => E164PhoneNumberCast::class.':NG',
     ];
+
+    /**
+     * Route notifications for the Africas Talking channel.
+     *
+     * @param  \Illuminate\Notifications\Notification  $notification
+     * @return string
+     */
+    public function routeNotificationForAfricasTalking($notification)
+    {
+        return $this->phone_number_e164;
+    }
 }

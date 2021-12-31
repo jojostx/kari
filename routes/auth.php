@@ -8,6 +8,9 @@ use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\Auth\PhoneNumberVerificationNotificationController;
+use App\Http\Controllers\Auth\PhoneNumberVerificationPromptController;
+use App\Http\Controllers\Auth\VerifyPhoneNumberController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/register', [RegisteredUserController::class, 'create'])
@@ -40,6 +43,20 @@ Route::post('/reset-password', [NewPasswordController::class, 'store'])
                 ->middleware('guest')
                 ->name('password.update');
 
+//phone number
+Route::get('/verify-phone', [PhoneNumberVerificationPromptController::class, '__invoke'])
+                ->middleware('auth')
+                ->name('phoneverification.notice');
+
+Route::get('/verify-phone/{id}/{hash}', [VerifyPhoneNumberController::class, '__invoke'])
+                ->middleware(['auth', 'signed', 'throttle:6,1'])
+                ->name('phoneverification.verify');
+
+Route::post('/phone/verification-notification', [PhoneNumberVerificationNotificationController::class, 'store'])
+                ->middleware(['auth', 'throttle:6,1'])
+                ->name('phoneverification.send');
+
+//email
 Route::get('/verify-email', [EmailVerificationPromptController::class, '__invoke'])
                 ->middleware('auth')
                 ->name('verification.notice');
@@ -52,6 +69,7 @@ Route::post('/email/verification-notification', [EmailVerificationNotificationCo
                 ->middleware(['auth', 'throttle:6,1'])
                 ->name('verification.send');
 
+//password
 Route::get('/confirm-password', [ConfirmablePasswordController::class, 'show'])
                 ->middleware('auth')
                 ->name('password.confirm');
@@ -59,6 +77,7 @@ Route::get('/confirm-password', [ConfirmablePasswordController::class, 'show'])
 Route::post('/confirm-password', [ConfirmablePasswordController::class, 'store'])
                 ->middleware('auth');
 
+//logout
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->middleware('auth')
                 ->name('logout');
