@@ -19,18 +19,15 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 
-<!-- <nav class="flex flex-col justify-between h-full col-span-3 py-6 bg-gray-300">
-            <div class="pl-6">
-                
-            </div>
-            
-        </nav>
--->
-
 <body class="font-sans antialiased" x-data="{ isOpen: false }">
     <div class="relative min-h-screen lg:grid lg:grid-cols-12 max-w-7xl">
         <!-- nav bar [ visible below desktop width] -->
         <header class="fixed z-50 w-full bg-white border-b border-gray-300 lg:hidden" x-data="{ isOpen: false }">
+            @if (!auth()->user()->hasVerifiedPhoneNumber())
+            <div class="p-4 text-sm text-center text-gray-200 bg-gray-800">
+                <p>You must verify your phone number before purchasing an investment plan. <a href="{{ route('phoneverification.notice') }}" class="">Verify Phone Number</a></p>
+            </div>
+            @endif
             <nav @click.outside="isOpen = false;" class="flex items-center justify-between w-full px-4 py-4 bg-white border-b" :class="isOpen ? 'flex-col absolute' : 'flex-row'">
                 <div class="flex items-center justify-between w-full bg-white">
                     <a class="flex items-center" href="{{ route('home') }}">
@@ -130,7 +127,7 @@
         </header>
 
         <!-- right pane [visible above desktop width]  -->
-        <aside class="fixed top-0 bottom-0 left-0 z-50 flex-col w-full max-w-[235px] hidden h-full py-8 overflow-hidden lg:flex bg-gradient-to-b from-gray-200 to-white">
+        <aside aria-label="side menu" role="navigation" class="fixed top-0 bottom-0 left-0 z-50 flex-col w-full max-w-[235px] hidden h-full py-8 overflow-hidden lg:flex bg-gradient-to-b from-gray-200 to-white">
             <div class="flex flex-col flex-1 min-h-0">
                 <a class="flex items-center px-8 py-4" href="{{ route('home') }}">
                     <x-application-logo class="flex-shrink-0 text-gray-900 transition-all duration-300 fill-current w-9 h-9" />
@@ -226,16 +223,22 @@
                 </div>
             </div>
         </aside>
-        <aside class="top-0 bottom-0 left-0 z-20 flex-col hidden h-full col-span-3 py-8 lg:flex">
+        <aside aria-label="side menu" role="navigation" class="top-0 bottom-0 left-0 z-20 flex-col hidden h-full col-span-3 py-8 lg:flex">
         </aside>
 
         <!-- main body -->
         <main class="h-full col-span-8">
+            @if (!auth()->user()->hasVerifiedPhoneNumber())
+            <div class="fixed top-0 left-0 z-50 hidden w-full p-4 text-sm text-center text-gray-200 bg-gray-800 lg:block">
+                <p>You must verify your phone number before purchasing an investment plan. <a href="{{ route('phoneverification.notice') }}" class="font-semibold underline hover:text-gray-300">Verify Phone Number</a></p>
+            </div>
+            @endif
+
             {{ $slot }}
         </main>
 
         <!-- right pane -->
-        <aside class="h-full col-span-1 py-12">
+        <aside aria-label="side menu" role="navigation" class="h-full col-span-1 py-12">
             <div class="hidden mt-2 sm:pl-8 lg:block">
                 <a href="#" target="_blank" rel="noopener noreferrer">
                     <svg class="w-6" stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -245,6 +248,8 @@
             </div>
         </aside>
     </div>
+    
+    <x-alert-toast-sms-verification/>
 </body>
 
 </html>

@@ -16,17 +16,16 @@ class PhoneNumberVerificationPromptController extends Controller
      */
     public function __invoke(Request $request)
     {
-        if ($request->user()->hasVerifiedPhoneNumber()) {
-            return redirect()->intended(RouteServiceProvider::HOME);
-        } else {
-
+        if (!$request->user()->hasVerifiedPhoneNumber()) {
             try {
                 $request->user()->sendPhoneNumberVerificationNotification();
                 
                 return view('auth.verify-phone');
             } catch (\Throwable $e) {
-                return back()->with('status', 'unable to send phone number verification sms');
+                return back()->with('status', 'verification-sms-not-sent');
             }
+        } else {
+            return redirect()->intended(RouteServiceProvider::HOME);
         }
     }
 }

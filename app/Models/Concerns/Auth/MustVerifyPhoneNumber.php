@@ -2,6 +2,8 @@
 
 namespace App\Models\Concerns\Auth;
 
+use NotificationChannels\AfricasTalking\Exceptions\CouldNotSendNotification;
+
 interface MustVerifyPhoneNumber
 {
     /**
@@ -22,6 +24,8 @@ interface MustVerifyPhoneNumber
      * Send the Phone number verification notification.
      *
      * @return void
+     * 
+     * @throws CouldNotSendNotification
      */
     public function sendPhoneNumberVerificationNotification();
 
