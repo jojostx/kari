@@ -18,7 +18,7 @@ class UserFactory extends Factory
             'first_name' => $this->faker->name(),
             'middle_name' => $this->faker->name(),
             'last_name' => $this->faker->name(),
-            'phone_number' => $this->faker->phoneNumber(),
+            'phone_number' => '08034081360',
             'phone_number_e164' => null,
             'email' => $this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),
@@ -37,6 +37,48 @@ class UserFactory extends Factory
         return $this->state(function (array $attributes) {
             return [
                 'email_verified_at' => null,
+            ];
+        });
+    }
+ 
+    /**
+     * Indicate that the model's email address should be verified.
+     *
+     * @return \Illuminate\Database\Eloquent\Factories\Factory
+     */
+    public function verified()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'email_verified_at' => now(),
+            ];
+        });
+    }
+  
+    /**
+     * Indicate that the model's phone should be unverified.
+     *
+     * @return \Illuminate\Database\Eloquent\Factories\Factory
+     */
+    public function unverified_phone()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'phone_verified_at' => null,
+            ];
+        });
+    }
+    
+    /**
+     * Indicate that the model's phone should be verified.
+     *
+     * @return \Illuminate\Database\Eloquent\Factories\Factory
+     */
+    public function verified_phone()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'phone_verified_at' => now(),
             ];
         });
     }
