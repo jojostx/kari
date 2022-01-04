@@ -171,3 +171,7 @@ input[type="radio"]:checked+label.positive-feedback-type {
 input[type="radio"]:checked+label.negative-feedback-type {
     @apply text-red-600;
 }
+
+[x-cloak] {
+    display: hidden;
+}
