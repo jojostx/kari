@@ -5,6 +5,10 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
+Route::get('/', function () {
+  return redirect()->route('admin.dashboard');
+})->name('admin.dashboard');
+
 Route::get('/dashboard', function () {
   return view('pages.admin.dashboard');
 })->name('admin.dashboard');
