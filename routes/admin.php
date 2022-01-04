@@ -5,17 +5,13 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-  return redirect()->route('admin.dashboard');
-})->name('admin.home');
+Route::get('/login', function () {
+  return view('pages.admin.login');
+})->name('admin.login');
 
 Route::get('/dashboard', function () {
   return view('pages.admin.dashboard');
 })->name('admin.dashboard');
-
-Route::get('/login', function () {
-  return view('pages.admin.dashboard');
-})->name('admin.login');
 
 Route::get('/dashboard/logout', function (Request $request) {
   Auth::guard('web')->logout();
