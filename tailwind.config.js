@@ -23,7 +23,8 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ["'Montserrat'"],
-                vesp: 'bely-display'
+                vesp: 'bely-display',
+                dm: 'DM Sans',
             },
             backgroundImage: {
                 'pent': "url('/images/bg-penthouse.jpg')",

@@ -9,8 +9,11 @@
     <title>{{ config('app.name', 'KARI INVESTMENT') }}</title>
 
     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://use.typekit.net/hph2pnz.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&Vesper+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -19,7 +22,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 
-<body class="font-sans antialiased" x-data="{ isOpen: false }">
+<body class="antialiased font-dm" x-data="{ isOpen: false }">
     <div class="relative min-h-screen lg:grid lg:grid-cols-12 max-w-7xl">
         <!-- nav bar [ visible below desktop width] -->
         <header class="fixed z-50 w-full bg-white border-b border-gray-300 lg:hidden" x-data="{ isOpen: false }">
@@ -248,8 +251,8 @@
             </div>
         </aside>
     </div>
-    
-    <x-alert-toast-sms-verification/>
+
+    <x-alert-toast-sms-verification />
 </body>
 
 </html>
