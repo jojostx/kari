@@ -65,5 +65,8 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'seenCookiePolicyAlert' => \App\Http\Middleware\CheckSeenCookiePolicyAlertCookie::class,
         'verifiedPhoneNumber' => \App\Http\Middleware\EnsurePhoneNumberIsVerified::class,
+        'admin' => \App\Http\Middleware\Admin::class,
+        'customer' => \App\Http\Middleware\Customer::class
+        
     ];
 }
