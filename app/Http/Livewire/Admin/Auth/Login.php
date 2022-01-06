@@ -40,12 +40,10 @@ class Login extends Component
         try {
             $this->rateLimit(5);
         } catch (TooManyRequestsException $exception) {
-            $this->addError('email', __('auth.throttle', [
+            return $this->addError('email', __('auth.throttle', [
                 'seconds' => $exception->secondsUntilAvailable,
                 'minutes' => ceil($exception->secondsUntilAvailable / 60),
             ]));
-
-            return;
         }
 
         $this->validate();
@@ -53,11 +51,9 @@ class Login extends Component
         if (!Auth::attempt([
             'email' => $this->email,
             'password' => $this->password,
+            'is_admin' => true
         ], $this->remember)) {
-
-            $this->addError('email', 'These credentials do not match our records.');
-
-            return;
+            return $this->addError('email', 'These credentials do not match our records.');;
         }
 
         return redirect()->intended(route('admin.dashboard'));
