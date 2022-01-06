@@ -53,6 +53,6 @@ Route::middleware(['throttle:xhrFormRequest'])->group(function () {
 
 Route::get('/dashboard', function () {
     return view('pages.customer.dashboard');
-})->middleware(['auth'])->name('dashboard');
+})->middleware(['auth', 'customer'])->name('dashboard');
 
 require __DIR__ . '/auth.php';
