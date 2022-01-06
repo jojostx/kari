@@ -27,7 +27,7 @@ class LoginTest extends TestCase
     {
         $this->assertGuest();
 
-        $userToAuthenticate = User::factory()->create();
+        $userToAuthenticate = User::factory()->admin()->create();
 
         Livewire::test(Login::class)
             ->set('email', $userToAuthenticate->email)
@@ -58,7 +58,7 @@ class LoginTest extends TestCase
         $this->assertGuest();
     }
  
-    function test_users_can_not_authenticate_with_password()
+    function test_users_can_not_authenticate_with_invalid_password()
     {
         $userToAuthenticate = User::factory()->create();
 
@@ -71,6 +71,7 @@ class LoginTest extends TestCase
         
         $this->assertGuest();
     }
+
     function test_can_validate_email_is_required()
     {
         Livewire::test(Login::class)
@@ -93,7 +94,7 @@ class LoginTest extends TestCase
     {
         $this->assertGuest();
 
-        $userToAuthenticate = User::factory()->create();
+        $userToAuthenticate = User::factory()->admin()->create();
 
         foreach (range(1, 5) as $i) {
             Livewire::test(Login::class)
