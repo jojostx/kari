@@ -214,14 +214,17 @@
                     </ul>
                 </div>
                 <div class="flex items-center pl-8">
-                    <div class="w-10 overflow-hidden bg-gray-700 rounded-full">
+                    <div class="flex-shrink-0 w-10 overflow-hidden bg-gray-700 rounded-full">
                         <svg id="pl-ava" class="w-full h-full text-white" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
                         </svg>
                     </div>
-                    <div class="ml-3">
-                        <p class="font-semibold">{{ auth()->user()->name }}</p>
+                    <div class="relative ml-3 overflow-hidden">
+                        <p class="font-semibold">{{ auth()->user()->full_name }}</p>
                         <p class="text-xs font-medium">{{ auth()->user()->email }}</p>
+                        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white to-white">
+
+                        </div>
                     </div>
                 </div>
             </div>

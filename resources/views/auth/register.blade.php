@@ -2,7 +2,7 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <x-application-logo class="w-20 h-20 text-gray-500 fill-current" />
+                <x-application-logo class="text-gray-500 fill-current w-14 h-14" />
             </a>
         </x-slot>
 
@@ -18,21 +18,21 @@
 
                 <x-input id="first_name" class="block w-full mt-1" type="text" name="first_name" :value="old('first_name')" required autofocus />
             </div>
-            
+
             <!-- Name -->
             <div class="mt-4">
                 <x-label for="middle_name" :value="__('Middle Name')" />
 
                 <x-input id="middle_name" class="block w-full mt-1" type="text" name="middle_name" :value="old('middle_name')" required autofocus />
             </div>
-            
+
             <!-- Name -->
             <div class="mt-4">
                 <x-label for="last_name" :value="__('Last Name')" />
 
                 <x-input id="last_name" class="block w-full mt-1" type="text" name="last_name" :value="old('last_name')" required autofocus />
             </div>
-            
+
             <!-- Name -->
             <div class="mt-4">
                 <x-label for="phone_number" :value="__('Phone Number')" />
@@ -51,19 +51,14 @@
             <div class="mt-4">
                 <x-label for="password" :value="__('Password')" />
 
-                <x-input id="password" class="block w-full mt-1"
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
+                <x-input id="password" class="block w-full mt-1" type="password" name="password" required autocomplete="new-password" />
             </div>
 
             <!-- Confirm Password -->
             <div class="mt-4">
                 <x-label for="password_confirmation" :value="__('Confirm Password')" />
 
-                <x-input id="password_confirmation" class="block w-full mt-1"
-                                type="password"
-                                name="password_confirmation" required />
+                <x-input id="password_confirmation" class="block w-full mt-1" type="password" name="password_confirmation" required />
             </div>
 
             <div class="flex items-center justify-end mt-4">

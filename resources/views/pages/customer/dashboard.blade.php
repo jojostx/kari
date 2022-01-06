@@ -7,7 +7,7 @@
                 <div class="flex items-center pl-8">
                     <div class="text-right">
                         <p class="text-sm font-semibold">{{ auth()->user()->name }}</p>
-                        <p class="text-xs font-medium text-gray-600">{{ auth()->user()->email }}</p>
+                        <p class="text-xs font-medium text-gray-600">{{ auth()->user()->full_name }}</p>
                     </div>
                     <div class="w-10 ml-4 overflow-hidden bg-gray-700 rounded-full">
                         <svg id="pl-ava" class="w-full h-full text-white" fill="currentColor" viewBox="0 0 24 24">

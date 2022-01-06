@@ -2,7 +2,7 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <x-application-logo class="w-20 h-20 text-gray-500 fill-current" />
+                <x-application-logo class="text-gray-500 fill-current w-14 h-14" />
             </a>
         </x-slot>
 
@@ -11,9 +11,9 @@
         </div>
 
         @if (session('status') == 'verification-sms-sent')
-            <div class="mb-4 text-sm font-medium text-green-600">
-                {{ __('A new verification SMS has been sent to the phone number you provided.') }}
-            </div>
+        <div class="mb-4 text-sm font-medium text-green-600">
+            {{ __('A new verification SMS has been sent to the phone number you provided.') }}
+        </div>
         @endif
 
         <div class="flex items-center justify-between mt-4">

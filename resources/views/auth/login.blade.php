@@ -2,7 +2,7 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <x-application-logo class="w-20 h-20 text-gray-500 fill-current" />
+                <x-application-logo class="text-gray-500 fill-current w-14 h-14" />
             </a>
         </x-slot>
 
@@ -26,10 +26,7 @@
             <div class="mt-4">
                 <x-label for="password" :value="__('Password')" />
 
-                <x-input id="password" class="block w-full mt-1"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
+                <x-input id="password" class="block w-full mt-1" type="password" name="password" required autocomplete="current-password" />
             </div>
 
             <!-- Remember Me -->
@@ -42,9 +39,9 @@
 
             <div class="flex items-center justify-end mt-4 text-xs">
                 @if (Route::has('password.request'))
-                    <a class="text-sm text-gray-600 underline hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
+                <a class="text-sm text-gray-600 underline hover:text-gray-900" href="{{ route('password.request') }}">
+                    {{ __('Forgot your password?') }}
+                </a>
                 @endif
 
                 <x-button class="ml-3">
