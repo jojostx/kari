@@ -2,14 +2,13 @@
   <div>
     <!-- nav -->
     @include('layouts.guest-nav')
-    
+
     <!-- contact -->
     <section class="relative text-gray-600 body-font">
       <div class="flex flex-wrap px-5 py-24 mx-auto sm:flex-nowrap">
         <div class="relative flex items-end justify-start w-full p-10 overflow-hidden bg-gray-300 rounded-lg min-h-[360px] lg:w-2/3 md:w-1/2 sm:mr-10">
-          <iframe class="absolute inset-0" style="filter: grayscale(0.5) contrast(1.2) opacity(0.7);" title="map" marginheight="0" marginwidth="0" scrolling="no" 
-          src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=14%20Captains%20Gardens,%20Colchester,%20Essex.%20United%20Kingdom&t=&z=13&ie=UTF8&iwloc=&output=embed"
-          width="100%" height="100%" frameborder="0"></iframe>
+          <iframe class="absolute inset-0 block w-full h-full m-0 border-0" style="filter: grayscale(0.5) contrast(1.2) opacity(0.7);" title="map" scrolling="no" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=14%20Captains%20Gardens,%20Colchester,%20Essex.%20United%20Kingdom&t=&z=13&ie=UTF8&iwloc=&output=embed">
+          </iframe>
           <div class="relative flex-wrap hidden py-6 bg-white rounded shadow-md sm:flex">
             <div class="px-6 lg:w-1/2">
               <h2 class="text-xs font-semibold tracking-widest text-gray-900 title-font">ADDRESS</h2>
@@ -37,10 +36,10 @@
         </div>
 
         <livewire:static.forms.contact />
-      
+
       </div>
     </section>
-    
+
     <!-- footer -->
     @include('layouts.footer')
   </div>
