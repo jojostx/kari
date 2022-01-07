@@ -1,4 +1,4 @@
-<svg viewBox="0 0 90 87" xmlns="http://www.w3.org/2000/svg" {{ $attributes }}>
+<svg  role="img" aria-label="Kariinvestment"  viewBox="0 0 90 87" xmlns="http://www.w3.org/2000/svg" {{ $attributes }}>
   <path
     d="M30.2941 78.0203L30.2941 83.9761C30.2941 84.1249 30.3694 84.1249 30.4447 84.1249L36.622 84.1249L36.622 77.7969L30.4447 77.7969C30.2941 77.7969 30.2941 77.8714 30.2941 77.9458L30.2941 78.0203Z" />
   <path
