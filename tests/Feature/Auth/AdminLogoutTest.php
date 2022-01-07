@@ -11,6 +11,8 @@ use Tests\TestCase;
 
 class AdminLogoutTest extends TestCase
 {
+    use RefreshDatabase;
+    
     public function test_admin_can_logout()
     {
         $this->assertGuest();
