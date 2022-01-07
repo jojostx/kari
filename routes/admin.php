@@ -9,10 +9,8 @@ Route::middleware(['auth', 'admin'])
   ->group(function () {
 
     Route::redirect('/', '/login')->middleware(['guest'])->withoutMiddleware(['auth', 'admin'])->name('home');
-    
     Route::get('/login', [AuthenticatedSessionController::class, 'create'])->middleware(['guest'])->withoutMiddleware(['auth', 'admin'])->name('login');
 
     Route::get('/dashboard', [DashboardController::class, '__invoke'])->name('dashboard');
-
     Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
   });
