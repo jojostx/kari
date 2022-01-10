@@ -2,7 +2,7 @@
 
 @section('title', 'Dashboard')
 
-@section('content')
+@section('contents')
 <div x-data="{ isOpen: false }" class="flex w-full min-h-screen text-gray-900 bg-gray-50">
   @livewire('admin.app.navigation')
 
@@ -11,7 +11,7 @@
     @livewire('admin.app.search-header')
 
     <div class="flex-1 w-full px-4 mx-auto md:px-6 lg:px-8 max-w-7xl">
-        @livewire('admin.app.dashboard')
+        @yield('body')
     </div>
 
     <x-footer/>

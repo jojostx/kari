@@ -4,7 +4,7 @@
     <aside x-bind:class="isOpen ? 'translate-x-0' : '-translate-x-full lg:-translate-x-0'" class="fixed inset-y-0 left-0 z-20 flex flex-col h-screen overflow-hidden duration-300 bg-white shadow-2xl lg:border-r w-80 lg:z-0 lg:translate-x-0">
         <header class="border-b h-[4rem] shrink-0 px-6 flex items-center">
             <a href="{{ route('admin.dashboard') }}" class="flex items-center">
-                <x-application-logo class="flex-shrink-0 text-gray-900 transition-all duration-300 fill-current w-9 h-9" />
+                <x-application-logo class="text-gray-900 transition-all duration-300 fill-current shrink w-9 h-9" />
                 <div class="flex flex-col ml-2 text-xl font-bold tracking-tight">
                     <p class="-mb-1 text-xl font-semibold text-gray-800 font-vesp">KARI</p>
                     <p class="text-sm font-normal">Investment</p>
@@ -13,13 +13,11 @@
         </header>
 
         <nav class="flex-1 py-6 overflow-y-auto">
-
             <ul class="px-6 space-y-6">
                 <li>
-
                     <ul class="-mx-3 space-y-1 text-sm">
                         <li>
-                            <a href="{{ route('admin.dashboard') }}" class="flex items-center gap-3 px-3 py-2 font-medium text-white transition bg-gray-800 rounded-lg hover:text-white">
+                            <a href="{{ route('admin.dashboard') }}" class="flex items-center gap-3 px-3 py-2 font-medium @if (request()->routeIs('admin.dashboard'))  bg-gray-800 text-white @else hover:bg-gray-500/5 focus:bg-gray-500/5 @endif transition rounded-lg">
                                 <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                                 </svg>
@@ -36,12 +34,12 @@
                 </li>
                 <li>
                     <p class="text-xs font-bold tracking-wider text-gray-600 uppercase">
-                        Guest
+                        Static
                     </p>
 
                     <ul class="mt-2 -mx-3 space-y-1 text-sm">
                         <li>
-                            <a href="https://demo.filamentadmin.com/shop/products" class="flex items-center gap-3 px-3 py-2 font-medium transition rounded-lg hover:bg-gray-500/5 focus:bg-gray-500/5">
+                            <a href="{{ route('admin.static.faqs.index') }}" class="flex items-center gap-3 px-3 py-2 font-medium @if (request()->routeIs('admin.static.faqs.index'))  bg-gray-800 text-white @else hover:bg-gray-500/5 focus:bg-gray-500/5 @endif transition rounded-lg">
                                 <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                                 </svg>
@@ -51,7 +49,7 @@
                             </a>
                         </li>
                         <li x-data="{ open: false }" x-on:click.outside="open = false" class="font-medium transition rounded-lg hover:bg-gray-500/5 focus:bg-gray-500/5">
-                            <button x-on:click="open = !open" class="flex items-center w-full gap-3 px-3 py-2 font-medium transition rounded-lg hover:bg-gray-500/5 focus:bg-gray-500/5">
+                            <button wire:click="$emit('changeTitle', 'Newsfeed')" x-on:click="open = !open" class="flex items-center w-full gap-3 px-3 py-2 font-medium transition rounded-lg hover:bg-gray-500/5 focus:bg-gray-500/5">
                                 <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
                                 </svg>
@@ -63,7 +61,7 @@
                                     <path x-bind:class="open ? '' : 'hidden' " x-cloak stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
                                 </svg>
                             </button>
-                            <div x-cloak x-show="open" class="p-3 ml-4 mr-1">
+                            <div x-cloak x-show="open" x-trap="open" class="p-3 ml-4 mr-1">
                                 <a href="#" class="flex items-center gap-3 px-3 py-2 transition rounded-lg hover:bg-gray-500/5 focus:bg-gray-500/5">
                                     <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>

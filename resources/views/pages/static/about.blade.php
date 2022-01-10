@@ -27,12 +27,12 @@
             <p class="font-normal">The insatiable urge to be of help to people and the drive to create investment solutions. Ensuring a wealthy future for the next generation.</p>
           </div>
           <div class="w-1 h-12 border-l-2 border-gray-900 border-dashed md:border-t-2 md:w-full md:h-1"></div>
-          <div class="flex-shrink-0 w-full md:max-w-md">
+          <div class="shrink w-full md:max-w-md">
             <img src="{{ asset('images/goal.png') }}" alt="our motivation">
           </div>
         </div>
         <div class="flex flex-col-reverse items-center w-full mt-12 md:items-center md:flex-row md:justify-between">
-          <div class="flex-shrink-0 w-full md:max-w-md">
+          <div class="shrink w-full md:max-w-md">
             <img src="{{ asset('images/motivation.jpg') }}" class="w-full" alt="our motivation">
           </div>
           <div class="w-1 h-12 border-l-2 border-gray-900 border-dashed md:border-t-2 md:w-full md:h-1"></div>

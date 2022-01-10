@@ -24,7 +24,7 @@
 </head>
 
 <body class="font-dm">
-  @yield('content')
+  @yield('contents')
 
   @livewireScripts
 </body>

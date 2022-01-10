@@ -6,7 +6,7 @@
 
     <div class="w-1 h-12 border-l-2 border-gray-900 border-dashed md:border-t-2 md:w-full md:h-1"></div>
 
-    <button class="flex-shrink-0 transition-all duration-100 hover:shadow-md">
+    <button class="shrink transition-all duration-100 hover:shadow-md">
       <x-animated-button href="{{ route('contact') }}" class="inline-block px-4 py-2 text-base font-medium text-black border-2 border-black lg:px-6 lg:py-4 md:text-xl hover:text-black animated-a">Get In Touch</x-animated-button>
     </button>
   </div>

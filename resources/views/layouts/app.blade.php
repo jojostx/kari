@@ -133,7 +133,7 @@
         <aside aria-label="side menu" role="navigation" class="fixed top-0 bottom-0 left-0 z-50 flex-col w-full max-w-[235px] hidden h-full py-8 overflow-hidden lg:flex bg-gradient-to-b from-gray-200 to-white">
             <div class="flex flex-col flex-1 min-h-0">
                 <a class="flex items-center px-8 py-4" href="{{ route('home') }}">
-                    <x-application-logo class="flex-shrink-0 text-gray-900 transition-all duration-300 fill-current w-9 h-9" />
+                    <x-application-logo class="shrink text-gray-900 transition-all duration-300 fill-current w-9 h-9" />
                     <div class="flex flex-col ml-2 md:ml-3">
                         <p class="-mb-1 text-lg font-semibold text-gray-900 font-vesp md:text-xl">KARI</p>
                         <p class="text-sm font-normal">Investment</p>
@@ -214,7 +214,7 @@
                     </ul>
                 </div>
                 <div class="flex items-center pl-8">
-                    <div class="flex-shrink-0 w-10 overflow-hidden bg-gray-700 rounded-full">
+                    <div class="shrink w-10 overflow-hidden bg-gray-700 rounded-full">
                         <svg id="pl-ava" class="w-full h-full text-white" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
                         </svg>

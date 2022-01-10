@@ -6,16 +6,16 @@ use Livewire\Component;
 
 class PageTitle extends Component
 {
-    public $title = 'Dash';
+    public $title = 'DashBoard';
 
     protected function getListeners(): array
     {
-        return ['Title:Dashboard' => 'changeTitle'];
+        return ['changeTitle'];
     }
     
-    public function changeTitle()
+    public function changeTitle($title)
     {
-        $this->title = 'Dashboard';
+        $this->title = $title;
     }
 
     public function render()
