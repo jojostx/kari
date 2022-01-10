@@ -1,7 +1,12 @@
 require('./bootstrap');
 
 import Alpine from 'alpinejs';
+import FormsAlpinePlugin from '../../vendor/filament/forms/dist/module.esm'
+import Trap from '@alpinejs/trap'
 
-window.Alpine = Alpine;
+Alpine.plugin(FormsAlpinePlugin)
+Alpine.plugin(Trap)
 
-Alpine.start();
+window.Alpine = Alpine
+
+Alpine.start()

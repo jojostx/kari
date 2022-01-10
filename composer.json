@@ -6,13 +6,18 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "filament/forms": "^2.0",
+        "filament/tables": "^2.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "http-interop/http-factory-guzzle": "^1.2",
         "laravel-notification-channels/africastalking": "^3.1",
         "laravel/framework": "^8.65",
         "laravel/sanctum": "^2.11",
+        "laravel/scout": "^9.3",
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.8",
+        "meilisearch/meilisearch-php": "^0.20.0",
         "propaganistas/laravel-phone": "^4.3"
     },
     "require-dev": {
@@ -43,7 +48,9 @@
             "@php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi"
+            "@php artisan vendor:publish --tag=laravel-assets --ansi",
+            "@php artisan config:clear",
+            "@php artisan view:clear"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
