@@ -2,7 +2,7 @@
     <div x-cloak x-data="{ isOpen: false }" x-on:open-payment-approval-modal.window="isOpen = true" role="dialog" aria-modal="true" class="block" aria-label="confirmation modal">
         <div x-show="isOpen" x-transition:enter="ease duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="fixed inset-0 z-40 flex items-center justify-center min-h-screen p-4 overflow-y-auto transition">
             <button x-on:click="isOpen = false" type="button" aria-hidden="true" class="fixed inset-0 w-full h-full bg-black/50 focus:outline-none"></button>
-            <div x-show="isOpen" x-trap="isOpen" x-on:keydown.window.escape="isOpen = false" x-transition:enter="ease duration-300" x-transition:enter-start="translate-y-8" x-transition:enter-end="translate-y-0" x-transition:leave="ease duration-300" x-transition:leave-start="translate-y-0" x-transition:leave-end="translate-y-8" class="relative mt-auto cursor-pointer md:mb-auto">
+            <div x-show="isOpen" x-trap="isOpen" x-on:keydown.window.escape="isOpen = false" x-transition:enter="ease duration-300" x-transition:enter-start="translate-y-8" x-transition:enter-end="translate-y-0" x-transition:leave="ease duration-300" x-transition:leave-start="translate-y-0" x-transition:leave-end="translate-y-8" class="relative mt-auto mb-auto cursor-pointer">
                 <div class="w-full max-w-sm p-2 mx-auto space-y-2 bg-white cursor-default rounded-xl">
                     <div class="space-y-2">
                         <div class="p-4 space-y-2 text-center">
