@@ -2,13 +2,19 @@
 
 namespace App\Http\Livewire\Admin\App;
 
+use Illuminate\Support\Facades\Artisan;
 use Livewire\Component;
 
 class Dashboard extends Component
 {
-    public function mount(): void
+    public function seedData()
     {
-        $this->emit('changeTitle', 'Dashboard');    
+        $this->commandStatus = Artisan::call('setup:prod');      
+    }
+    
+    public function getCommandStatusProperty()
+    {
+        return 700;
     }
 
     public function render()
