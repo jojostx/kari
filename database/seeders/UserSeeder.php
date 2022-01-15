@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
             'last_name' => 'ikuru',
             'phone_number' => '08034081360',
             'phone_number_e164' => '+2348034081360',
-            'email' => 'ikuskid7@kariinvestment.com',
+            'email' => 'support@kariinvestment.com',
             'email_verified_at' => \now(),
             'phone_verified_at' => \now(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
