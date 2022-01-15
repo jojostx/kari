@@ -1,6 +1,6 @@
-<x-partials.admin-index :hasAction="true">
+<x-partials.admin-index :hasAction="false">
     <x-slot name="title">
-        FAQs
+      Payouts
     </x-slot>
 
     <x-slot name="link">
@@ -9,5 +9,5 @@
         </a>
     </x-slot>
 
-    {{ $this->table }}
+    Table
 </x-partials.admin-index>

@@ -6,7 +6,7 @@
 <div x-data="{ isOpen: false }" class="flex w-full min-h-screen text-gray-900 bg-gray-50">
   @livewire('admin.app.navigation')
 
-  <div class="flex flex-col flex-1 w-screen space-y-6 lg:pl-80">
+  <div class="flex flex-col flex-1 w-screen space-y-6 lg:pl-72">
     <!-- top header [search] -->
     @livewire('admin.app.search-header')
 

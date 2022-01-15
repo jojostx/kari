@@ -2,9 +2,10 @@
 
 namespace Database\Factories;
 
+use App\Models\Plan;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class NewsfeedSubscriptionFactory extends Factory
+class PaymentFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -13,9 +14,13 @@ class NewsfeedSubscriptionFactory extends Factory
      */
     public function definition()
     {
+        $plan = Plan::first();
+
         return [
-            'fullname' => $this->faker->name('male'),
-            'email' => $this->faker->email(),
+            'tag' => $this->faker->text(6),
+            'refcode' => $this->faker->uuid(),
+            'status' => true,
+            'plan_id' => $plan->id,
         ];
     }
 }

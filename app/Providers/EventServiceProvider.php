@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Events\Admin\PaymentApprovedEvent;
+use App\Listeners\Admin\SendPaymentApprovedNotification;
+use App\Listeners\Admin\SendSubsriptionCreatedNotification;
 use App\Models\User;
 use App\Observers\UserObserver;
 use Illuminate\Auth\Events\Registered;
@@ -19,6 +22,10 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         Registered::class => [
             SendEmailVerificationNotification::class,
+        ],
+
+        PaymentApprovedEvent::class => [
+            SendPaymentApprovedNotification::class,
         ],
     ];
 

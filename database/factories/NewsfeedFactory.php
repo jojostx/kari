@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class NewsfeedSubscriptionFactory extends Factory
+class NewsfeedFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,8 +14,10 @@ class NewsfeedSubscriptionFactory extends Factory
     public function definition()
     {
         return [
-            'fullname' => $this->faker->name('male'),
-            'email' => $this->faker->email(),
+            'tag' => $this->faker->text(8),
+            'slug' => $this->faker->slug(),
+            'content' => $this->faker->sentence(nbWords: 25),
+            'author_email' => 'admin@kariinvestment.com',
         ];
     }
 }

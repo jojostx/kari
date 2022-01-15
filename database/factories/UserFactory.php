@@ -15,15 +15,17 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'first_name' => $this->faker->name(),
-            'middle_name' => $this->faker->name(),
-            'last_name' => $this->faker->name(),
+            'first_name' => $this->faker->firstName(),
+            'middle_name' => $this->faker->firstName(),
+            'last_name' => $this->faker->lastName(),
             'phone_number' => '08034081360',
             'phone_number_e164' => null,
             'email' => $this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'remember_token' => Str::random(10),
+            'created_at' => \now(),
+            'updated_at' => \now(),
         ];
     }
 
@@ -34,7 +36,7 @@ class UserFactory extends Factory
      */
     public function unverified()
     {
-        return $this->state(function (array $attributes) {
+        return $this->state(function () {
             return [
                 'email_verified_at' => null,
             ];
@@ -48,7 +50,7 @@ class UserFactory extends Factory
      */
     public function verified()
     {
-        return $this->state(function (array $attributes) {
+        return $this->state(function () {
             return [
                 'email_verified_at' => now(),
             ];
@@ -62,7 +64,7 @@ class UserFactory extends Factory
      */
     public function unverified_phone()
     {
-        return $this->state(function (array $attributes) {
+        return $this->state(function () {
             return [
                 'phone_verified_at' => null,
             ];

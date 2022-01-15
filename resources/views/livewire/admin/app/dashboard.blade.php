@@ -11,7 +11,7 @@
             </div>
         </header>
         <div class="grid grid-cols-1 gap-4 mb-6 lg:grid-cols-2 lg:gap-8">
-            <div wire:id="q3xTSf4MytnRjHP0ND15" class="p-2 space-y-2 bg-white shadow rounded-xl">
+            <div class="p-2 space-y-2 bg-white shadow rounded-xl">
                 <div class="space-y-2">
                     <div class="px-4 py-2 space-y-4">
                         <div class="flex items-center h-12 space-x-4 rtl:space-x-reverse">

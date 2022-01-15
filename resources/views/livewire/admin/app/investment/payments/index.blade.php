@@ -1,6 +1,6 @@
-<x-partials.admin-index :hasAction="true">
+<x-partials.admin-index :hasAction="false">
     <x-slot name="title">
-        FAQs
+      Payments
     </x-slot>
 
     <x-slot name="link">
@@ -10,4 +10,6 @@
     </x-slot>
 
     {{ $this->table }}
+
+    @livewire('admin.components.payment-approval-modal')
 </x-partials.admin-index>
