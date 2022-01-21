@@ -35,24 +35,13 @@ class PaymentApprovalModal extends Component
         $this->validate();
 
         DB::transaction(function () {
-            $this->payment->status = true;
-
-            $saved = $this->payment->save();
-
-            $saved && Subscription::create([
-                'refcode' => $this->payment->refcode,
-                'principal' => $this->payment->plan->principal,
-                'interest' => $this->payment->plan->interest,
-                'user_id' => $this->payment->user_id,
-                'plan_id' => $this->payment->plan_id,
-                'payment_id' => $this->payment->id,
-                'ends_at' => now()->addYear(),
-            ]);
-
-            $saved && $this->emit('payment-approved', [$this->payment->getKey()]);
-            
-            PaymentApprovedEvent::dispatchIf($saved, $this->payment);
-            //Send SubsriptionCreatedEmail and SMS to the customer from the Created event of the Subscription model
+            if ($this->payment->approve()) {
+                $this->emit('payment-approved', [$this->payment->getKey()]);
+    
+                $this->dispatchBrowserEvent('close-payment-approval-modal');
+                
+                PaymentApprovedEvent::dispatch($this->payment, $this->payment->subscription);
+            }
         });
     }
 

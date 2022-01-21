@@ -28,14 +28,6 @@ class Index extends Component implements HasTable
         return Subscription::query();
     }
 
-    protected function getTableBulkActions(): array
-    {
-        // send email notification to verify their email & activate account.
-        return [
-            BulkAction::make('notify')->action(fn (Collection $records) => $records->each->delete())->deselectRecordsAfterCompletion(),
-        ];
-    }
-
     protected function getTableColumns(): array
     {
         return [
@@ -51,6 +43,7 @@ class Index extends Component implements HasTable
                 ->searchable(),
 
             TextColumn::make('customer.email')
+                ->label('Customer Email')
                 ->extraAttributes(['style' => 'max-width:140px; overflow-wrap: break-word; white-space: normal;'])
                 ->searchable(),
 
