@@ -95,12 +95,12 @@ class User extends Authenticatable implements MustVerifyPhoneNumber, MustVerifyE
         return ucwords("{$this->first_name} {$this->last_name}");
     }
 
-    public function getVerifiedAttribute($value): string
+    public function getVerifiedAttribute()
     {
         return boolval($this->hasVerifiedEmail());
     }
 
-    public function getVerifiedPhoneAttribute($value): string
+    public function getVerifiedPhoneAttribute()
     {
         return boolval($this->hasVerifiedPhoneNumber());
     }

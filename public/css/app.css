@@ -5866,6 +5866,22 @@ a:hover:after{
   max-width: none;
 }
 
+.max-w-\[60px\]{
+  max-width: 60px;
+}
+
+.max-w-\[120px\]{
+  max-width: 120px;
+}
+
+.max-w-\[130px\]{
+  max-width: 130px;
+}
+
+.max-w-\[160px\]{
+  max-width: 160px;
+}
+
 .flex-1{
   flex: 1 1 0%;
 }
@@ -5961,6 +5977,18 @@ a:hover:after{
 
 .transform{
   transform: var(--tw-transform);
+}
+
+@keyframes spin{
+
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin{
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
 }
 
 .cursor-default{
@@ -6762,6 +6790,10 @@ a:hover:after{
 
 .p-2\.5{
   padding: 0.625rem;
+}
+
+.p-5{
+  padding: 1.25rem;
 }
 
 .px-4{
@@ -8935,6 +8967,10 @@ input[type="radio"]:checked+label.negative-feedback-type{
 
   .md\:max-w-md{
     max-width: 28rem;
+  }
+
+  .md\:max-w-\[260px\]{
+    max-width: 260px;
   }
 
   .md\:grid-cols-6{
