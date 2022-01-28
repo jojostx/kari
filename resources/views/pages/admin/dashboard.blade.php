@@ -16,5 +16,13 @@
 
     <x-footer/>
   </div>
+
+    @if (session()->has('message'))
+    <x-alert-toast>
+        <p>
+        {{ session('message') }}
+        </p>
+    </x-alert-toast>
+    @endif
 </div>
 @endsection
