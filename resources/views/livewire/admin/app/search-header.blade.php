@@ -25,13 +25,37 @@
                                 <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                 </svg> </span>
-
-                            <input id="globalSearchQueryInput" placeholder="Search" type="search" autocomplete="off" class="block w-full h-10 pl-10 placeholder-gray-500 duration-75 border-transparent rounded-lg lg:text-lg bg-gray-400/10 focus:bg-white focus:placeholder-gray-400 focus:border-gray-600 focus:ring-1 focus:ring-inset focus:ring-gray-600">
+                            <input wire:model.debounce.500ms="searchQuery" id="globalSearchQueryInput" placeholder="Search" type="search" autocomplete="off" class="block w-full h-10 pl-10 placeholder-gray-500 transition duration-75 border-transparent rounded-lg lg:text-lg bg-gray-400/10 focus:bg-white focus:placeholder-gray-400 focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600">
                         </div>
                     </div>
 
+                    <div x-cloak x-data="{ isOpen: false }" x-show="isOpen" x-on:keydown.escape.window="isOpen = false" x-on:click.away="isOpen = false" x-on:open-global-search-results.window="isOpen = true" class="absolute right-0 top-auto z-10 w-screen max-w-xs mt-2 overflow-hidden shadow-xl rtl:right-auto rtl:left-0 rounded-xl sm:max-w-lg">
+                        <div class="overflow-x-hidden overflow-y-scroll bg-white shadow max-h-96 rounded-xl">
+                            @forelse($this->searchResults->groupByType() as $type => $modelSearchResults)
+                            <ul class="divide-y">
+                                <li class="sticky top-0 z-10">
+                                    <header class="px-6 py-2 bg-gray-50/80 backdrop-blur-xl backdrop-saturate-150">
+                                        <p class="text-xs font-bold tracking-wider text-gray-500 uppercase">
+                                            {{ $type }}
+                                        </p>
+                                    </header>
+                                </li>
+                                @foreach($modelSearchResults as $searchResult)
+                                <li>
+                                    <a href="{{ $searchResult->url }}" class="relative block px-6 py-4 focus:bg-gray-500/5 hover:bg-gray-500/5 focus:ring-1 focus:ring-gray-300">
+                                        <p class="font-medium">{{ $searchResult->title }}</p>
+                                    </a>
+                                </li>
+                                @endforeach
+                            </ul>
+                            @empty
+                            <div class="px-6 py-4">
+                                No search results found.
+                            </div>
+                            @endforelse
+                        </div>
+                    </div>
                 </div>
-
             </div>
         </div>
     </div>

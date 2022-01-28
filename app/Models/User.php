@@ -7,17 +7,30 @@ use App\Models\Concerns\Auth\MustVerifyPhoneNumber;
 use App\Models\Traits\MustVerifyPhoneNumber as TraitsMustVerifyPhoneNumber;
 use App\Notifications\Auth\VerifyEmailQueued;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Propaganistas\LaravelPhone\Casts\E164PhoneNumberCast;
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
 
-
-class User extends Authenticatable implements MustVerifyPhoneNumber, MustVerifyEmail
+class User extends Authenticatable implements MustVerifyPhoneNumber, MustVerifyEmail, Searchable
 {
     use HasApiTokens, HasFactory, Notifiable, TraitsMustVerifyPhoneNumber;
+
+    public $searchableType = 'Customers';
+
+    public function getSearchResult(): SearchResult
+     {
+        $url = route('admin.investment.customers.view', $this->getKey());
+     
+         return new SearchResult(
+            $this,
+            $this->full_name,
+            $url
+         );
+     }
 
     public function sendEmailVerificationNotification()
     {

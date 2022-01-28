@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "fakerphp/faker": "^1.9.1",
         "filament/forms": "^2.0",
         "filament/tables": "^2.0",
         "fruitcake/laravel-cors": "^2.0",
@@ -13,13 +14,13 @@
         "http-interop/http-factory-guzzle": "^1.2",
         "laravel-notification-channels/africastalking": "^3.1",
         "laravel/framework": "^8.65",
-        "fakerphp/faker": "^1.9.1",
         "laravel/sanctum": "^2.11",
         "laravel/scout": "^9.3",
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.8",
         "meilisearch/meilisearch-php": "^0.20.0",
-        "propaganistas/laravel-phone": "^4.3"
+        "propaganistas/laravel-phone": "^4.3",
+        "spatie/laravel-searchable": "^1.11"
     },
     "require-dev": {
         "brianium/paratest": "^6.4",
