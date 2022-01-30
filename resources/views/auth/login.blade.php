@@ -23,11 +23,7 @@
             </div>
 
             <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block w-full mt-1" type="password" name="password" required autocomplete="current-password" />
-            </div>
+           <x-password-input/>
 
             <!-- Remember Me -->
             <div class="block mt-4">

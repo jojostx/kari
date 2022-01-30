@@ -1,6 +1,12 @@
 @if (!Cookie::get('cookieAlertSeen') && !(\Request::routeIs('cookie')))
 <x-alert-toast>
-  We are using Cookies, read our<a href="{{ route('cookie') }}" class="font-medium underline hover:text-gray-200">Cookie Policy</a>
+  <p>
+    We are using Cookies, read our 
+    <span>
+      <a href="{{ route('cookie') }}" class="inline font-medium underline hover:text-gray-200">Cookie Policy</a>
+    </span>
+  </p>
+  
   <script>
     let input = document.getElementById('footertoast')
     let url = "{{ route('cookie.accept') }}"
