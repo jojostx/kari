@@ -22,15 +22,15 @@ class User extends Authenticatable implements MustVerifyPhoneNumber, MustVerifyE
     public $searchableType = 'Customers';
 
     public function getSearchResult(): SearchResult
-     {
+    {
         $url = route('admin.investment.customers.view', $this->getKey());
-     
-         return new SearchResult(
+
+        return new SearchResult(
             $this,
             $this->full_name,
             $url
-         );
-     }
+        );
+    }
 
     public function sendEmailVerificationNotification()
     {
@@ -117,7 +117,7 @@ class User extends Authenticatable implements MustVerifyPhoneNumber, MustVerifyE
     }
 
     /**
-     * The favorited users for a user.
+     * The payments for a user.
      */
     public function payments(bool|null $status = null): HasMany
     {
@@ -136,7 +136,7 @@ class User extends Authenticatable implements MustVerifyPhoneNumber, MustVerifyE
     }
 
     /**
-     * The favorited users for a user.
+     * The subscriptions for a user.
      */
     public function subscriptions(): HasMany
     {

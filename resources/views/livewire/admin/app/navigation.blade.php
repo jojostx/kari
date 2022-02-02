@@ -183,7 +183,7 @@
             <div class="bg-gray-400 bg-center bg-cover rounded-full w-11 h-11" style="background-image: url('https://ui-avatars.com/api/?name=Onyedika+Ikuru&color=FFFFFF&background=111827')"></div>
             <div>
                 <p class="text-sm font-bold">
-                    Onyedika Ikuru
+                    {{ auth()->user()->full_name }}
                 </p>
                 <p class="text-xs text-gray-500 hover:text-gray-700 focus:text-gray-700">
                     <a href="{{ route('admin.logout') }}">

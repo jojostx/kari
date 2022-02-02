@@ -19,7 +19,7 @@ class VerifyPhoneNumberController extends Controller
         $status = $request->fulfill();
 
         return $status ?
-            \redirect()->route('dashboard')->with('status', 'phone-verification-success') :
-            \redirect()->route('dashboard')->with('status', 'phone-verification-failure');
+            \redirect()->to(RouteServiceProvider::HOME)->with('status', 'phone-verification-success') :
+            \redirect()->to(RouteServiceProvider::HOME)->with('status', 'phone-verification-failure');
     }
 }
