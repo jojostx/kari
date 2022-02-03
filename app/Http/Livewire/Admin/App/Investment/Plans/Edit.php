@@ -4,7 +4,6 @@ namespace App\Http\Livewire\Admin\App\Investment\Plans;
 
 use App\Models\Plan;
 use Filament\Forms\Components\MarkdownEditor;
-use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;

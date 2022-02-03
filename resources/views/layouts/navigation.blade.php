@@ -3,7 +3,7 @@
     <!-- side nav -->
     <aside x-bind:class="isOpen ? 'translate-x-0' : '-translate-x-full lg:-translate-x-0'" class="fixed inset-y-0 left-0 z-20 flex flex-col h-screen overflow-hidden duration-300 bg-white shadow-2xl lg:border-r w-72 lg:z-0 lg:translate-x-0">
         <header class="border-b h-[4rem] shrink-0 px-6 flex items-center">
-            <a href="{{ route('admin.dashboard') }}" class="flex items-center">
+            <a href="{{ route('dashboard') }}" class="flex items-center">
                 <x-application-logo class="text-gray-900 transition-all duration-300 fill-current shrink w-9 h-9" />
                 <div class="flex flex-col ml-2 text-xl font-bold tracking-tight">
                     <p class="-mb-1 text-xl font-semibold text-gray-800 font-vesp">KARI</p>
@@ -39,7 +39,7 @@
 
                     <ul class="mt-2 -mx-3 space-y-1 text-sm">
                         <li>
-                            <a href="{{ route('subscriptions') }}" class="flex items-center gap-3 px-3 py-2 font-medium @if (request()->routeIs('admin.investment.subscriptions.*'))  bg-gray-800 text-white hover:text-white @else hover:bg-gray-500/5 focus:bg-gray-500/5 @endif transition rounded-lg">
+                            <a href="{{ route('subscriptions') }}" class="flex items-center gap-3 px-3 py-2 font-medium @if (request()->routeIs('subscriptions'))  bg-gray-800 text-white hover:text-white @else hover:bg-gray-500/5 focus:bg-gray-500/5 @endif transition rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                                 </svg>
@@ -49,7 +49,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('payments') }}" class="flex items-center gap-3 px-3 py-2 font-medium @if (request()->routeIs('admin.investment.payments.*'))  bg-gray-800 text-white hover:text-white @else hover:bg-gray-500/5 focus:bg-gray-500/5 @endif transition rounded-lg">
+                            <a href="{{ route('payments') }}" class="flex items-center gap-3 px-3 py-2 font-medium @if (request()->routeIs('payments'))  bg-gray-800 text-white hover:text-white @else hover:bg-gray-500/5 focus:bg-gray-500/5 @endif transition rounded-lg">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path>
                                 </svg>
@@ -59,7 +59,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('payouts') }}" class="flex items-center gap-3 px-3 py-2 font-medium @if (request()->routeIs('admin.investment.payouts.*'))  bg-gray-800 text-white hover:text-white @else hover:bg-gray-500/5 focus:bg-gray-500/5 @endif transition rounded-lg">
+                            <a href="{{ route('payouts') }}" class="flex items-center gap-3 px-3 py-2 font-medium @if (request()->routeIs('payouts'))  bg-gray-800 text-white hover:text-white @else hover:bg-gray-500/5 focus:bg-gray-500/5 @endif transition rounded-lg">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
                                 </svg>
@@ -69,7 +69,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('history') }}" class="flex items-center gap-3 px-3 py-2 font-medium @if (request()->routeIs('admin.investment.plans.*'))  bg-gray-800 text-white hover:text-white @else hover:bg-gray-500/5 focus:bg-gray-500/5 @endif transition rounded-lg">
+                            <a href="{{ route('history') }}" class="flex items-center gap-3 px-3 py-2 font-medium @if (request()->routeIs('history'))  bg-gray-800 text-white hover:text-white @else hover:bg-gray-500/5 focus:bg-gray-500/5 @endif transition rounded-lg">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
@@ -91,7 +91,7 @@
 
                     <ul class="mt-2 -mx-3 space-y-1 text-sm">
                         <li>
-                            <a href="{{ route('profile') }}" class="flex items-center gap-3 px-3 py-2 font-medium transition rounded-lg hover:bg-gray-500/5 focus:bg-gray-500/5">
+                            <a href="{{ route('profile') }}" class="flex items-center gap-3 px-3 py-2 font-medium @if (request()->routeIs('profile'))  bg-gray-800 text-white hover:text-white @else hover:bg-gray-500/5 focus:bg-gray-500/5 @endif transition rounded-lg">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
@@ -101,7 +101,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('account-settings') }}" class="flex items-center gap-3 px-3 py-2 font-medium transition rounded-lg hover:bg-gray-500/5 focus:bg-gray-500/5">
+                            <a href="{{ route('account-settings') }}" class="flex items-center gap-3 px-3 py-2 font-medium @if (request()->routeIs('account-settings'))  bg-gray-800 text-white hover:text-white @else hover:bg-gray-500/5 focus:bg-gray-500/5 @endif transition rounded-lg">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
