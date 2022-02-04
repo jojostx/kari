@@ -8,6 +8,7 @@ use App\Models\Traits\MustVerifyPhoneNumber as TraitsMustVerifyPhoneNumber;
 use App\Notifications\Auth\VerifyEmailQueued;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -49,6 +50,7 @@ class User extends Authenticatable implements MustVerifyPhoneNumber, MustVerifyE
         'phone_number',
         'email',
         'password',
+        'birthdate',
         'is_admin',
     ];
 
@@ -71,6 +73,7 @@ class User extends Authenticatable implements MustVerifyPhoneNumber, MustVerifyE
         'is_admin' => 'boolean',
         'email_verified_at' => 'datetime',
         'phone_verified_at' => 'datetime',
+        'birthdate' => 'datetime',
         'phone_number_e164' => E164PhoneNumberCast::class . ':NG',
     ];
 
@@ -141,5 +144,13 @@ class User extends Authenticatable implements MustVerifyPhoneNumber, MustVerifyE
     public function subscriptions(): HasMany
     {
         return $this->hasMany(Subscription::class);
+    }
+  
+    /**
+     * The address for a user.
+     */
+    public function location(): HasOne
+    {
+        return $this->hasOne(UserAddress::class, 'user_id');
     }
 }

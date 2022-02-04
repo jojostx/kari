@@ -1,0 +1,3726 @@
+[{
+        "city": "Lagos",
+        "country": "Nigeria",
+        "state": "Lagos"
+    },
+    {
+        "city": "Kano",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Ibadan",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Onitsha",
+        "country": "Nigeria",
+        "state": "Anambra"
+    },
+    {
+        "city": "Owerri",
+        "country": "Nigeria",
+        "state": "Imo"
+    },
+    {
+        "city": "Abuja",
+        "country": "Nigeria",
+        "state": "Federal Capital Territory"
+    },
+    {
+        "city": "Maiduguri",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Benin City",
+        "country": "Nigeria",
+        "state": "Edo"
+    },
+    {
+        "city": "Ikare",
+        "country": "Nigeria",
+        "state": "Ondo"
+    },
+    {
+        "city": "Ogbomoso",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Port Harcourt",
+        "country": "Nigeria",
+        "state": "Rivers"
+    },
+    {
+        "city": "Abeokuta",
+        "country": "Nigeria",
+        "state": "Ogun"
+    },
+    {
+        "city": "Jos",
+        "country": "Nigeria",
+        "state": "Plateau"
+    },
+    {
+        "city": "Ilorin",
+        "country": "Nigeria",
+        "state": "Kwara"
+    },
+    {
+        "city": "Warri",
+        "country": "Nigeria",
+        "state": "Delta"
+    },
+    {
+        "city": "Kaduna",
+        "country": "Nigeria",
+        "state": "Kaduna"
+    },
+    {
+        "city": "Oyo",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Sokoto",
+        "country": "Nigeria",
+        "state": "Sokoto"
+    },
+    {
+        "city": "Enugu",
+        "country": "Nigeria",
+        "state": "Enugu"
+    },
+    {
+        "city": "Bauchi",
+        "country": "Nigeria",
+        "state": "Bauchi"
+    },
+    {
+        "city": "Ile-Ife",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Aba",
+        "country": "Nigeria",
+        "state": "Abia"
+    },
+    {
+        "city": "Calabar",
+        "country": "Nigeria",
+        "state": "Cross River"
+    },
+    {
+        "city": "Ado-Ekiti",
+        "country": "Nigeria",
+        "state": "Ekiti"
+    },
+    {
+        "city": "Katsina",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Uyo",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Akure",
+        "country": "Nigeria",
+        "state": "Ondo"
+    },
+    {
+        "city": "Osogbo",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Zaria",
+        "country": "Nigeria",
+        "state": "Kaduna"
+    },
+    {
+        "city": "Yola",
+        "country": "Nigeria",
+        "state": "Adamawa"
+    },
+    {
+        "city": "Umuahia",
+        "country": "Nigeria",
+        "state": "Abia"
+    },
+    {
+        "city": "Sapele",
+        "country": "Nigeria",
+        "state": "Delta"
+    },
+    {
+        "city": "Minna",
+        "country": "Nigeria",
+        "state": "Niger"
+    },
+    {
+        "city": "Awka",
+        "country": "Nigeria",
+        "state": "Anambra"
+    },
+    {
+        "city": "Makurdi",
+        "country": "Nigeria",
+        "state": "Benue"
+    },
+    {
+        "city": "Owo",
+        "country": "Nigeria",
+        "state": "Ondo"
+    },
+    {
+        "city": "Gombe",
+        "country": "Nigeria",
+        "state": "Gombe"
+    },
+    {
+        "city": "Ondo",
+        "country": "Nigeria",
+        "state": "Ondo"
+    },
+    {
+        "city": "Damaturu",
+        "country": "Nigeria",
+        "state": "Yobe"
+    },
+    {
+        "city": "Iwo",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Gusau",
+        "country": "Nigeria",
+        "state": "Zamfara"
+    },
+    {
+        "city": "Mubi",
+        "country": "Nigeria",
+        "state": "Adamawa"
+    },
+    {
+        "city": "Apapa",
+        "country": "Nigeria",
+        "state": "Lagos"
+    },
+    {
+        "city": "Burutu",
+        "country": "Nigeria",
+        "state": "Delta"
+    },
+    {
+        "city": "Ijebu-Ode",
+        "country": "Nigeria",
+        "state": "Ogun"
+    },
+    {
+        "city": "Mai’Adua",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Epe",
+        "country": "Nigeria",
+        "state": "Lagos"
+    },
+    {
+        "city": "Funtua",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Bida",
+        "country": "Nigeria",
+        "state": "Niger"
+    },
+    {
+        "city": "Offa",
+        "country": "Nigeria",
+        "state": "Kwara"
+    },
+    {
+        "city": "Zango",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Dutse",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Lafia",
+        "country": "Nigeria",
+        "state": "Nasarawa"
+    },
+    {
+        "city": "Gashua",
+        "country": "Nigeria",
+        "state": "Yobe"
+    },
+    {
+        "city": "Bama",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Jalingo",
+        "country": "Nigeria",
+        "state": "Taraba"
+    },
+    {
+        "city": "Nsukka",
+        "country": "Nigeria",
+        "state": "Enugu"
+    },
+    {
+        "city": "Nguru",
+        "country": "Nigeria",
+        "state": "Yobe"
+    },
+    {
+        "city": "Birnin Kebbi",
+        "country": "Nigeria",
+        "state": "Kebbi"
+    },
+    {
+        "city": "Azare",
+        "country": "Nigeria",
+        "state": "Bauchi"
+    },
+    {
+        "city": "Kontagora",
+        "country": "Nigeria",
+        "state": "Niger"
+    },
+    {
+        "city": "Iseyin",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Biu",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Wukari",
+        "country": "Nigeria",
+        "state": "Taraba"
+    },
+    {
+        "city": "Potiskum",
+        "country": "Nigeria",
+        "state": "Yobe"
+    },
+    {
+        "city": "Keffi",
+        "country": "Nigeria",
+        "state": "Nasarawa"
+    },
+    {
+        "city": "Numan",
+        "country": "Nigeria",
+        "state": "Adamawa"
+    },
+    {
+        "city": "Idah",
+        "country": "Nigeria",
+        "state": "Kogi"
+    },
+    {
+        "city": "Otukpo",
+        "country": "Nigeria",
+        "state": "Benue"
+    },
+    {
+        "city": "Lokoja",
+        "country": "Nigeria",
+        "state": "Kogi"
+    },
+    {
+        "city": "Kumo",
+        "country": "Nigeria",
+        "state": "Gombe"
+    },
+    {
+        "city": "Ikot Abasi",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Orlu",
+        "country": "Nigeria",
+        "state": "Imo"
+    },
+    {
+        "city": "Ajegunle",
+        "country": "Nigeria",
+        "state": "Lagos"
+    },
+    {
+        "city": "Oshodi",
+        "country": "Nigeria",
+        "state": "Lagos"
+    },
+    {
+        "city": "Somolu",
+        "country": "Nigeria",
+        "state": "Lagos"
+    },
+    {
+        "city": "Ifako",
+        "country": "Nigeria",
+        "state": "Lagos"
+    },
+    {
+        "city": "Surulere",
+        "country": "Nigeria",
+        "state": "Lagos"
+    },
+    {
+        "city": "Mushin",
+        "country": "Nigeria",
+        "state": "Lagos"
+    },
+    {
+        "city": "Ebute-Metta",
+        "country": "Nigeria",
+        "state": "Lagos"
+    },
+    {
+        "city": "Ojota",
+        "country": "Nigeria",
+        "state": "Lagos"
+    },
+    {
+        "city": "Ikotun",
+        "country": "Nigeria",
+        "state": "Lagos"
+    },
+    {
+        "city": "Ikeja",
+        "country": "Nigeria",
+        "state": "Lagos"
+    },
+    {
+        "city": "Agege",
+        "country": "Nigeria",
+        "state": "Lagos"
+    },
+    {
+        "city": "Makera",
+        "country": "Nigeria",
+        "state": "Kaduna"
+    },
+    {
+        "city": "Umundugba",
+        "country": "Nigeria",
+        "state": "Imo"
+    },
+    {
+        "city": "Ojo",
+        "country": "Nigeria",
+        "state": "Lagos"
+    },
+    {
+        "city": "Okrika",
+        "country": "Nigeria",
+        "state": "Rivers"
+    },
+    {
+        "city": "Uselu",
+        "country": "Nigeria",
+        "state": "Edo"
+    },
+    {
+        "city": "Neni",
+        "country": "Nigeria",
+        "state": "Anambra"
+    },
+    {
+        "city": "Kpor",
+        "country": "Nigeria",
+        "state": "Rivers"
+    },
+    {
+        "city": "Ozubulu",
+        "country": "Nigeria",
+        "state": "Anambra"
+    },
+    {
+        "city": "Hadejia",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Festac Town",
+        "country": "Nigeria",
+        "state": "Lagos"
+    },
+    {
+        "city": "Buguma",
+        "country": "Nigeria",
+        "state": "Rivers"
+    },
+    {
+        "city": "Amaigbo",
+        "country": "Nigeria",
+        "state": "Imo"
+    },
+    {
+        "city": "Ungogo",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Ikoyi",
+        "country": "Nigeria",
+        "state": "Lagos"
+    },
+    {
+        "city": "Kumbotso",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Effurun",
+        "country": "Nigeria",
+        "state": "Delta"
+    },
+    {
+        "city": "Dikenafai",
+        "country": "Nigeria",
+        "state": "Imo"
+    },
+    {
+        "city": "Nnewi",
+        "country": "Nigeria",
+        "state": "Anambra"
+    },
+    {
+        "city": "Ojoto",
+        "country": "Nigeria",
+        "state": "Anambra"
+    },
+    {
+        "city": "Nnenasa",
+        "country": "Nigeria",
+        "state": "Imo"
+    },
+    {
+        "city": "Rumuodomaya",
+        "country": "Nigeria",
+        "state": "Rivers"
+    },
+    {
+        "city": "Itu",
+        "country": "Nigeria",
+        "state": "Imo"
+    },
+    {
+        "city": "Ilobu",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Afor-Oru",
+        "country": "Nigeria",
+        "state": "Imo"
+    },
+    {
+        "city": "Isinweke",
+        "country": "Nigeria",
+        "state": "Imo"
+    },
+    {
+        "city": "Ilesa",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Ogu",
+        "country": "Nigeria",
+        "state": "Rivers"
+    },
+    {
+        "city": "Nchia",
+        "country": "Nigeria",
+        "state": "Rivers"
+    },
+    {
+        "city": "Egbeda",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Ukpo",
+        "country": "Nigeria",
+        "state": "Anambra"
+    },
+    {
+        "city": "Abagana",
+        "country": "Nigeria",
+        "state": "Anambra"
+    },
+    {
+        "city": "Asaba",
+        "country": "Nigeria",
+        "state": "Delta"
+    },
+    {
+        "city": "Yenagoa",
+        "country": "Nigeria",
+        "state": "Bayelsa"
+    },
+    {
+        "city": "Abakaliki",
+        "country": "Nigeria",
+        "state": "Ebonyi"
+    },
+    {
+        "city": "Suleja",
+        "country": "Nigeria",
+        "state": "Niger"
+    },
+    {
+        "city": "Ikorodu",
+        "country": "Nigeria",
+        "state": "Lagos"
+    },
+    {
+        "city": "Ukpor",
+        "country": "Nigeria",
+        "state": "Anambra"
+    },
+    {
+        "city": "Ihiala",
+        "country": "Nigeria",
+        "state": "Anambra"
+    },
+    {
+        "city": "Mgbidi",
+        "country": "Nigeria",
+        "state": "Imo"
+    },
+    {
+        "city": "Umumma",
+        "country": "Nigeria",
+        "state": "Imo"
+    },
+    {
+        "city": "Nwaorieubi",
+        "country": "Nigeria",
+        "state": "Imo"
+    },
+    {
+        "city": "Iho",
+        "country": "Nigeria",
+        "state": "Imo"
+    },
+    {
+        "city": "Ogidi",
+        "country": "Nigeria",
+        "state": "Anambra"
+    },
+    {
+        "city": "Nteje",
+        "country": "Nigeria",
+        "state": "Anambra"
+    },
+    {
+        "city": "Fufu",
+        "country": "Nigeria",
+        "state": "Kwara"
+    },
+    {
+        "city": "Oron",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Saakpenwa",
+        "country": "Nigeria",
+        "state": "Rivers"
+    },
+    {
+        "city": "Sabon Gari",
+        "country": "Nigeria",
+        "state": "Kaduna"
+    },
+    {
+        "city": "Ifon",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Ngo",
+        "country": "Nigeria",
+        "state": "Rivers"
+    },
+    {
+        "city": "Aboh",
+        "country": "Nigeria",
+        "state": "Imo"
+    },
+    {
+        "city": "Okwe",
+        "country": "Nigeria",
+        "state": "Imo"
+    },
+    {
+        "city": "Ifo",
+        "country": "Nigeria",
+        "state": "Ogun"
+    },
+    {
+        "city": "Osisioma",
+        "country": "Nigeria",
+        "state": "Abia"
+    },
+    {
+        "city": "Mgboko",
+        "country": "Nigeria",
+        "state": "Abia"
+    },
+    {
+        "city": "Nkwerre",
+        "country": "Nigeria",
+        "state": "Imo"
+    },
+    {
+        "city": "Opobo",
+        "country": "Nigeria",
+        "state": "Rivers"
+    },
+    {
+        "city": "Umuelemai",
+        "country": "Nigeria",
+        "state": "Imo"
+    },
+    {
+        "city": "Ikot Ekpene",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Otor-Udu",
+        "country": "Nigeria",
+        "state": "Delta"
+    },
+    {
+        "city": "Otun-Ekiti",
+        "country": "Nigeria",
+        "state": "Ekiti"
+    },
+    {
+        "city": "Eyofin",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Etinan",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Eket",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Awo-Idemili",
+        "country": "Nigeria",
+        "state": "Imo"
+    },
+    {
+        "city": "Afaha Offiong",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Ilemona",
+        "country": "Nigeria",
+        "state": "Kwara"
+    },
+    {
+        "city": "Akanran",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Ikenne",
+        "country": "Nigeria",
+        "state": "Ogun"
+    },
+    {
+        "city": "Urualla",
+        "country": "Nigeria",
+        "state": "Imo"
+    },
+    {
+        "city": "Kuje",
+        "country": "Nigeria",
+        "state": "Federal Capital Territory"
+    },
+    {
+        "city": "Abat",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Nkwo Nike",
+        "country": "Nigeria",
+        "state": "Enugu"
+    },
+    {
+        "city": "Abak",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Nung Udoe",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Gezawa",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Ibagwa-Aka",
+        "country": "Nigeria",
+        "state": "Enugu"
+    },
+    {
+        "city": "Otu-Jeremi",
+        "country": "Nigeria",
+        "state": "Delta"
+    },
+    {
+        "city": "Umunze",
+        "country": "Nigeria",
+        "state": "Anambra"
+    },
+    {
+        "city": "Afikpo",
+        "country": "Nigeria",
+        "state": "Ebonyi"
+    },
+    {
+        "city": "Enugu-Ezike",
+        "country": "Nigeria",
+        "state": "Enugu"
+    },
+    {
+        "city": "Bomadi",
+        "country": "Nigeria",
+        "state": "Delta"
+    },
+    {
+        "city": "Iragbiji",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Ikirun",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Ikere-Ekiti",
+        "country": "Nigeria",
+        "state": "Ekiti"
+    },
+    {
+        "city": "Daura",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Dawakin Kudu",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Igbara-Oke",
+        "country": "Nigeria",
+        "state": "Ondo"
+    },
+    {
+        "city": "Obollo-Afor",
+        "country": "Nigeria",
+        "state": "Enugu"
+    },
+    {
+        "city": "Bukuru",
+        "country": "Nigeria",
+        "state": "Plateau"
+    },
+    {
+        "city": "Riyom",
+        "country": "Nigeria",
+        "state": "Plateau"
+    },
+    {
+        "city": "Afaha Ikot Ebak",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Nto Edino",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Aramoko-Ekiti",
+        "country": "Nigeria",
+        "state": "Ekiti"
+    },
+    {
+        "city": "Ile-Ogbo",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Ikot Edibon",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Okoroete",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Ijero-Ekiti",
+        "country": "Nigeria",
+        "state": "Ekiti"
+    },
+    {
+        "city": "Kura",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Omuo-Ekiti",
+        "country": "Nigeria",
+        "state": "Ekiti"
+    },
+    {
+        "city": "Oko Ita",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Ido-Ekiti",
+        "country": "Nigeria",
+        "state": "Ekiti"
+    },
+    {
+        "city": "Wudil",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Okpuala-Ngwa",
+        "country": "Nigeria",
+        "state": "Abia"
+    },
+    {
+        "city": "Ota",
+        "country": "Nigeria",
+        "state": "Ogun"
+    },
+    {
+        "city": "Ogbede",
+        "country": "Nigeria",
+        "state": "Enugu"
+    },
+    {
+        "city": "Akinima",
+        "country": "Nigeria",
+        "state": "Rivers"
+    },
+    {
+        "city": "Bori",
+        "country": "Nigeria",
+        "state": "Rivers"
+    },
+    {
+        "city": "Atani",
+        "country": "Nigeria",
+        "state": "Anambra"
+    },
+    {
+        "city": "Odot",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Isiala Oboro",
+        "country": "Nigeria",
+        "state": "Abia"
+    },
+    {
+        "city": "Urua Inyang",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Urue Offong",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Koguna",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Iyana-Ofa",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Dawakin Tofa",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Utu Etim Ekpo",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Minjibir",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Madobi",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Atan",
+        "country": "Nigeria",
+        "state": "Ogun"
+    },
+    {
+        "city": "Aguata",
+        "country": "Nigeria",
+        "state": "Anambra"
+    },
+    {
+        "city": "Ilawe-Ekiti",
+        "country": "Nigeria",
+        "state": "Ekiti"
+    },
+    {
+        "city": "Itu",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Akpafa",
+        "country": "Nigeria",
+        "state": "Kogi"
+    },
+    {
+        "city": "Badagry",
+        "country": "Nigeria",
+        "state": "Lagos"
+    },
+    {
+        "city": "Garun Malam",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Agbani",
+        "country": "Nigeria",
+        "state": "Enugu"
+    },
+    {
+        "city": "Mkpat Enin",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Isiokolo",
+        "country": "Nigeria",
+        "state": "Delta"
+    },
+    {
+        "city": "Itigidi",
+        "country": "Nigeria",
+        "state": "Cross River"
+    },
+    {
+        "city": "Gwarzo",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Isu",
+        "country": "Nigeria",
+        "state": "Ebonyi"
+    },
+    {
+        "city": "Omoba",
+        "country": "Nigeria",
+        "state": "Abia"
+    },
+    {
+        "city": "Kabo",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Rimin Gado",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Okigwe",
+        "country": "Nigeria",
+        "state": "Imo"
+    },
+    {
+        "city": "Tofa",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Efon-Alaaye",
+        "country": "Nigeria",
+        "state": "Ekiti"
+    },
+    {
+        "city": "Obiozara",
+        "country": "Nigeria",
+        "state": "Ebonyi"
+    },
+    {
+        "city": "Bwari",
+        "country": "Nigeria",
+        "state": "Federal Capital Territory"
+    },
+    {
+        "city": "Okuku",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Otan Ayegbaju",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Ahoada",
+        "country": "Nigeria",
+        "state": "Rivers"
+    },
+    {
+        "city": "Sandamu",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Bichi",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Apomu",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Ikire",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Ajalli",
+        "country": "Nigeria",
+        "state": "Anambra"
+    },
+    {
+        "city": "Nguzu Edda",
+        "country": "Nigeria",
+        "state": "Ebonyi"
+    },
+    {
+        "city": "Uquo",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Ikot Akpa Nkuk",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Ndeaboh",
+        "country": "Nigeria",
+        "state": "Enugu"
+    },
+    {
+        "city": "Onuebonyi Echara",
+        "country": "Nigeria",
+        "state": "Ebonyi"
+    },
+    {
+        "city": "Moniya",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Bagwai",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Enwang",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Gumel",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Iye-Ekiti",
+        "country": "Nigeria",
+        "state": "Ekiti"
+    },
+    {
+        "city": "Oka",
+        "country": "Nigeria",
+        "state": "Ondo"
+    },
+    {
+        "city": "Kazaure",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Arochukwu",
+        "country": "Nigeria",
+        "state": "Abia"
+    },
+    {
+        "city": "Bende",
+        "country": "Nigeria",
+        "state": "Abia"
+    },
+    {
+        "city": "Idogbo",
+        "country": "Nigeria",
+        "state": "Edo"
+    },
+    {
+        "city": "Awgu",
+        "country": "Nigeria",
+        "state": "Enugu"
+    },
+    {
+        "city": "Abua",
+        "country": "Nigeria",
+        "state": "Rivers"
+    },
+    {
+        "city": "Udi",
+        "country": "Nigeria",
+        "state": "Enugu"
+    },
+    {
+        "city": "Ebem Ohafia",
+        "country": "Nigeria",
+        "state": "Abia"
+    },
+    {
+        "city": "Batagarawa",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Bonny",
+        "country": "Nigeria",
+        "state": "Rivers"
+    },
+    {
+        "city": "Shagamu",
+        "country": "Nigeria",
+        "state": "Ogun"
+    },
+    {
+        "city": "Kaura Namoda",
+        "country": "Nigeria",
+        "state": "Zamfara"
+    },
+    {
+        "city": "Omoku",
+        "country": "Nigeria",
+        "state": "Rivers"
+    },
+    {
+        "city": "Dutsi",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Albasu",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Obudu",
+        "country": "Nigeria",
+        "state": "Cross River"
+    },
+    {
+        "city": "Idu",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Isiaka",
+        "country": "Nigeria",
+        "state": "Ebonyi"
+    },
+    {
+        "city": "Otuocha",
+        "country": "Nigeria",
+        "state": "Anambra"
+    },
+    {
+        "city": "Irrua",
+        "country": "Nigeria",
+        "state": "Edo"
+    },
+    {
+        "city": "Onueke",
+        "country": "Nigeria",
+        "state": "Ebonyi"
+    },
+    {
+        "city": "Ile-Oluji",
+        "country": "Nigeria",
+        "state": "Ondo"
+    },
+    {
+        "city": "Ughelli",
+        "country": "Nigeria",
+        "state": "Delta"
+    },
+    {
+        "city": "Sabon Wuse",
+        "country": "Nigeria",
+        "state": "Niger"
+    },
+    {
+        "city": "Tsanyawa",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Warawa",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Okopedi",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Ikot Ibritam",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Oghara",
+        "country": "Nigeria",
+        "state": "Delta"
+    },
+    {
+        "city": "Oke-Agbe",
+        "country": "Nigeria",
+        "state": "Ondo"
+    },
+    {
+        "city": "Bindawa",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Karaye",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Rano",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Bunkure",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Kibiya",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Afam",
+        "country": "Nigeria",
+        "state": "Rivers"
+    },
+    {
+        "city": "Upenekang",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Isara",
+        "country": "Nigeria",
+        "state": "Ogun"
+    },
+    {
+        "city": "Owa-Oyibu",
+        "country": "Nigeria",
+        "state": "Delta"
+    },
+    {
+        "city": "Garko",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Kwoi",
+        "country": "Nigeria",
+        "state": "Kaduna"
+    },
+    {
+        "city": "Ezzamgbo",
+        "country": "Nigeria",
+        "state": "Ebonyi"
+    },
+    {
+        "city": "Nkwoagu Isuochi",
+        "country": "Nigeria",
+        "state": "Abia"
+    },
+    {
+        "city": "Ode-Ekiti",
+        "country": "Nigeria",
+        "state": "Ekiti"
+    },
+    {
+        "city": "Hunkuyi",
+        "country": "Nigeria",
+        "state": "Kaduna"
+    },
+    {
+        "city": "Isua",
+        "country": "Nigeria",
+        "state": "Ondo"
+    },
+    {
+        "city": "Oleh",
+        "country": "Nigeria",
+        "state": "Delta"
+    },
+    {
+        "city": "Okeho",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Ikot Nakanda",
+        "country": "Nigeria",
+        "state": "Cross River"
+    },
+    {
+        "city": "Takai",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Igede-Ekiti",
+        "country": "Nigeria",
+        "state": "Ekiti"
+    },
+    {
+        "city": "Uromi",
+        "country": "Nigeria",
+        "state": "Edo"
+    },
+    {
+        "city": "Ejigbo",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Patani",
+        "country": "Nigeria",
+        "state": "Delta"
+    },
+    {
+        "city": "Mbalano",
+        "country": "Nigeria",
+        "state": "Abia"
+    },
+    {
+        "city": "Okehi",
+        "country": "Nigeria",
+        "state": "Rivers"
+    },
+    {
+        "city": "Eberi",
+        "country": "Nigeria",
+        "state": "Rivers"
+    },
+    {
+        "city": "Ise-Ekiti",
+        "country": "Nigeria",
+        "state": "Ekiti"
+    },
+    {
+        "city": "Dandume",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Ijebu-Igbo",
+        "country": "Nigeria",
+        "state": "Ogun"
+    },
+    {
+        "city": "Umuguma",
+        "country": "Nigeria",
+        "state": "Imo"
+    },
+    {
+        "city": "Kiru",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Abuochiche",
+        "country": "Nigeria",
+        "state": "Cross River"
+    },
+    {
+        "city": "Oke-Ila",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Zakirai",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Sumaila",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Rimi",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Emure-Ekiti",
+        "country": "Nigeria",
+        "state": "Ekiti"
+    },
+    {
+        "city": "Dutsin-Ma",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Ipokia",
+        "country": "Nigeria",
+        "state": "Ogun"
+    },
+    {
+        "city": "Zuru",
+        "country": "Nigeria",
+        "state": "Kebbi"
+    },
+    {
+        "city": "Bodinga",
+        "country": "Nigeria",
+        "state": "Sokoto"
+    },
+    {
+        "city": "Wamako",
+        "country": "Nigeria",
+        "state": "Sokoto"
+    },
+    {
+        "city": "Agbor",
+        "country": "Nigeria",
+        "state": "Delta"
+    },
+    {
+        "city": "Abonnema",
+        "country": "Nigeria",
+        "state": "Rivers"
+    },
+    {
+        "city": "Degema",
+        "country": "Nigeria",
+        "state": "Rivers"
+    },
+    {
+        "city": "Shanono",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Obangede",
+        "country": "Nigeria",
+        "state": "Kogi"
+    },
+    {
+        "city": "Ogaminana",
+        "country": "Nigeria",
+        "state": "Kogi"
+    },
+    {
+        "city": "Vandeikya",
+        "country": "Nigeria",
+        "state": "Benue"
+    },
+    {
+        "city": "Okitipupa",
+        "country": "Nigeria",
+        "state": "Ondo"
+    },
+    {
+        "city": "Okene",
+        "country": "Nigeria",
+        "state": "Kogi"
+    },
+    {
+        "city": "Oguta",
+        "country": "Nigeria",
+        "state": "Imo"
+    },
+    {
+        "city": "Ozoro",
+        "country": "Nigeria",
+        "state": "Delta"
+    },
+    {
+        "city": "Orerokpe",
+        "country": "Nigeria",
+        "state": "Delta"
+    },
+    {
+        "city": "Charanchi",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Oye-Ekiti",
+        "country": "Nigeria",
+        "state": "Ekiti"
+    },
+    {
+        "city": "Obiaruku",
+        "country": "Nigeria",
+        "state": "Delta"
+    },
+    {
+        "city": "Ugep",
+        "country": "Nigeria",
+        "state": "Cross River"
+    },
+    {
+        "city": "Rogo",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Isiokpo",
+        "country": "Nigeria",
+        "state": "Rivers"
+    },
+    {
+        "city": "Emuoha",
+        "country": "Nigeria",
+        "state": "Rivers"
+    },
+    {
+        "city": "Makarfi",
+        "country": "Nigeria",
+        "state": "Kaduna"
+    },
+    {
+        "city": "Achalla",
+        "country": "Nigeria",
+        "state": "Anambra"
+    },
+    {
+        "city": "Gwagwalada",
+        "country": "Nigeria",
+        "state": "Federal Capital Territory"
+    },
+    {
+        "city": "Shelleng",
+        "country": "Nigeria",
+        "state": "Adamawa"
+    },
+    {
+        "city": "Malumfashi",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Baure",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Ugbodo",
+        "country": "Nigeria",
+        "state": "Ebonyi"
+    },
+    {
+        "city": "Idi-Ayunre",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Anaku",
+        "country": "Nigeria",
+        "state": "Anambra"
+    },
+    {
+        "city": "Aguobu-Owa",
+        "country": "Nigeria",
+        "state": "Enugu"
+    },
+    {
+        "city": "Dambatta",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Danja",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Gulak",
+        "country": "Nigeria",
+        "state": "Adamawa"
+    },
+    {
+        "city": "Bebeji",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Akodo",
+        "country": "Nigeria",
+        "state": "Lagos"
+    },
+    {
+        "city": "Oke-Ikpe",
+        "country": "Nigeria",
+        "state": "Abia"
+    },
+    {
+        "city": "Yana",
+        "country": "Nigeria",
+        "state": "Bauchi"
+    },
+    {
+        "city": "Umuneke-Ngor",
+        "country": "Nigeria",
+        "state": "Imo"
+    },
+    {
+        "city": "Auyo",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Ilaro",
+        "country": "Nigeria",
+        "state": "Ogun"
+    },
+    {
+        "city": "Ajingi",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Gaya",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Oji River",
+        "country": "Nigeria",
+        "state": "Enugu"
+    },
+    {
+        "city": "Ijebu-Jesa",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Akwukwu-Igbo",
+        "country": "Nigeria",
+        "state": "Delta"
+    },
+    {
+        "city": "Ede",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Awo",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Khaddamari",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Billiri",
+        "country": "Nigeria",
+        "state": "Gombe"
+    },
+    {
+        "city": "Kafin Hausa",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Ekpoma",
+        "country": "Nigeria",
+        "state": "Edo"
+    },
+    {
+        "city": "Ogbia",
+        "country": "Nigeria",
+        "state": "Bayelsa"
+    },
+    {
+        "city": "Kusada",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Wurno",
+        "country": "Nigeria",
+        "state": "Sokoto"
+    },
+    {
+        "city": "Giade",
+        "country": "Nigeria",
+        "state": "Bauchi"
+    },
+    {
+        "city": "Okpoga",
+        "country": "Nigeria",
+        "state": "Benue"
+    },
+    {
+        "city": "Kiri Kasamma",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Odogbolu",
+        "country": "Nigeria",
+        "state": "Ogun"
+    },
+    {
+        "city": "Obarike-Ito",
+        "country": "Nigeria",
+        "state": "Benue"
+    },
+    {
+        "city": "Igbo-Ora",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Akwete",
+        "country": "Nigeria",
+        "state": "Abia"
+    },
+    {
+        "city": "Gwadabawa",
+        "country": "Nigeria",
+        "state": "Sokoto"
+    },
+    {
+        "city": "Nzam",
+        "country": "Nigeria",
+        "state": "Anambra"
+    },
+    {
+        "city": "Mani",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Sagbama",
+        "country": "Nigeria",
+        "state": "Bayelsa"
+    },
+    {
+        "city": "Ibokun",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Roni",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Gwiwa",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Issele-Uku",
+        "country": "Nigeria",
+        "state": "Delta"
+    },
+    {
+        "city": "Jama’are",
+        "country": "Nigeria",
+        "state": "Bauchi"
+    },
+    {
+        "city": "Bolorunduro",
+        "country": "Nigeria",
+        "state": "Ondo"
+    },
+    {
+        "city": "Bakori",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Kaura",
+        "country": "Nigeria",
+        "state": "Kaduna"
+    },
+    {
+        "city": "Michika",
+        "country": "Nigeria",
+        "state": "Adamawa"
+    },
+    {
+        "city": "Ringim",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Ingawa",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Misau",
+        "country": "Nigeria",
+        "state": "Bauchi"
+    },
+    {
+        "city": "Igbekebo",
+        "country": "Nigeria",
+        "state": "Ondo"
+    },
+    {
+        "city": "Matazu",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Bode Osi",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Gella",
+        "country": "Nigeria",
+        "state": "Adamawa"
+    },
+    {
+        "city": "Kalgo",
+        "country": "Nigeria",
+        "state": "Kebbi"
+    },
+    {
+        "city": "Birnin Kudu",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Ikara",
+        "country": "Nigeria",
+        "state": "Kaduna"
+    },
+    {
+        "city": "Odoro Ikpe",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Ibiaku Ntok Okpo",
+        "country": "Nigeria",
+        "state": "Akwa Ibom"
+    },
+    {
+        "city": "Jega",
+        "country": "Nigeria",
+        "state": "Kebbi"
+    },
+    {
+        "city": "Iboko",
+        "country": "Nigeria",
+        "state": "Ebonyi"
+    },
+    {
+        "city": "Karkarna",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Sabuwa",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Illela",
+        "country": "Nigeria",
+        "state": "Sokoto"
+    },
+    {
+        "city": "Enagi",
+        "country": "Nigeria",
+        "state": "Niger"
+    },
+    {
+        "city": "Tudun Wada",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Barkin Ladi",
+        "country": "Nigeria",
+        "state": "Plateau"
+    },
+    {
+        "city": "Ankpa",
+        "country": "Nigeria",
+        "state": "Kogi"
+    },
+    {
+        "city": "Kurfi",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Malam Madori",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Wannune",
+        "country": "Nigeria",
+        "state": "Benue"
+    },
+    {
+        "city": "Miga",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Maiha",
+        "country": "Nigeria",
+        "state": "Adamawa"
+    },
+    {
+        "city": "Kafur",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Umulona",
+        "country": "Nigeria",
+        "state": "Enugu"
+    },
+    {
+        "city": "Auchi",
+        "country": "Nigeria",
+        "state": "Edo"
+    },
+    {
+        "city": "Igbokoda",
+        "country": "Nigeria",
+        "state": "Ondo"
+    },
+    {
+        "city": "Binji",
+        "country": "Nigeria",
+        "state": "Sokoto"
+    },
+    {
+        "city": "Musawa",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Igarra",
+        "country": "Nigeria",
+        "state": "Edo"
+    },
+    {
+        "city": "Batsari",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Kaiama",
+        "country": "Nigeria",
+        "state": "Bayelsa"
+    },
+    {
+        "city": "Ifetedo",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Iju",
+        "country": "Nigeria",
+        "state": "Ondo"
+    },
+    {
+        "city": "Ita-Ogbolu",
+        "country": "Nigeria",
+        "state": "Ondo"
+    },
+    {
+        "city": "Taura",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Kware",
+        "country": "Nigeria",
+        "state": "Sokoto"
+    },
+    {
+        "city": "Jahun",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Ila Orangun",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Aliero",
+        "country": "Nigeria",
+        "state": "Kebbi"
+    },
+    {
+        "city": "Otukpa",
+        "country": "Nigeria",
+        "state": "Benue"
+    },
+    {
+        "city": "Mashi",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Kaita",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Gboko",
+        "country": "Nigeria",
+        "state": "Benue"
+    },
+    {
+        "city": "Warji",
+        "country": "Nigeria",
+        "state": "Bauchi"
+    },
+    {
+        "city": "Jobele",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Gamboru",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Amagunze",
+        "country": "Nigeria",
+        "state": "Enugu"
+    },
+    {
+        "city": "Kaltungo",
+        "country": "Nigeria",
+        "state": "Gombe"
+    },
+    {
+        "city": "Boh",
+        "country": "Nigeria",
+        "state": "Gombe"
+    },
+    {
+        "city": "Iresa-Adu",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Gwandu",
+        "country": "Nigeria",
+        "state": "Kebbi"
+    },
+    {
+        "city": "Tambuwal",
+        "country": "Nigeria",
+        "state": "Sokoto"
+    },
+    {
+        "city": "Kankia",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Ode-Irele",
+        "country": "Nigeria",
+        "state": "Ondo"
+    },
+    {
+        "city": "Gantsa",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Kwale",
+        "country": "Nigeria",
+        "state": "Delta"
+    },
+    {
+        "city": "Igumale",
+        "country": "Nigeria",
+        "state": "Benue"
+    },
+    {
+        "city": "Langtang",
+        "country": "Nigeria",
+        "state": "Plateau"
+    },
+    {
+        "city": "Dass",
+        "country": "Nigeria",
+        "state": "Bauchi"
+    },
+    {
+        "city": "Bajoga",
+        "country": "Nigeria",
+        "state": "Gombe"
+    },
+    {
+        "city": "Agenebode",
+        "country": "Nigeria",
+        "state": "Edo"
+    },
+    {
+        "city": "Ogoja",
+        "country": "Nigeria",
+        "state": "Cross River"
+    },
+    {
+        "city": "Igueben",
+        "country": "Nigeria",
+        "state": "Edo"
+    },
+    {
+        "city": "Silame",
+        "country": "Nigeria",
+        "state": "Sokoto"
+    },
+    {
+        "city": "Owode",
+        "country": "Nigeria",
+        "state": "Ogun"
+    },
+    {
+        "city": "Ikole-Ekiti",
+        "country": "Nigeria",
+        "state": "Ekiti"
+    },
+    {
+        "city": "Kankara",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Mangu",
+        "country": "Nigeria",
+        "state": "Plateau"
+    },
+    {
+        "city": "Argungu",
+        "country": "Nigeria",
+        "state": "Kebbi"
+    },
+    {
+        "city": "Birnin Magaji",
+        "country": "Nigeria",
+        "state": "Zamfara"
+    },
+    {
+        "city": "Ogwashi-Uku",
+        "country": "Nigeria",
+        "state": "Delta"
+    },
+    {
+        "city": "Kunchi",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Ezillo",
+        "country": "Nigeria",
+        "state": "Ebonyi"
+    },
+    {
+        "city": "Ikem",
+        "country": "Nigeria",
+        "state": "Enugu"
+    },
+    {
+        "city": "Dange",
+        "country": "Nigeria",
+        "state": "Sokoto"
+    },
+    {
+        "city": "Egbema",
+        "country": "Nigeria",
+        "state": "Imo"
+    },
+    {
+        "city": "Maigatari",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Ipetumodu",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Nembe",
+        "country": "Nigeria",
+        "state": "Bayelsa"
+    },
+    {
+        "city": "Ekeremor",
+        "country": "Nigeria",
+        "state": "Bayelsa"
+    },
+    {
+        "city": "Dambam",
+        "country": "Nigeria",
+        "state": "Bauchi"
+    },
+    {
+        "city": "Jibia",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Kiyawa",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Bunza",
+        "country": "Nigeria",
+        "state": "Kebbi"
+    },
+    {
+        "city": "Itas",
+        "country": "Nigeria",
+        "state": "Bauchi"
+    },
+    {
+        "city": "Oju",
+        "country": "Nigeria",
+        "state": "Benue"
+    },
+    {
+        "city": "Shinkafi",
+        "country": "Nigeria",
+        "state": "Zamfara"
+    },
+    {
+        "city": "Lessel",
+        "country": "Nigeria",
+        "state": "Benue"
+    },
+    {
+        "city": "Adikpo",
+        "country": "Nigeria",
+        "state": "Benue"
+    },
+    {
+        "city": "Iloffa",
+        "country": "Nigeria",
+        "state": "Kwara"
+    },
+    {
+        "city": "Bungudu",
+        "country": "Nigeria",
+        "state": "Zamfara"
+    },
+    {
+        "city": "Kaugama",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Giwa",
+        "country": "Nigeria",
+        "state": "Kaduna"
+    },
+    {
+        "city": "Obubra",
+        "country": "Nigeria",
+        "state": "Cross River"
+    },
+    {
+        "city": "Obi",
+        "country": "Nigeria",
+        "state": "Nasarawa"
+    },
+    {
+        "city": "Tse-Agberagba",
+        "country": "Nigeria",
+        "state": "Benue"
+    },
+    {
+        "city": "Saminaka",
+        "country": "Nigeria",
+        "state": "Kaduna"
+    },
+    {
+        "city": "Eruwa",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Gbongan",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Sankera",
+        "country": "Nigeria",
+        "state": "Benue"
+    },
+    {
+        "city": "Zing",
+        "country": "Nigeria",
+        "state": "Taraba"
+    },
+    {
+        "city": "Dan Musa",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Ajaawa",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Yabo",
+        "country": "Nigeria",
+        "state": "Sokoto"
+    },
+    {
+        "city": "Shagari",
+        "country": "Nigeria",
+        "state": "Sokoto"
+    },
+    {
+        "city": "Sabongida-Ora",
+        "country": "Nigeria",
+        "state": "Edo"
+    },
+    {
+        "city": "Safana",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Akpet Central",
+        "country": "Nigeria",
+        "state": "Cross River"
+    },
+    {
+        "city": "Fufore",
+        "country": "Nigeria",
+        "state": "Adamawa"
+    },
+    {
+        "city": "Girei",
+        "country": "Nigeria",
+        "state": "Adamawa"
+    },
+    {
+        "city": "Fugar",
+        "country": "Nigeria",
+        "state": "Edo"
+    },
+    {
+        "city": "Owena",
+        "country": "Nigeria",
+        "state": "Ondo"
+    },
+    {
+        "city": "Maigana",
+        "country": "Nigeria",
+        "state": "Kaduna"
+    },
+    {
+        "city": "Iperindo",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Gwaram",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Buruku",
+        "country": "Nigeria",
+        "state": "Benue"
+    },
+    {
+        "city": "Bogoro",
+        "country": "Nigeria",
+        "state": "Bauchi"
+    },
+    {
+        "city": "Oporoma",
+        "country": "Nigeria",
+        "state": "Bayelsa"
+    },
+    {
+        "city": "Akwanga",
+        "country": "Nigeria",
+        "state": "Nasarawa"
+    },
+    {
+        "city": "Okpo",
+        "country": "Nigeria",
+        "state": "Kogi"
+    },
+    {
+        "city": "Tsafe",
+        "country": "Nigeria",
+        "state": "Zamfara"
+    },
+    {
+        "city": "Iyara",
+        "country": "Nigeria",
+        "state": "Kogi"
+    },
+    {
+        "city": "Tunkus",
+        "country": "Nigeria",
+        "state": "Plateau"
+    },
+    {
+        "city": "Ubiaja",
+        "country": "Nigeria",
+        "state": "Edo"
+    },
+    {
+        "city": "Briyel",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Deba",
+        "country": "Nigeria",
+        "state": "Gombe"
+    },
+    {
+        "city": "Bassa",
+        "country": "Nigeria",
+        "state": "Plateau"
+    },
+    {
+        "city": "Nasarawa Egon",
+        "country": "Nigeria",
+        "state": "Nasarawa"
+    },
+    {
+        "city": "Turunku",
+        "country": "Nigeria",
+        "state": "Kaduna"
+    },
+    {
+        "city": "Ore",
+        "country": "Nigeria",
+        "state": "Ondo"
+    },
+    {
+        "city": "Mallam Sidi",
+        "country": "Nigeria",
+        "state": "Gombe"
+    },
+    {
+        "city": "Afuze",
+        "country": "Nigeria",
+        "state": "Edo"
+    },
+    {
+        "city": "Zonkwa",
+        "country": "Nigeria",
+        "state": "Kaduna"
+    },
+    {
+        "city": "Kafanchan",
+        "country": "Nigeria",
+        "state": "Kaduna"
+    },
+    {
+        "city": "Omu-Aran",
+        "country": "Nigeria",
+        "state": "Kwara"
+    },
+    {
+        "city": "Ugba",
+        "country": "Nigeria",
+        "state": "Benue"
+    },
+    {
+        "city": "Guyuk",
+        "country": "Nigeria",
+        "state": "Adamawa"
+    },
+    {
+        "city": "Talasse",
+        "country": "Nigeria",
+        "state": "Gombe"
+    },
+    {
+        "city": "Odo-Ere",
+        "country": "Nigeria",
+        "state": "Kogi"
+    },
+    {
+        "city": "Osu",
+        "country": "Nigeria",
+        "state": "Osun"
+    },
+    {
+        "city": "Besse",
+        "country": "Nigeria",
+        "state": "Kebbi"
+    },
+    {
+        "city": "Maiyama",
+        "country": "Nigeria",
+        "state": "Kebbi"
+    },
+    {
+        "city": "Okpoma",
+        "country": "Nigeria",
+        "state": "Cross River"
+    },
+    {
+        "city": "Gwoza",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Kisi",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Ugwolawo",
+        "country": "Nigeria",
+        "state": "Kogi"
+    },
+    {
+        "city": "Bokkos",
+        "country": "Nigeria",
+        "state": "Plateau"
+    },
+    {
+        "city": "Gada",
+        "country": "Nigeria",
+        "state": "Sokoto"
+    },
+    {
+        "city": "Igboho",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Anchau",
+        "country": "Nigeria",
+        "state": "Kaduna"
+    },
+    {
+        "city": "Katagum",
+        "country": "Nigeria",
+        "state": "Bauchi"
+    },
+    {
+        "city": "Gwantu",
+        "country": "Nigeria",
+        "state": "Kaduna"
+    },
+    {
+        "city": "Kwali",
+        "country": "Nigeria",
+        "state": "Federal Capital Territory"
+    },
+    {
+        "city": "Faskari",
+        "country": "Nigeria",
+        "state": "Katsina"
+    },
+    {
+        "city": "Goronyo",
+        "country": "Nigeria",
+        "state": "Sokoto"
+    },
+    {
+        "city": "Gagarawa",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Twon-Brass",
+        "country": "Nigeria",
+        "state": "Bayelsa"
+    },
+    {
+        "city": "Sankwala",
+        "country": "Nigeria",
+        "state": "Cross River"
+    },
+    {
+        "city": "Angware",
+        "country": "Nigeria",
+        "state": "Plateau"
+    },
+    {
+        "city": "Ugbokpo",
+        "country": "Nigeria",
+        "state": "Benue"
+    },
+    {
+        "city": "Kagarko",
+        "country": "Nigeria",
+        "state": "Kaduna"
+    },
+    {
+        "city": "Ririwai",
+        "country": "Nigeria",
+        "state": "Kano"
+    },
+    {
+        "city": "Zurmi",
+        "country": "Nigeria",
+        "state": "Zamfara"
+    },
+    {
+        "city": "Guri",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Garki",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Tafawa Balewa",
+        "country": "Nigeria",
+        "state": "Bauchi"
+    },
+    {
+        "city": "Kebbe",
+        "country": "Nigeria",
+        "state": "Sokoto"
+    },
+    {
+        "city": "Darazo",
+        "country": "Nigeria",
+        "state": "Bauchi"
+    },
+    {
+        "city": "Abaji",
+        "country": "Nigeria",
+        "state": "Federal Capital Territory"
+    },
+    {
+        "city": "Ido",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Araromi-Opin",
+        "country": "Nigeria",
+        "state": "Kwara"
+    },
+    {
+        "city": "Onyedega",
+        "country": "Nigeria",
+        "state": "Kogi"
+    },
+    {
+        "city": "Naka",
+        "country": "Nigeria",
+        "state": "Benue"
+    },
+    {
+        "city": "Lamurde",
+        "country": "Nigeria",
+        "state": "Adamawa"
+    },
+    {
+        "city": "Gamawa",
+        "country": "Nigeria",
+        "state": "Bauchi"
+    },
+    {
+        "city": "Isanlu",
+        "country": "Nigeria",
+        "state": "Kogi"
+    },
+    {
+        "city": "Pankshin",
+        "country": "Nigeria",
+        "state": "Plateau"
+    },
+    {
+        "city": "Kwal",
+        "country": "Nigeria",
+        "state": "Plateau"
+    },
+    {
+        "city": "Otu",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Maikunkele",
+        "country": "Nigeria",
+        "state": "Niger"
+    },
+    {
+        "city": "Sabon Birni",
+        "country": "Nigeria",
+        "state": "Sokoto"
+    },
+    {
+        "city": "Ayetoro",
+        "country": "Nigeria",
+        "state": "Ogun"
+    },
+    {
+        "city": "Jajimaji",
+        "country": "Nigeria",
+        "state": "Yobe"
+    },
+    {
+        "city": "Ifon",
+        "country": "Nigeria",
+        "state": "Ondo"
+    },
+    {
+        "city": "Owu-Isin",
+        "country": "Nigeria",
+        "state": "Kwara"
+    },
+    {
+        "city": "Obagaji",
+        "country": "Nigeria",
+        "state": "Benue"
+    },
+    {
+        "city": "Adogo",
+        "country": "Nigeria",
+        "state": "Kogi"
+    },
+    {
+        "city": "Itori",
+        "country": "Nigeria",
+        "state": "Ogun"
+    },
+    {
+        "city": "Sabon Garin Nangere",
+        "country": "Nigeria",
+        "state": "Yobe"
+    },
+    {
+        "city": "Ganye",
+        "country": "Nigeria",
+        "state": "Adamawa"
+    },
+    {
+        "city": "Maradun",
+        "country": "Nigeria",
+        "state": "Zamfara"
+    },
+    {
+        "city": "Babura",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Sule Tankarkar",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Birniwa",
+        "country": "Nigeria",
+        "state": "Jigawa"
+    },
+    {
+        "city": "Effraya",
+        "country": "Nigeria",
+        "state": "Cross River"
+    },
+    {
+        "city": "Dakingari",
+        "country": "Nigeria",
+        "state": "Kebbi"
+    },
+    {
+        "city": "Shani",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Koko",
+        "country": "Nigeria",
+        "state": "Delta"
+    },
+    {
+        "city": "Shanga",
+        "country": "Nigeria",
+        "state": "Kebbi"
+    },
+    {
+        "city": "Katsina-Ala",
+        "country": "Nigeria",
+        "state": "Benue"
+    },
+    {
+        "city": "Ogbe-Ijoh",
+        "country": "Nigeria",
+        "state": "Delta"
+    },
+    {
+        "city": "Baap",
+        "country": "Nigeria",
+        "state": "Plateau"
+    },
+    {
+        "city": "Ayete",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Gawu Babangida",
+        "country": "Nigeria",
+        "state": "Niger"
+    },
+    {
+        "city": "Abigi",
+        "country": "Nigeria",
+        "state": "Ogun"
+    },
+    {
+        "city": "Shendam",
+        "country": "Nigeria",
+        "state": "Plateau"
+    },
+    {
+        "city": "Ikom",
+        "country": "Nigeria",
+        "state": "Cross River"
+    },
+    {
+        "city": "Kauru",
+        "country": "Nigeria",
+        "state": "Kaduna"
+    },
+    {
+        "city": "Karu",
+        "country": "Nigeria",
+        "state": "Nasarawa"
+    },
+    {
+        "city": "Igbeti",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Odeda",
+        "country": "Nigeria",
+        "state": "Ogun"
+    },
+    {
+        "city": "Demsa",
+        "country": "Nigeria",
+        "state": "Adamawa"
+    },
+    {
+        "city": "Ikoyi-Ile",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Talata Mafara",
+        "country": "Nigeria",
+        "state": "Zamfara"
+    },
+    {
+        "city": "Bakura",
+        "country": "Nigeria",
+        "state": "Zamfara"
+    },
+    {
+        "city": "Lafiagi",
+        "country": "Nigeria",
+        "state": "Kwara"
+    },
+    {
+        "city": "Afon",
+        "country": "Nigeria",
+        "state": "Kwara"
+    },
+    {
+        "city": "Jimeta",
+        "country": "Nigeria",
+        "state": "Adamawa"
+    },
+    {
+        "city": "Koton-Karfe",
+        "country": "Nigeria",
+        "state": "Kogi"
+    },
+    {
+        "city": "Abudu",
+        "country": "Nigeria",
+        "state": "Edo"
+    },
+    {
+        "city": "Ribah",
+        "country": "Nigeria",
+        "state": "Kebbi"
+    },
+    {
+        "city": "Kwaya Kusar",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Augie",
+        "country": "Nigeria",
+        "state": "Kebbi"
+    },
+    {
+        "city": "Sarkin Pawa",
+        "country": "Nigeria",
+        "state": "Niger"
+    },
+    {
+        "city": "Kujama",
+        "country": "Nigeria",
+        "state": "Kaduna"
+    },
+    {
+        "city": "Keana",
+        "country": "Nigeria",
+        "state": "Nasarawa"
+    },
+    {
+        "city": "Mabudi",
+        "country": "Nigeria",
+        "state": "Plateau"
+    },
+    {
+        "city": "Nafada",
+        "country": "Nigeria",
+        "state": "Gombe"
+    },
+    {
+        "city": "Ningi",
+        "country": "Nigeria",
+        "state": "Bauchi"
+    },
+    {
+        "city": "Ajaka",
+        "country": "Nigeria",
+        "state": "Kogi"
+    },
+    {
+        "city": "Paiko",
+        "country": "Nigeria",
+        "state": "Niger"
+    },
+    {
+        "city": "Dekina",
+        "country": "Nigeria",
+        "state": "Kogi"
+    },
+    {
+        "city": "Oguma",
+        "country": "Nigeria",
+        "state": "Kogi"
+    },
+    {
+        "city": "Lemu",
+        "country": "Nigeria",
+        "state": "Niger"
+    },
+    {
+        "city": "Agaie",
+        "country": "Nigeria",
+        "state": "Niger"
+    },
+    {
+        "city": "Katcha",
+        "country": "Nigeria",
+        "state": "Niger"
+    },
+    {
+        "city": "Isa",
+        "country": "Nigeria",
+        "state": "Sokoto"
+    },
+    {
+        "city": "Gbajimba",
+        "country": "Nigeria",
+        "state": "Benue"
+    },
+    {
+        "city": "Jada",
+        "country": "Nigeria",
+        "state": "Adamawa"
+    },
+    {
+        "city": "Mayo-Belwa",
+        "country": "Nigeria",
+        "state": "Adamawa"
+    },
+    {
+        "city": "Gombi",
+        "country": "Nigeria",
+        "state": "Adamawa"
+    },
+    {
+        "city": "Sakaba",
+        "country": "Nigeria",
+        "state": "Kebbi"
+    },
+    {
+        "city": "Aliade",
+        "country": "Nigeria",
+        "state": "Benue"
+    },
+    {
+        "city": "Askira",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Ago-Amodu",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Saki",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Fika",
+        "country": "Nigeria",
+        "state": "Yobe"
+    },
+    {
+        "city": "Kamba",
+        "country": "Nigeria",
+        "state": "Kebbi"
+    },
+    {
+        "city": "Mokwa",
+        "country": "Nigeria",
+        "state": "Niger"
+    },
+    {
+        "city": "Pantisawa",
+        "country": "Nigeria",
+        "state": "Taraba"
+    },
+    {
+        "city": "Aboh",
+        "country": "Nigeria",
+        "state": "Delta"
+    },
+    {
+        "city": "Takum",
+        "country": "Nigeria",
+        "state": "Taraba"
+    },
+    {
+        "city": "Okada",
+        "country": "Nigeria",
+        "state": "Edo"
+    },
+    {
+        "city": "Bukkuyum",
+        "country": "Nigeria",
+        "state": "Zamfara"
+    },
+    {
+        "city": "Gummi",
+        "country": "Nigeria",
+        "state": "Zamfara"
+    },
+    {
+        "city": "Boje",
+        "country": "Nigeria",
+        "state": "Cross River"
+    },
+    {
+        "city": "Damagum",
+        "country": "Nigeria",
+        "state": "Yobe"
+    },
+    {
+        "city": "Gubio",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Wara",
+        "country": "Nigeria",
+        "state": "Kebbi"
+    },
+    {
+        "city": "Jakusko",
+        "country": "Nigeria",
+        "state": "Yobe"
+    },
+    {
+        "city": "Mahuta",
+        "country": "Nigeria",
+        "state": "Kebbi"
+    },
+    {
+        "city": "Abejukolo",
+        "country": "Nigeria",
+        "state": "Kogi"
+    },
+    {
+        "city": "Hong",
+        "country": "Nigeria",
+        "state": "Adamawa"
+    },
+    {
+        "city": "Wamba",
+        "country": "Nigeria",
+        "state": "Nasarawa"
+    },
+    {
+        "city": "Azare",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Garaku",
+        "country": "Nigeria",
+        "state": "Nasarawa"
+    },
+    {
+        "city": "Rijau",
+        "country": "Nigeria",
+        "state": "Niger"
+    },
+    {
+        "city": "Anka",
+        "country": "Nigeria",
+        "state": "Zamfara"
+    },
+    {
+        "city": "Kirfi",
+        "country": "Nigeria",
+        "state": "Bauchi"
+    },
+    {
+        "city": "Ehor",
+        "country": "Nigeria",
+        "state": "Edo"
+    },
+    {
+        "city": "Share",
+        "country": "Nigeria",
+        "state": "Kwara"
+    },
+    {
+        "city": "Dukku",
+        "country": "Nigeria",
+        "state": "Gombe"
+    },
+    {
+        "city": "Rabah",
+        "country": "Nigeria",
+        "state": "Sokoto"
+    },
+    {
+        "city": "Kutigi",
+        "country": "Nigeria",
+        "state": "Niger"
+    },
+    {
+        "city": "Dengi",
+        "country": "Nigeria",
+        "state": "Plateau"
+    },
+    {
+        "city": "Kagara",
+        "country": "Nigeria",
+        "state": "Niger"
+    },
+    {
+        "city": "Alkaleri",
+        "country": "Nigeria",
+        "state": "Bauchi"
+    },
+    {
+        "city": "Kachia",
+        "country": "Nigeria",
+        "state": "Kaduna"
+    },
+    {
+        "city": "Doma",
+        "country": "Nigeria",
+        "state": "Nasarawa"
+    },
+    {
+        "city": "Kafin Madaki",
+        "country": "Nigeria",
+        "state": "Bauchi"
+    },
+    {
+        "city": "Imeko",
+        "country": "Nigeria",
+        "state": "Ogun"
+    },
+    {
+        "city": "Kabba",
+        "country": "Nigeria",
+        "state": "Kogi"
+    },
+    {
+        "city": "Tureta",
+        "country": "Nigeria",
+        "state": "Sokoto"
+    },
+    {
+        "city": "Dikwa",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Machina",
+        "country": "Nigeria",
+        "state": "Yobe"
+    },
+    {
+        "city": "Nasko",
+        "country": "Nigeria",
+        "state": "Niger"
+    },
+    {
+        "city": "Ogbere",
+        "country": "Nigeria",
+        "state": "Ogun"
+    },
+    {
+        "city": "Rann",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Toro",
+        "country": "Nigeria",
+        "state": "Bauchi"
+    },
+    {
+        "city": "Mopa",
+        "country": "Nigeria",
+        "state": "Kogi"
+    },
+    {
+        "city": "Bagudo",
+        "country": "Nigeria",
+        "state": "Kebbi"
+    },
+    {
+        "city": "Kajuru",
+        "country": "Nigeria",
+        "state": "Kaduna"
+    },
+    {
+        "city": "Chibok",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Iguobazuwa",
+        "country": "Nigeria",
+        "state": "Edo"
+    },
+    {
+        "city": "Kukawa",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Gidan Madi",
+        "country": "Nigeria",
+        "state": "Sokoto"
+    },
+    {
+        "city": "Kuta",
+        "country": "Nigeria",
+        "state": "Niger"
+    },
+    {
+        "city": "Bara",
+        "country": "Nigeria",
+        "state": "Yobe"
+    },
+    {
+        "city": "Gembu",
+        "country": "Nigeria",
+        "state": "Taraba"
+    },
+    {
+        "city": "Iwere-Ile",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Wushishi",
+        "country": "Nigeria",
+        "state": "Niger"
+    },
+    {
+        "city": "Marte",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Song",
+        "country": "Nigeria",
+        "state": "Adamawa"
+    },
+    {
+        "city": "Toto",
+        "country": "Nigeria",
+        "state": "Nasarawa"
+    },
+    {
+        "city": "Gudumbali",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Monguno",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Awe",
+        "country": "Nigeria",
+        "state": "Nasarawa"
+    },
+    {
+        "city": "Birnin Gwari",
+        "country": "Nigeria",
+        "state": "Kaduna"
+    },
+    {
+        "city": "Mutum Biyu",
+        "country": "Nigeria",
+        "state": "Taraba"
+    },
+    {
+        "city": "Gajiram",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Tede",
+        "country": "Nigeria",
+        "state": "Oyo"
+    },
+    {
+        "city": "Buni Yadi",
+        "country": "Nigeria",
+        "state": "Yobe"
+    },
+    {
+        "city": "Lapai",
+        "country": "Nigeria",
+        "state": "Niger"
+    },
+    {
+        "city": "Donga",
+        "country": "Nigeria",
+        "state": "Taraba"
+    },
+    {
+        "city": "Kangiwa",
+        "country": "Nigeria",
+        "state": "Kebbi"
+    },
+    {
+        "city": "Maru",
+        "country": "Nigeria",
+        "state": "Zamfara"
+    },
+    {
+        "city": "Geidam",
+        "country": "Nigeria",
+        "state": "Yobe"
+    },
+    {
+        "city": "Patigi",
+        "country": "Nigeria",
+        "state": "Kwara"
+    },
+    {
+        "city": "Damboa",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Damasak",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Lissam",
+        "country": "Nigeria",
+        "state": "Taraba"
+    },
+    {
+        "city": "Mafa",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Agwara",
+        "country": "Nigeria",
+        "state": "Niger"
+    },
+    {
+        "city": "Yelwa",
+        "country": "Nigeria",
+        "state": "Kebbi"
+    },
+    {
+        "city": "Sunkani",
+        "country": "Nigeria",
+        "state": "Taraba"
+    },
+    {
+        "city": "Bangi",
+        "country": "Nigeria",
+        "state": "Niger"
+    },
+    {
+        "city": "Oke-Oyi",
+        "country": "Nigeria",
+        "state": "Kwara"
+    },
+    {
+        "city": "Bode Saadu",
+        "country": "Nigeria",
+        "state": "Kwara"
+    },
+    {
+        "city": "Benisheikh",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Nasarawa",
+        "country": "Nigeria",
+        "state": "Nasarawa"
+    },
+    {
+        "city": "Ibi",
+        "country": "Nigeria",
+        "state": "Taraba"
+    },
+    {
+        "city": "Dapchi",
+        "country": "Nigeria",
+        "state": "Yobe"
+    },
+    {
+        "city": "Lau",
+        "country": "Nigeria",
+        "state": "Taraba"
+    },
+    {
+        "city": "Karim Lamido",
+        "country": "Nigeria",
+        "state": "Taraba"
+    },
+    {
+        "city": "Magumeri",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Konduga",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Odukpani",
+        "country": "Nigeria",
+        "state": "Cross River"
+    },
+    {
+        "city": "Akamkpa",
+        "country": "Nigeria",
+        "state": "Cross River"
+    },
+    {
+        "city": "Yusufari",
+        "country": "Nigeria",
+        "state": "Yobe"
+    },
+    {
+        "city": "Mallam Fatori",
+        "country": "Nigeria",
+        "state": "Borno"
+    },
+    {
+        "city": "Wase",
+        "country": "Nigeria",
+        "state": "Plateau"
+    },
+    {
+        "city": "Bali",
+        "country": "Nigeria",
+        "state": "Taraba"
+    },
+    {
+        "city": "Mashegu",
+        "country": "Nigeria",
+        "state": "Niger"
+    },
+    {
+        "city": "Balle",
+        "country": "Nigeria",
+        "state": "Sokoto"
+    },
+    {
+        "city": "Kosubosu",
+        "country": "Nigeria",
+        "state": "Kwara"
+    },
+    {
+        "city": "Kanamma",
+        "country": "Nigeria",
+        "state": "Yobe"
+    },
+    {
+        "city": "Baissa",
+        "country": "Nigeria",
+        "state": "Taraba"
+    },
+    {
+        "city": "Babban Gida",
+        "country": "Nigeria",
+        "state": "Yobe"
+    },
+    {
+        "city": "New Bussa",
+        "country": "Nigeria",
+        "state": "Niger"
+    },
+    {
+        "city": "Kaiama",
+        "country": "Nigeria",
+        "state": "Kwara"
+    },
+    {
+        "city": "Toungo",
+        "country": "Nigeria",
+        "state": "Adamawa"
+    },
+    {
+        "city": "Serti",
+        "country": "Nigeria",
+        "state": "Taraba"
+    }
+]

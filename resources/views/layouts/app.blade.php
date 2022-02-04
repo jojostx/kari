@@ -17,6 +17,12 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
+    @livewireStyles
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -72,12 +78,12 @@
                         </div>
                     </div>
                 </header>
-                
+
                 {{ $slot }}
 
                 <x-footer />
             </div>
-           
+
         </div>
     </div>
 
@@ -90,6 +96,9 @@
     @endif
 
     <x-alert-toast-sms-verification />
+
+
+    @livewireScripts
 </body>
 
 </html>

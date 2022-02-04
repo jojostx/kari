@@ -3,7 +3,9 @@
 use App\Http\Controllers\Static\HelpCenterController;
 use App\Http\Controllers\Static\SeenCookiePolicyController;
 use App\Http\Livewire\Customer\App\AccountSettings;
+use App\Http\Livewire\Customer\App\Dashboard;
 use App\Http\Livewire\Customer\App\History;
+use App\Http\Livewire\Customer\App\InvestmentCreate;
 use App\Http\Livewire\Customer\App\Investments;
 use App\Http\Livewire\Customer\App\Payments;
 use App\Http\Livewire\Customer\App\Payouts;
@@ -49,11 +51,15 @@ Route::middleware(['throttle:xhrFormRequest'])->group(function () {
 
 Route::middleware(['auth', 'customer'])
     ->group(function () {
-        Route::get('/dashboard', Investments::class)->name('dashboard');
+        Route::get('/dashboard', Dashboard::class)->name('dashboard');
 
-        Route::get('/subscriptions', Subscriptions::class)->name('subscriptions');
-        
-        Route::get('/payments', Payments::class)->name('payments');
+        Route::name('investments.')->prefix('investments')->group(function () {            
+            Route::get('/', Investments::class)->name('index');
+           
+            Route::get('/create', InvestmentCreate::class)->name('create');
+            
+            Route::get('/{payment}/approve', Investments::class)->name('approve');
+          });
         
         Route::get('/payouts', Payouts::class)->name('payouts');
         

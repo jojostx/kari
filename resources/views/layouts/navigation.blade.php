@@ -39,22 +39,12 @@
 
                     <ul class="mt-2 -mx-3 space-y-1 text-sm">
                         <li>
-                            <a href="{{ route('subscriptions') }}" class="flex items-center gap-3 px-3 py-2 font-medium @if (request()->routeIs('subscriptions'))  bg-gray-800 text-white hover:text-white @else hover:bg-gray-500/5 focus:bg-gray-500/5 @endif transition rounded-lg">
+                            <a href="{{ route('investments.index') }}" class="flex items-center gap-3 px-3 py-2 font-medium @if (request()->routeIs('investments.*'))  bg-gray-800 text-white hover:text-white @else hover:bg-gray-500/5 focus:bg-gray-500/5 @endif transition rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                                 </svg>
                                 <span>
-                                    Subscriptions
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('payments') }}" class="flex items-center gap-3 px-3 py-2 font-medium @if (request()->routeIs('payments'))  bg-gray-800 text-white hover:text-white @else hover:bg-gray-500/5 focus:bg-gray-500/5 @endif transition rounded-lg">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                                </svg>
-                                <span>
-                                    Payments
+                                    Investments
                                 </span>
                             </a>
                         </li>

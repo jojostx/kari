@@ -13,14 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('plans', function (Blueprint $table) {
+        Schema::create('user_addresses', function (Blueprint $table) {
             $table->id();
-            $table->uuid('tag');
-            $table->text('icon')->nullable();
-            $table->string('name')->unique();
-            $table->unsignedInteger('principal')->unique();
-            $table->float(column: 'interest', total: 4, places: 3, unsigned: true);
-            $table->float(column: 'bonus', total: 4, places: 3, unsigned: true);
+            $table->foreignId('user_id')->constrained();
+            $table->string('state')->index()->nullable();
+            $table->string('city')->index()->nullable();
+            $table->text('address')->nullable();
+            $table->string('postcode')->index()->nullable();
             $table->timestamps();
         });
     }
@@ -32,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('plans');
+        Schema::dropIfExists('user_addresses');
     }
 };

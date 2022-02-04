@@ -29,7 +29,7 @@ class Subscription extends Model
         'ends_at' => 'datetime',
     ];
 
-     /**
+    /**
      * The customer who made the payment.
      */
     public function customer()
@@ -52,5 +52,4 @@ class Subscription extends Model
     {
         return $this->belongsTo(Payment::class);
     }
-
 }
