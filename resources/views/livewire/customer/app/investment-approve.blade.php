@@ -1,77 +1,50 @@
 <div class="flex flex-col items-center w-full mt-6">
     <div class="w-full max-w-[840px] mx-auto px-4 md:px-6 lg:px-8">
-        <p class="mb-4 text-sm font-bold tracking-wide sm:text-base">INVESTMENTS</p>
+        <p class="mb-4 text-sm font-bold tracking-wide sm:text-base">
+            <a href="{{ route('investments.index') }}">
+                INVESTMENTS
+            </a>
+            <span>
+                /
+            </span>
+            <span>
+                APPROVE {{ $payment->tag }}
+            </span>
+        </p>
         <!-- desktop summary card -->
-        <div class="grid gap-4 p-6 bg-white border rounded-lg shadow-sm md:grid-cols-2">
-            <div class="">
-                <div class="py-2 text-gray-600 md:col-span-2">
-                    <div class="font-medium">Investment requirements:</div>
-                    <div class="text-sm text-gray-500">Ensure that these requirements are met:</div>
-                    <ul class="pl-4 text-xs leading-5 text-gray-500">
-                        <li class="">1. At least 10 characters (and up to 100 characters)</li>
-                        <li class="">2. At least one lowercase character</li>
-                        <li class="">3. Inclusion of at least one special character, e.g., ! @ # ?</li>
-                    </ul>
-                </div>
+        <div class="grid p-6 bg-white border rounded-lg shadow-sm md:grid-cols-5 gap-x-6">
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 col-span-full">
+                <dl>
+                    <dt class="text-sm font-medium leading-5 text-gray-500 ">Plan Type</dt>
+                    <dd class="text-sm font-medium leading-5 uppercase">{{ $payment->plan->name }} </dd>
+                </dl>
+                <dl>
+                    <dt class="text-sm font-medium leading-5 text-gray-500 ">Plan Tag</dt>
+                    <dd class="text-sm font-medium leading-5">{{ $payment->tag }}</dd>
+                </dl>
+                <dl>
+                    <dt class="text-sm font-medium leading-5 text-gray-500 ">Payment Principal</dt>
+                    <dd class="text-sm font-medium leading-5">£ {{ number_format($payment->plan->principal) }}</dd>
+                </dl>
+                <dl>
+                    <dt class="text-sm font-medium leading-5 text-gray-500 ">Payment Interest</dt>
+                    <dd class="text-sm font-medium leading-5">{{ $payment->plan->interest * 100 }}%</dd>
+                </dl>
             </div>
-            <div class="flex items-center justify-center ">
-                <a href="{{ route('investments.create') }}" class="flex items-center gap-3 px-3 py-2 font-medium text-white transition bg-gray-800 rounded-lg hover:text-white hover:bg-gray-700 focus:bg-gray-700">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                    </svg>
-                    <span>
-                        Create New Investment
-                    </span>
-                </a>
-            </div>
-        </div>
 
-        
-        <div class="mt-8">
-            <p class="mb-4 font-bold tracking-wide sm:text-lg">Pending Payments</p>
-            {{ $this->table }}
-        </div>
-        
-        <div class="mt-8">
-            <p class="mb-4 font-bold tracking-wide sm:text-lg">Subscriptions/Approved Payments</p>
-            <div class="grid gap-4 sm:grid-cols-2">
-                @foreach ($subscriptions as $subscription)
-                <div class="col-span-1 flex items-center px-3 py-3 bg-[#F1F1F1] border-b border-gray-300 rounded-md shadow-md sm:px-4 sm:pt-4">
-                    <div class="flex items-center justify-center h-24 p-3 bg-white rounded-md shrink w-28">
-                        {!! $subscription->plan->icon !!}
-                    </div>
-                    <div class="grid w-full grid-cols-2 grid-rows-3 gap-2 ml-3">
-                        <div>
-                            <p class="text-xs font-semibold text-gray-500">Type</p>
-                            <h2 class="text-sm font-semibold text-gray-800 uppercase">{{ $subscription->plan['name'] }}</h2>
-                        </div>
-                        <div>
-                            </div>
-                            <div>
-                                <p class="text-xs font-semibold text-gray-500 ">Principal</p>
-                            <h2 class="text-sm font-semibold text-gray-800">£{{ number_format($subscription['principal']) }}</h2>
-                        </div>
-                        <div>
-                            <p class="text-xs font-semibold text-gray-500">Interest</p>
-                            <h2 class="text-sm font-semibold text-gray-800">{{ $subscription['interest'] * 100 }}%</h2>
-                        </div>
-                        <div>
-                            <p class="text-xs font-semibold text-gray-500">Start</p>
-                            <h2 class="text-sm font-semibold text-gray-800">{{ $subscription['created_at']->format('M jS, Y') }}</h2>
-                        </div>
-                        <div>
-                            <p class="text-xs font-semibold text-gray-500">End</p>
-                            <h2 class="text-sm font-semibold text-gray-800">{{ $subscription['ends_at']->format('M jS, Y') }}</h2>
-                        </div>
-                    </div>
+            <div class="mt-6 md:col-span-full">
+                {{ $this->form }}
+                <div class="mt-4">
+                    <x-button wire:loading.attr="disabled" wire:target="submit" wire:click="submit">
+                        Submit
+                    </x-button>
                 </div>
-                @endforeach
             </div>
         </div>
 
         <div class="mt-6">
             <p class="mb-4 font-bold tracking-wide sm:text-lg">Help</p>
-            
+
             <div class="p-4 bg-white border rounded-lg shadow-sm">
                 <div>
                     <a href="{{ route('contact') }}" class="flex items-center gap-3 px-3 py-4 font-medium transition border-b border-gray-200 rounded-lg hover:text-blue-700 focus:text-gray-700">
@@ -128,6 +101,4 @@
             </div>
         </div>
     </div>
-    
-    <p class="hidden text-blue-600"></p>
 </div>

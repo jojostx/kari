@@ -8,28 +8,54 @@
                     <div class="text-gray-600 col-span-full">
                         <p>Personal Information</p>
                     </div>
-                    
+
                     <div class="mt-6">
                         {{ $this->personalInfoForm }}
                     </div>
 
-                    <x-button class="mt-6" wire:click="save">
-                        Update
-                    </x-button>
+                    <div class="flex items-center mt-6">
+                        <x-button wire:target="savePersonalInfo" wire:loading.attr="disabled" wire:click="savePersonalInfo">
+                            Update
+                        </x-button>
+
+                        @if ($savedPersonalInfo)
+                        <p class="flex items-center ml-2 text-blue-600">
+                            updated
+                            <span>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </span>
+                        </p>
+                        @endif
+                    </div>
                 </div>
-                
+
                 <div class="mt-8">
                     <div class="text-gray-600 col-span-full">
                         <p>Contact Information</p>
                     </div>
-                    
+
                     <div class="mt-6">
                         {{ $this->contactInfoForm }}
                     </div>
 
-                    <x-button class="mt-6" wire:click="save">
-                        Update
-                    </x-button>
+                    <div class="flex items-center mt-6">
+                        <x-button wire:target="saveContactInfo" wire:loading.attr="disabled" wire:click="saveContactInfo">
+                            Update
+                        </x-button>
+
+                        @if ($savedContactInfo)
+                        <p class="flex items-center ml-2 text-blue-600">
+                            updated
+                            <span>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </span>
+                        </p>
+                        @endif
+                    </div>
                 </div>
             </div>
         </div>
@@ -51,9 +77,22 @@
                         </ul>
                     </div>
 
-                    <x-button class="mt-6" wire:click="save">
-                        Update
-                    </x-button>
+                    <div class="flex items-center mt-6">
+                        <x-button wire:target="savePasswordInfo" wire:loading.attr="disabled" wire:click="savePasswordInfo">
+                            Update
+                        </x-button>
+
+                        @if ($savedPasswordInfo)
+                        <p class="flex items-center ml-2 text-blue-600">
+                            updated
+                            <span>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </span>
+                        </p>
+                        @endif
+                    </div>
                 </div>
             </div>
         </div>

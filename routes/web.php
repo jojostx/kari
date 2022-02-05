@@ -5,6 +5,7 @@ use App\Http\Controllers\Static\SeenCookiePolicyController;
 use App\Http\Livewire\Customer\App\AccountSettings;
 use App\Http\Livewire\Customer\App\Dashboard;
 use App\Http\Livewire\Customer\App\History;
+use App\Http\Livewire\Customer\App\InvestmentApprove;
 use App\Http\Livewire\Customer\App\InvestmentCreate;
 use App\Http\Livewire\Customer\App\Investments;
 use App\Http\Livewire\Customer\App\Payments;
@@ -58,7 +59,7 @@ Route::middleware(['auth', 'customer'])
            
             Route::get('/create', InvestmentCreate::class)->name('create');
             
-            Route::get('/{payment}/approve', Investments::class)->name('approve');
+            Route::get('/{payment}/approve', InvestmentApprove::class)->name('approve');
           });
         
         Route::get('/payouts', Payouts::class)->name('payouts');

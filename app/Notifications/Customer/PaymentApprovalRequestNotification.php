@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Notifications;
+namespace App\Notifications\Customer;
 
-use App\Models\Subscription;
+use App\Models\Payment;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
@@ -10,7 +10,7 @@ use Illuminate\Notifications\Notification;
 use NotificationChannels\AfricasTalking\AfricasTalkingChannel;
 use NotificationChannels\AfricasTalking\AfricasTalkingMessage;
 
-class SubscriptionCreatedNotification extends Notification implements ShouldQueue
+class PaymentApprovalRequestNotification extends Notification
 {
     use Queueable;
 
@@ -19,7 +19,7 @@ class SubscriptionCreatedNotification extends Notification implements ShouldQueu
      *
      * @return void
      */
-    public function __construct(public Subscription $subscription)
+    public function __construct(public Payment $payment)
     {
         //
     }
@@ -43,7 +43,7 @@ class SubscriptionCreatedNotification extends Notification implements ShouldQueu
      */
     public function toAfricasTalking($notifiable)
     {
-        $Url = $this->subscriptionUrl();
+        $Url = $this->paymentUrl();
 
         $message = $this->buildSMSMessage($Url, $notifiable);
 
@@ -61,11 +61,9 @@ class SubscriptionCreatedNotification extends Notification implements ShouldQueu
      */
     protected function buildSMSMessage($url, $notifiable)
     {
-        $name = (string) $notifiable->first_name ?? '';
-
-        return "Kariinvestment: [Payment Approved & Subscription Created] 
-                \n Hello {$name}, 
-                \n Your Payment & Subscription has been approved 
+        return "Kariinvestment: [Payment Approval Request] 
+                \n A payment approval has been requested, 
+                \n click the link below to begin approval process 
                 \n {$url}";
     }
 
@@ -73,9 +71,9 @@ class SubscriptionCreatedNotification extends Notification implements ShouldQueu
      * Get the verification URL for the given notifiable.
      * @return string
      */
-    protected function subscriptionUrl()
+    protected function paymentUrl()
     {
-        return route('dashboard');
+        return route('admin.investment.payments.index');
     }
 
     /**
@@ -86,12 +84,13 @@ class SubscriptionCreatedNotification extends Notification implements ShouldQueu
      */
     public function toMail($notifiable)
     {
+        $user = $this->payment->customer();
+
         return (new MailMessage)
-            ->subject('Kariinvestment: [Payment Approved & Subscription Created]')
-            ->greeting("Hello! { $notifiable->fullname },")
-            ->line('Thank you for using our application!')
-            ->action('View Subscription', $this->subscriptionUrl())
-            ->line('Thank you for using our application!');
+            ->subject('Kariinvestment: [Payment Approval Request]')
+            ->greeting("Hello!")
+            ->line("A payment approval has been requested by { $user->full_name } - { $user->email }")
+            ->action('View payment', $this->paymentUrl());
     }
 
     /**
@@ -103,8 +102,8 @@ class SubscriptionCreatedNotification extends Notification implements ShouldQueu
     public function toArray($notifiable)
     {
         return [
-            'subscription_id' => $this->subscription->id,
-            'subscription_refcode' => $this->subscription->refcode,
+            'payment_id' => $this->payment->id,
+            'payment_refcode' => $this->payment->refcode,
         ];
     }
 }

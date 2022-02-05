@@ -73,7 +73,7 @@ class User extends Authenticatable implements MustVerifyPhoneNumber, MustVerifyE
         'is_admin' => 'boolean',
         'email_verified_at' => 'datetime',
         'phone_verified_at' => 'datetime',
-        'birthdate' => 'datetime',
+        'birthdate' => 'datetime:Y-m-d', 
         'phone_number_e164' => E164PhoneNumberCast::class . ':NG',
     ];
 
@@ -117,6 +117,17 @@ class User extends Authenticatable implements MustVerifyPhoneNumber, MustVerifyE
     public function scopeCustomers($query)
     {
         return $query->where('is_admin', false);
+    }
+    
+    /**
+     * Scope a query to return the available roommates for the authenticated user.
+     * @method availableRoommates()
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeAdmins($query)
+    {
+        return $query->where('is_admin', true);
     }
 
     /**

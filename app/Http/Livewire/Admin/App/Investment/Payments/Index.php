@@ -46,6 +46,11 @@ class Index extends Component implements HasTable
                     }
                 })->extraAttributes(['style' => 'cursor: text;']),
 
+            TextColumn::make('tag')
+                ->label('Tag')
+                ->extraAttributes(['style' => 'padding:0.75rem 0rem 0.75rem 0.75rem; overflow-wrap: break-word; white-space: normal;'])
+                ->searchable(),
+
             TextColumn::make('refcode')
                 ->label('Refcode (teller-code)')
                 ->default('non-specified')

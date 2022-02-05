@@ -12,6 +12,8 @@ class PaymentApprovalModal extends Component
 {
     public Payment $payment;
 
+    public $showForm = false;
+
     protected $rules = [
         'payment.refcode' => ['required', 'string', 'min:8', 'unique:subscriptions,refcode'],
     ];
@@ -28,6 +30,10 @@ class PaymentApprovalModal extends Component
     public function hydrateProperties(Payment $payment)
     {
         $this->payment = $payment;
+        
+        if (is_null($this->payment->refcode)) {
+            $this->showForm = true;
+        }
     }
 
     public function confirm(): void

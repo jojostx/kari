@@ -45,8 +45,18 @@ class InvestmentCreate extends Component implements HasForms
     }
 
     public function create()
-    {
-        \dd($this->form->getState());
+    {        
+        if (auth()->user()->payments()->count() <= 5) {
+            $payment_pending = auth()->user()->payments()->create([
+                'tag' => $this->form->getState()['tag'],
+                'plan_id' => $this->form->getState()['plan_id'],
+            ]);
+
+            return redirect()->route('investments.approve', ['payment' => $payment_pending->refresh()]);
+        }
+        else {
+            return redirect()->route('investments.index');
+        }
     }
 
     public function render()

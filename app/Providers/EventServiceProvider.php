@@ -3,8 +3,10 @@
 namespace App\Providers;
 
 use App\Events\Admin\PaymentApprovedEvent;
+use App\Events\Customer\PaymentRefcodeUpdatedByCustomerForApprovalEvent;
 use App\Listeners\Admin\SendPaymentApprovedNotification;
 use App\Listeners\Admin\SendSubsriptionCreatedNotification;
+use App\Listeners\Customer\SendPaymentApprovalRequestNotification;
 use App\Models\User;
 use App\Observers\UserObserver;
 use Illuminate\Auth\Events\Registered;
@@ -27,6 +29,10 @@ class EventServiceProvider extends ServiceProvider
         PaymentApprovedEvent::class => [
             SendPaymentApprovedNotification::class,
         ],
+
+        PaymentRefcodeUpdatedByCustomerForApprovalEvent::class => [
+            SendPaymentApprovalRequestNotification::class,
+        ]
     ];
 
     /**

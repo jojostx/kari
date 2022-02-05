@@ -28,6 +28,18 @@ class Payment extends Model
         'status' => 'boolean',
     ];
 
+    
+    /**
+     * Scope a query to return the available roommates for the authenticated user.
+     * @method availableRoommates()
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopePendingPayments($query)
+    {
+        return $query->where('status', false);
+    }
+
     /**
      * The customer who made the payment.
      */
@@ -57,14 +69,18 @@ class Payment extends Model
      */
     public function approve(): bool
     {
+        if ($this->status) {
+            return false;
+        }
+        
+        if (\is_null($this->refcode)) {
+            return false;
+        }
+
         $this->status = true;
 
         $saved = $this->save();
 
-        if (!$saved && \is_null($this->refcode)) {
-            return false;
-        }
-        
         $this->subscription()->create([
            'refcode' => $this->refcode,
            'principal' => $this->plan->principal,

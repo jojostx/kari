@@ -6,17 +6,13 @@ use App\Models\Subscription;
 use App\Models\User;
 use Closure;
 use Filament\Tables\Actions\BulkAction;
-use Filament\Tables\Actions\ButtonAction;
-use Filament\Tables\Actions\LinkAction;
 use Filament\Tables\Columns\BooleanColumn;
-use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Concerns\InteractsWithTable;
 use Filament\Tables\Contracts\HasTable;
 use Illuminate\Contracts\Pagination\Paginator;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Database\Eloquent\Model;
 use Livewire\Component;
 
 class Index extends Component implements HasTable

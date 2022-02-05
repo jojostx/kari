@@ -2,36 +2,91 @@
 
 namespace App\Http\Livewire\Customer\App;
 
-use Illuminate\Support\Facades\DB;
+use App\Models\Payment;
+use Filament\Tables\Actions\LinkAction;
+use Filament\Tables\Columns\BadgeColumn;
+use Filament\Tables\Columns\BooleanColumn;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ViewColumn;
+use Filament\Tables\Concerns\InteractsWithTable;
+use Filament\Tables\Contracts\HasTable;
+use Illuminate\Contracts\Pagination\Paginator;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\View\View;
 use Livewire\Component;
 
-class Investments extends Component
+class Investments extends Component implements HasTable
 {
-    public $total_principal;
-    public $total_investments;
-    public $total_roi;
-    public $plans;
+    use InteractsWithTable;
+
     public $subscriptions;
+    public $payments;
+
+    protected $queryString = [
+        'tableFilters',
+        'tableSortColumn',
+        'tableSortDirection',
+        'tableSearchQuery' => ['except' => ''],
+    ];
 
     public function mount()
     {
-        $this->total_principal = auth()->user()->subscriptions()->pluck('principal')->sum();
-
-        $this->total_investments = auth()->user()->subscriptions()->count();
-
-        $this->total_roi = auth()->user()->subscriptions->reduce(function ($carry, $item) {
-            return $carry + ($item['principal'] * $item['interest']);
-        });
-
-        $this->plans = collect(DB::table('plans')->get(['id', 'icon', 'name']))->map(function ($plan)
-        {
-            $plan->subCount = auth()->user()->subscriptions->countBy(fn ($sub) => $sub->plan_id)->get($plan->id) ?? 0;
-
-            return $plan;
-        });
-
         $this->subscriptions = auth()->user()->subscriptions;
+        $this->payments = auth()->user()->payments;
     }
+
+    protected function getTableQuery(): Builder
+    {
+        return Auth::user()->payments(false)->getQuery();
+    }
+
+    protected function getTableColumns(): array
+    {
+        return [
+            TextColumn::make('plan.name')
+                ->label('Type')
+                ->extraAttributes(['style' => 'text-transform: uppercase; font-size: 0.8rem; font-weight: 600;']),
+
+            TextColumn::make('tag')
+                ->label('Tag')
+                ->extraAttributes(['style' => 'max-width: 150px; overflow-wrap: break-word; white-space: normal; font-size: 0.8rem; ']),
+
+            TextColumn::make('plan.principal')
+                ->extraAttributes(['style' => 'font-size: 0.8rem; font-weight: 600;'])
+                ->label('Principal')->money('gbp', \true),
+
+            TextColumn::make('status')
+                ->formatStateUsing(function (string $state, $record): string {
+                    if ($record->refcode && !$state) {
+                        return 'Your payment is being reviewed for approval';
+                    }
+
+                    return 'Click the "approve" link to complete you payment for approval';
+                })->extraAttributes(function ($record) {
+                    if ($record->refcode) {
+                        return ['class' => 'text-blue-600, text-sm', 'style' => 'color: rgb(37, 99, 235)'];
+                    }
+
+                    return ['class' => 'text-gray-600, text-xs'];
+                })->wrap(),
+        ];
+    }
+
+    protected function getTableActions(): array
+    {
+        return [
+            LinkAction::make('Approve')
+                ->url(fn ($record): string => route('investments.approve', ['payment' => $record]))
+                ->hidden(fn ($record): bool => !$record->status && $record->refcode),
+        ];
+    }
+
+    protected function paginateTableQuery(Builder $query): Paginator
+    {
+        return $query->simplePaginate($this->getTableRecordsPerPage());
+    }
+
 
     public function render()
     {

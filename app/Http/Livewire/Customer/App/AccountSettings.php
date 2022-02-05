@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Customer\App;
 
 use App\Models\City;
 use App\Models\State;
+use App\Models\User;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Select;
@@ -16,7 +17,11 @@ class AccountSettings extends Component implements HasForms
 {
     use InteractsWithForms;
 
-    public $authUser;
+    public User $authUser;
+
+    public $savedPersonalInfo = false;
+    public $savedContactInfo = false;
+    public $savedPasswordInfo = false;
 
     public $first_name;
     public $middle_name;
@@ -25,7 +30,10 @@ class AccountSettings extends Component implements HasForms
 
     public $email;
     public $phone_number;
+    public $state;
+    public $city;
     public $address;
+    public $postcode;
 
     public $current_password;
     public $new_password;
@@ -45,6 +53,9 @@ class AccountSettings extends Component implements HasForms
         $this->contactInfoForm->fill([
             'email' => $this->authUser->email,
             'phone_number' => $this->authUser->phone_number,
+            'state' => $this->authUser->location?->state,
+            'city' => $this->authUser->location?->city,
+            'postcode' => $this->authUser->location?->postcode,
             'address' => $this->authUser->location?->address
         ]);
 
@@ -78,7 +89,7 @@ class AccountSettings extends Component implements HasForms
                             'md' => 1,
                         ]
                     ),
-                    DatePicker::make('birthdate')->label('Birthdate')->required(),
+                    DatePicker::make('birthdate')->label('Birthdate')->reactive(),
                 ]),
         ];
     }
@@ -108,15 +119,14 @@ class AccountSettings extends Component implements HasForms
 
                     Select::make('city_id')
                         ->label('City')
-                        ->searchable()
-                        ->getSearchResultsUsing(function (string $query, callable $get) {
-                            $state = State::find($get('state_id'));
+                        ->options(function (callable $get) {
+                            $selectedState = State::find($get('state_id'));
 
-                            if (!$state) {
-                                return City::where('name', 'like', "%{$query}%")->limit(50)->pluck('name', 'id');
+                            if ($selectedState) {
+                                return $selectedState->cities->pluck('name', 'id');
                             }
 
-                            return $state->cities->pluck('name', 'id');
+                            return [];
                         }),
 
                     TextInput::make('location.address')
@@ -175,12 +185,28 @@ class AccountSettings extends Component implements HasForms
 
     public function savePersonalInfo(): void
     {
-        \dd($this->personalInfoForm->getState());
+        $saved = $this->authUser->fill($this->personalInfoForm->getState())->save();
+
+        if ($saved) {
+            $this->savedPersonalInfo = true;
+        }
     }
 
     public function saveContactInfo(): void
     {
-        \dd($this->contactInfoForm->getState());
+        // $this->authUser->fill([
+        //     'email' => $this->personalInfoForm->getState()[''],
+        //     'phone_number' => $this->personalInfoForm->getState()[''],
+        // ]);
+
+        $location = $this->authUser->location()->create([
+            'state_id' => $this->contactInfoForm->getState()['state_id'],
+            'city_id' => $this->contactInfoForm->getState()['city_id'],
+            'address' => $this->contactInfoForm->getState()['location']['address'],
+            'postcode' => $this->contactInfoForm->getState()['location']['postcode'],
+        ]);
+
+        \dd($location);
     }
 
     public function savePasswordInfo(): void

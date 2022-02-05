@@ -23,7 +23,7 @@
                         </dl>
                         <dl>
                             <dt class="text-sm font-medium leading-5 text-gray-500 ">Birthday</dt>
-                            <dd class="text-sm font-medium leading-5">13/09/96</dd>
+                            <dd class="text-sm font-medium leading-5">{{ auth()->user()?->birthdate?->format('M j, Y') ?: 'Not Specified' }}</dd>
                         </dl>
                     </div>
                 </div>
@@ -35,35 +35,39 @@
                     <div class="grid grid-cols-1 gap-6 mt-4 md:grid-cols-2">
                         <dl>
                             <dt class="text-sm font-medium leading-5 text-gray-500">Email Address
+                                @if (auth()->user()->hasVerifiedEmail())
                                 <span class="inline-flex items-center justify-center px-2 py-0.5 text-xs tracking-tight text-blue-600 bg-blue-200 rounded-full">
                                     Verified
                                 </span>
+                                @endif
                             </dt>
                             <dd class="mt-1 font-medium leading-5">{{ auth()->user()->email }}</dd>
                         </dl>
                         <dl>
                             <dt class="text-sm font-medium leading-5 text-gray-500">{{ __('Phone Number') }}
+                                @if (auth()->user()->hasVerifiedPhoneNumber())
                                 <span class="inline-flex items-center justify-center px-2 py-0.5 text-xs tracking-tight text-blue-600 bg-blue-200 rounded-full">
                                     Verified
                                 </span>
+                                @endif
                             </dt>
                             <dd class="mt-1 font-medium leading-5">{{ auth()->user()->phone_number }}</dd>
                         </dl>
                         <dl>
                             <dt class="text-sm font-medium leading-5 text-gray-500">{{ __('State') }}</dt>
-                            <dd class="mt-1 leading-5">Lagos</dd>
+                            <dd class="mt-1 leading-5">{{ auth()->user()->location?->state?->name ?: 'Not Specified' }}</dd>
                         </dl>
                         <dl>
                             <dt class="text-sm font-medium leading-5 text-gray-500">{{ __('City') }}</dt>
-                            <dd class="mt-1 font-medium leading-5">Ikeja</dd>
+                            <dd class="mt-1 font-medium leading-5">{{ auth()->user()->location?->city?->name ?: 'Not Specified' }}</dd>
                         </dl>
                         <dl>
                             <dt class="text-sm font-medium leading-5 text-gray-500">{{ __('Address') }}</dt>
-                            <dd class="mt-1 font-medium leading-5">Blk B, flat 7, INEC qrtrs, Degema street, Area 10, Garki</dd>
+                            <dd class="mt-1 font-medium leading-5">{{ auth()->user()->location?->address ?: 'Not Specified' }}</dd>
                         </dl>
                         <dl>
                             <dt class="text-sm font-medium leading-5 text-gray-500">{{ __('Zip/postal-code') }}</dt>
-                            <dd class="mt-1 font-medium leading-5">900422</dd>
+                            <dd class="mt-1 font-medium leading-5">{{ auth()->user()->location?->postcode ?: 'Not Specified' }}</dd>
                         </dl>
                     </div>
                 </div>
