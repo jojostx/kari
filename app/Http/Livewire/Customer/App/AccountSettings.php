@@ -205,8 +205,10 @@ class AccountSettings extends Component implements HasForms
             'address' => $this->contactInfoForm->getState()['location']['address'],
             'postcode' => $this->contactInfoForm->getState()['location']['postcode'],
         ]);
-
-        \dd($location);
+        
+        if ($location) {
+            $this->savedContactInfo = true;
+        }
     }
 
     public function savePasswordInfo(): void
