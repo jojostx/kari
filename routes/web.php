@@ -22,9 +22,9 @@ Route::middleware(['seenCookiePolicyAlert'])->group(function () {
         return view('pages.static.about');
     })->name('about');
 
-    Route::get('/investments', function () {
+    Route::get('/investment', function () {
         return view('pages.static.investments');
-    })->name('investments');
+    })->name('investment.plans');
 
     Route::get('/contact', function () {
         return view('pages.static.contact');

@@ -2,7 +2,7 @@
   <div class="overflow-hidden rounded-box">
     <footer class="p-10 bg-gray-200 footer text-base-content">
       <div><span class="footer-title">Products</span>
-        <a href="{{ route('investments') }}">Investment Plans</a>
+        <a href="{{ route('investment.plans') }}">Investment Plans</a>
       </div>
       <div><span class="footer-title">Company</span>
         <a href="{{ route('about') }}" class="link link-hover">About us</a>

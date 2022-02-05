@@ -23,7 +23,7 @@
     <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
     <div :class="isOpen ? 'flex' : 'hidden'" class="flex-col pb-4 mt-8 space-y-8 md:pb-0 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0">
       <x-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">Home</x-nav-link>
-      <x-nav-link href="{{ route('investments') }}" :active="request()->routeIs('investments')">Investments</x-nav-link>
+      <x-nav-link href="{{ route('investment.plans') }}" :active="request()->routeIs('investment.plans')">Investments</x-nav-link>
       <x-nav-link href="{{ route('about') }}" :active="request()->routeIs('about')">About Us</x-nav-link>
       <x-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')">Contact</x-nav-link>
     </div>
