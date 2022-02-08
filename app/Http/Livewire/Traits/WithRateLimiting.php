@@ -4,7 +4,7 @@
 namespace App\Http\Livewire\Traits;
 
 
-use App\Http\Livewire\Exceptions\TooManyRequestsException;
+use App\Exceptions\TooManyRequestsException;
 use Illuminate\Support\Facades\RateLimiter;
 
 trait WithRateLimiting

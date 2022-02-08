@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire\Admin\Auth;
 
-use App\Http\Livewire\Exceptions\TooManyRequestsException;
+use App\Exceptions\TooManyRequestsException;
 use App\Http\Livewire\Traits\WithRateLimiting;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;

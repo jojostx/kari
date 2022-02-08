@@ -7,7 +7,9 @@ use App\Events\Customer\PaymentRefcodeUpdatedByCustomerForApprovalEvent;
 use App\Listeners\Admin\SendPaymentApprovedNotification;
 use App\Listeners\Admin\SendSubsriptionCreatedNotification;
 use App\Listeners\Customer\SendPaymentApprovalRequestNotification;
+use App\Models\PendingUserPhoneNumber;
 use App\Models\User;
+use App\Observers\PendingUserPhoneNumberObserver;
 use App\Observers\UserObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
@@ -43,5 +45,7 @@ class EventServiceProvider extends ServiceProvider
     public function boot()
     {
         User::observe(UserObserver::class);
+        
+        PendingUserPhoneNumber::observe(PendingUserPhoneNumberObserver::class);
     }
 }

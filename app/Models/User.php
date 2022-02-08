@@ -13,12 +13,13 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Propaganistas\LaravelPhone\Casts\E164PhoneNumberCast;
+use ProtoneMedia\LaravelVerifyNewEmail\MustVerifyNewEmail;
 use Spatie\Searchable\Searchable;
 use Spatie\Searchable\SearchResult;
 
 class User extends Authenticatable implements MustVerifyPhoneNumber, MustVerifyEmail, Searchable
 {
-    use HasApiTokens, HasFactory, Notifiable, TraitsMustVerifyPhoneNumber;
+    use HasApiTokens, HasFactory, Notifiable, TraitsMustVerifyPhoneNumber, MustVerifyNewEmail;
 
     public $searchableType = 'Customers';
 
@@ -73,8 +74,7 @@ class User extends Authenticatable implements MustVerifyPhoneNumber, MustVerifyE
         'is_admin' => 'boolean',
         'email_verified_at' => 'datetime',
         'phone_verified_at' => 'datetime',
-        'birthdate' => 'datetime:Y-m-d', 
-        'phone_number_e164' => E164PhoneNumberCast::class . ':NG',
+        'birthdate' => 'datetime:Y-m-d',
     ];
 
     /**
@@ -118,7 +118,7 @@ class User extends Authenticatable implements MustVerifyPhoneNumber, MustVerifyE
     {
         return $query->where('is_admin', false);
     }
-    
+
     /**
      * Scope a query to return the available roommates for the authenticated user.
      * @method availableRoommates()
@@ -156,12 +156,20 @@ class User extends Authenticatable implements MustVerifyPhoneNumber, MustVerifyE
     {
         return $this->hasMany(Subscription::class);
     }
-  
+
     /**
      * The address for a user.
      */
     public function location(): HasOne
     {
         return $this->hasOne(UserAddress::class, 'user_id');
+    }
+
+    /**
+     * The pending Phone Number for a user.
+     */
+    public function pendingPhoneNumber(): HasOne
+    {
+        return $this->hasOne(PendingUserPhoneNumber::class, 'user_id');
     }
 }
