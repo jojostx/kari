@@ -33,7 +33,7 @@
         </div>
         
         <div class="mt-8">
-            <p class="mb-4 font-bold tracking-wide sm:text-lg">Subscriptions/Approved Payments</p>
+            <p class="mb-4 font-bold tracking-wide sm:text-lg">Subscriptions</p>
             <div class="grid gap-4 sm:grid-cols-2">
                 @foreach ($subscriptions as $subscription)
                 <div class="col-span-1 flex items-center px-3 py-3 bg-[#F1F1F1] border-b border-gray-300 rounded-md shadow-md sm:px-4 sm:pt-4">

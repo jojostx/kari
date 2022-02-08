@@ -45,7 +45,7 @@ class PendingUserPhoneNumber extends Model
      */
     public function user(): BelongsTo
     {
-        return $this->belongsTo('user', 'user_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     /**

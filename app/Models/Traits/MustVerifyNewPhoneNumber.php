@@ -99,8 +99,6 @@ trait MustVerifyNewPhoneNumber
      */
     public function resendPendingPhoneNumberVerificationSMS(): ?Model
     {
-        $pendingUserPhoneNumber = $this->forUser($this->user)->firstOrFail();
-
-        return $this->newPhoneNumber($this->user, $pendingUserPhoneNumber->phone_number);
+        return $this->newPhoneNumber($this->user, $this->phone_number);
     }
 }

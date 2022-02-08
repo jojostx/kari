@@ -3,8 +3,10 @@
 namespace App\Http\Livewire\Customer\App;
 
 use App\Models\City;
+use App\Models\PendingUserPhoneNumber;
 use App\Models\State;
 use App\Models\User;
+use App\Models\UserAddress;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Select;
@@ -53,8 +55,8 @@ class AccountSettings extends Component implements HasForms
         $this->contactInfoForm->fill([
             'email' => $this->authUser->email,
             'phone_number' => $this->authUser->phone_number,
-            'state' => $this->authUser->location?->state,
-            'city' => $this->authUser->location?->city,
+            'state' => $this->authUser->location?->state?->id,
+            'city' => $this->authUser->location?->city?->id,
             'postcode' => $this->authUser->location?->postcode,
             'address' => $this->authUser->location?->address
         ]);
@@ -130,10 +132,10 @@ class AccountSettings extends Component implements HasForms
                         }),
 
                     TextInput::make('location.address')
-                        ->label('Address'),
+                        ->label('Address')->rules(['between:5,255', 'string'])->reactive(),
 
                     TextInput::make('location.postcode')
-                        ->label('Zip/Postcode')
+                        ->label('Zip/Postcode')->rules(['max:7', 'string'])->reactive()
                 ]),
         ];
     }
@@ -194,18 +196,19 @@ class AccountSettings extends Component implements HasForms
 
     public function saveContactInfo(): void
     {
-        // $this->authUser->fill([
-        //     'email' => $this->personalInfoForm->getState()[''],
-        //     'phone_number' => $this->personalInfoForm->getState()[''],
-        // ]);
+        (new PendingUserPhoneNumber())->newPhoneNumber($this->authUser, $this->contactInfoForm->getState()['phone_number']);
 
-        $location = $this->authUser->location()->create([
+        $this->authUser->newEmail($this->contactInfoForm->getState()['email']);
+
+        UserAddress::where('user_id', $this->authUser->id)->delete();
+
+        $location = $this->authUser->location()->updateOrCreate([
             'state_id' => $this->contactInfoForm->getState()['state_id'],
             'city_id' => $this->contactInfoForm->getState()['city_id'],
             'address' => $this->contactInfoForm->getState()['location']['address'],
             'postcode' => $this->contactInfoForm->getState()['location']['postcode'],
         ]);
-        
+
         if ($location) {
             $this->savedContactInfo = true;
         }
