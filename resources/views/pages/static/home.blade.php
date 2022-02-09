@@ -29,11 +29,11 @@
 				<h1 class="text-3xl font-bold tracking-wide text-black md:text-4xl font-vesp lg:tracking-wider">Why You Should Invest With Us</h1>
 			</div>
 			<article class="flex flex-row flex-wrap justify-center w-full lg:mb-24 md:justify-center">
-				<div class="flex flex-col justify-center order-2 w-full py-10 text-center lg:w-1/2 md:text-left">
+				<div class="flex flex-col justify-center order-2 w-full py-10 text-center lg:w-1/2">
 					<p class="font-semibold text-gray-400 uppercase opacity-75">Stable and Transparant</p>
 					<h2 class="mt-6 text-2xl font-extrabold text-gray-900 font-vesp lg:mt-2">Currency Hedging</h2>
-					<p class="max-w-md text-gray-600">Investing in the UK; one of the world’s largest economies ensures the security of investment. The fluctuation in the foreign market does not have an impact on your funds. We have developed measures to mitigate volatility.</p>
-					<a href="/how-it-works" class="inline-flex justify-center py-2 text-blue-900 uppercase lg:justify-start hover:text-blue-700">
+					<p class="max-w-md mx-auto text-gray-600">Investing in the UK; one of the world’s largest economies ensures the security of investment. The fluctuation in the foreign market does not have an impact on your funds. We have developed measures to mitigate volatility.</p>
+					<a href="/how-it-works" class="inline-flex justify-center py-2 text-blue-900 uppercase hover:text-blue-700">
 						Learn More
 						<svg version="1.1" viewBox="0 0 16 16" class="w-4 ml-2">
 							<g stroke="currentColor" fill="none" fill-rule="evenodd">
@@ -47,14 +47,14 @@
 			</article>
 
 			<article class="flex flex-row-reverse flex-wrap justify-center w-full lg:mb-24 md:justify-center">
-				<div class="flex flex-col justify-center order-2 w-full py-10 text-center lg:w-1/2 md:text-left">
+				<div class="flex flex-col justify-center order-2 w-full py-10 text-center lg:w-1/2">
 					<p class="font-semibold text-gray-400 uppercase opacity-75">Integrity and Openness </p>
 					<h2 class="mt-6 text-2xl font-extrabold text-gray-900 font-vesp lg:mt-2">Security of Funds</h2>
-					<p class="max-w-md text-gray-600">
+					<p class="max-w-md mx-auto text-gray-600">
 						Kari Properties Limited operates with integrity and openness following the UK government compliance standards.
 						We assure top safety of all investors’ funds under our investment cycle.
 					</p>
-					<a href="/how-it-works" class="inline-flex justify-center py-2 text-blue-900 uppercase lg:justify-start hover:text-blue-700">
+					<a href="/how-it-works" class="inline-flex justify-center py-2 text-blue-900 uppercase hover:text-blue-700">
 						Learn More
 						<svg version="1.1" viewBox="0 0 16 16" class="w-4 ml-2">
 							<g stroke="currentColor" fill="none" fill-rule="evenodd">
@@ -68,11 +68,11 @@
 			</article>
 
 			<article class="flex flex-row flex-wrap justify-center w-full lg:mb-24 md:justify-center">
-				<div class="flex flex-col justify-center order-2 w-full py-10 text-center lg:w-1/2 md:text-left">
+				<div class="flex flex-col justify-center order-2 w-full py-10 text-center lg:w-1/2">
 					<p class="font-semibold text-gray-400 uppercase opacity-75">Guaranteed and Safe</p>
 					<h2 class="mt-6 text-2xl font-extrabold text-gray-900 font-vesp lg:mt-2">Excellent Annual Returns</h2>
-					<p class="max-w-md text-gray-600">Unlike most private real estate investment companies, we offer our investors between 7% to 8.5% annual ROI and bonus payout.</p>
-					<a href="/how-it-works" class="inline-flex justify-center py-2 text-blue-900 uppercase lg:justify-start hover:text-blue-700">
+					<p class="max-w-md mx-auto text-gray-600">Unlike most private real estate investment companies, we offer our investors between 7% to 8.5% annual ROI and bonus payout.</p>
+					<a href="/how-it-works" class="inline-flex justify-center py-2 text-blue-900 uppercase hover:text-blue-700">
 						Learn More
 						<svg version="1.1" viewBox="0 0 16 16" class="w-4 ml-2">
 							<g stroke="currentColor" fill="none" fill-rule="evenodd">
