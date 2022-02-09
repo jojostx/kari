@@ -2,18 +2,13 @@
 
 namespace App\Http\Livewire\Customer\App;
 
-use App\Models\Payment;
 use Filament\Tables\Actions\LinkAction;
-use Filament\Tables\Columns\BadgeColumn;
-use Filament\Tables\Columns\BooleanColumn;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Columns\ViewColumn;
 use Filament\Tables\Concerns\InteractsWithTable;
 use Filament\Tables\Contracts\HasTable;
 use Illuminate\Contracts\Pagination\Paginator;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\View\View;
 use Livewire\Component;
 
 class Investments extends Component implements HasTable

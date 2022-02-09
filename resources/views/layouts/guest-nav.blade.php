@@ -26,6 +26,18 @@
       <x-nav-link href="{{ route('investment.plans') }}" :active="request()->routeIs('investment.plans')">Investments</x-nav-link>
       <x-nav-link href="{{ route('about') }}" :active="request()->routeIs('about')">About Us</x-nav-link>
       <x-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')">Contact</x-nav-link>
+      <ul class="grid grid-cols-2">
+          <li>
+            <a class="inline-flex justify-center w-full h-full px-4 py-2 text-sm font-medium bg-gray-800 border border-gray-800 border-1 border-r-gray-100 lg:text-base animated-a focus:outline-none" href="{{ route('login') }}">
+              <span>Login</span>
+            </a>
+          </li>
+          <li>
+            <a class="inline-flex justify-center w-full h-full px-4 py-2 text-sm font-medium bg-gray-800 border border-gray-800 border-1 lg:text-base animated-a focus:outline-none" href="{{ route('register') }}">
+              <span>Register</span>
+            </a>
+          </li>
+      </ul>
     </div>
   </nav>
 </div>

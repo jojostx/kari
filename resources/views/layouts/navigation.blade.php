@@ -112,11 +112,14 @@
                 <p class="text-sm font-bold">
                     {{ auth()->user()->full_name }}
                 </p>
-                <p class="text-xs text-gray-500 hover:text-gray-700 focus:text-gray-700">
-                    <a href="{{ route('logout') }}">
-                        Log out
-                    </a>
-                </p>
+                <form action="{{ route('logout') }}" method="post">
+                    @csrf
+                    <p class="text-xs text-gray-500 hover:text-gray-700 focus:text-gray-700">
+                        <button type="submit">
+                            Log out
+                        </button>
+                    </p>
+                </form>
             </div>
         </footer>
     </aside>

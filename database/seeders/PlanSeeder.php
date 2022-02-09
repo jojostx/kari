@@ -21,6 +21,7 @@ class PlanSeeder extends Seeder
             'principal' => 25000.00,
             'interest' => 0.07,
             'bonus' => 0.02,
+            'description' => 'Rerum reiciendis beatae tenetur excepturi aut pariatur est eos. Sit sit necessitatibus veritatis sed molestiae voluptates incidunt iure sapiente.'
         ]);
 
         Plan::create([
@@ -30,6 +31,7 @@ class PlanSeeder extends Seeder
             'principal' => 50000.00,
             'interest' => 0.075,
             'bonus' => 0.025,
+            'description' => 'Rerum reiciendis beatae tenetur excepturi aut pariatur est eos. Sit sit necessitatibus veritatis sed molestiae voluptates incidunt iure sapiente.'
         ]);
 
         Plan::create([
@@ -39,6 +41,7 @@ class PlanSeeder extends Seeder
             'principal' => 100000.00,
             'interest' => 0.08,
             'bonus' => 0.03,
+            'description' => 'Rerum reiciendis beatae tenetur excepturi aut pariatur est eos. Sit sit necessitatibus veritatis sed molestiae voluptates incidunt iure sapiente.'
         ]);
 
         Plan::create([
@@ -48,6 +51,7 @@ class PlanSeeder extends Seeder
             'principal' => 200000.00,
             'interest' => 0.085,
             'bonus' => 0.035,
+            'description' => 'Rerum reiciendis beatae tenetur excepturi aut pariatur est eos. Sit sit necessitatibus veritatis sed molestiae voluptates incidunt iure sapiente.'
         ]);
     }
 }

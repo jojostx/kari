@@ -1,7 +1,5 @@
 @extends('layouts.admin.app')
 
-@section('title', 'Dashboard')
-
 @section('contents')
 <div x-data="{ isOpen: false }" class="flex w-full min-h-screen text-gray-900 bg-gray-50">
   @livewire('admin.app.navigation')

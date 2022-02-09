@@ -54,20 +54,20 @@ Route::middleware(['auth', 'customer'])
     ->group(function () {
         Route::get('/dashboard', Dashboard::class)->name('dashboard');
 
-        Route::name('investments.')->prefix('investments')->group(function () {            
+        Route::name('investments.')->prefix('investments')->group(function () {
             Route::get('/', Investments::class)->name('index');
-           
+
             Route::get('/create', InvestmentCreate::class)->name('create');
-            
+
             Route::get('/{payment}/approve', InvestmentApprove::class)->name('approve');
-          });
-        
+        });
+
         Route::get('/payouts', Payouts::class)->name('payouts');
-        
+
         Route::get('/history', History::class)->name('history');
-        
+
         Route::get('/profile', Profile::class)->name('profile');
-        
+
         Route::get('/account-settings', AccountSettings::class)->name('account-settings');
     });
 

@@ -13,7 +13,7 @@
 			</div>
 
 			<div class="relative z-20">
-				<p class="max-w-sm mb-8 text-white lg:text-lg">
+				<p class="max-w-sm mb-8 text-lg font-medium text-white">
 					Start investing in real estate with a stable ROI
 				</p>
 			</div>
@@ -98,27 +98,23 @@
 
 				<div class="grid gap-8 mt-10 md:grid-cols-2 lg:grid-cols-3">
 					<div class="px-6 py-8 bg-white rounded-md shadow-md">
-						<h2 class="text-xl font-medium text-gray-800">Coming Soon</h2>
-						<p class="max-w-md mt-4 text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing Ac
-							aliquam ac
-							volutpat,
-							viverra magna risus aliquam massa.</p>
+						<div class="flex items-center justify-between">
+							<h2 class="text-xl font-medium text-gray-800">Create Account</h2>
+						</div>
+						<p class="max-w-md mt-4 text-gray-600">Register with the required data making sure they are accurate and login.</p>
 					</div>
 					<div class="px-6 py-8 bg-white rounded-md shadow-md">
-						<h2 class="text-xl font-medium text-gray-800">Coming Soon</h2>
-						<p class="max-w-md mt-4 text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing Ac
-							aliquam ac
-							volutpat,
-							viverra magna risus aliquam massa.</p>
+						<div class="flex items-center justify-between">
+							<h2 class="text-xl font-medium text-gray-800">Update Profile</h2>
+						</div>
+						<p class="max-w-md mt-4 text-gray-600">Verify your Email address, phone number and other required data.</p>
 					</div>
 					<div class="px-6 py-8 bg-white rounded-md shadow-md">
-						<h2 class="text-xl font-medium text-gray-800">Coming Soon</h2>
-						<p class="max-w-md mt-4 text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing Ac
-							aliquam ac
-							volutpat,
-							viverra magna risus aliquam massa.</p>
+						<div class="flex items-center justify-between">
+							<h2 class="text-xl font-medium text-gray-800">Create a Subscription</h2>
+						</div>
+						<p class="max-w-md mt-4 text-gray-600">Subscribe to an investment plan (up to five), make payment through the required channels and get your subscriptions approved.</p>
 					</div>
-
 				</div>
 			</div>
 		</section>
@@ -411,7 +407,7 @@
 
 		<!-- newsfeed -->
 		<livewire:static.forms.subscribe-to-newsfeed />
-		
+
 		<!-- footer -->
 		@include('layouts.footer')
 	</div>

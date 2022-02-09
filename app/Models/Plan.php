@@ -15,7 +15,8 @@ class Plan extends Model
         'name',
         'principal',
         'interest',
-        'bonus'
+        'bonus',
+        'description',
     ];
 
     protected $guarded = [

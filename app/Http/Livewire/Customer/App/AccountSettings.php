@@ -39,7 +39,7 @@ class AccountSettings extends Component implements HasForms
 
     public $current_password;
     public $new_password;
-    public $password_confirmation;
+    public $new_password_confirmation;
 
     public function mount()
     {
@@ -64,7 +64,7 @@ class AccountSettings extends Component implements HasForms
         $this->passwordInfoForm->fill([
             'current_password' => '',
             'new_password' => '',
-            'password_confirmation' => ''
+            'new_password_confirmation' => ''
         ]);
     }
 
@@ -146,24 +146,29 @@ class AccountSettings extends Component implements HasForms
             Grid::make([
                 'default' => 1,
                 'md' => 2,
-            ])
-                ->schema([
+            ])->schema([
                     TextInput::make('current_password')
                         ->label('Current Password')
-                        ->columnSpan(
-                            [
-                                'md' => 1,
-                            ]
-                        )
-                        ->required(),
-
-                    TextInput::make('new_password')
-                        ->label('New Password')
-                        ->required(),
-
-                    TextInput::make('password_confirmation')
-                        ->label('Confirm Password')
-                        ->required()
+                        ->password()
+                        ->rules(['required_with:new_password'])
+                        ->currentPassword()
+                        ->autocomplete('off')
+                        ->columnSpan(1),
+                    Grid::make()
+                        ->schema([
+                            TextInput::make('new_password')
+                                ->label('New Password')
+                                ->password()
+                                ->rules(['confirmed'])
+                                ->autocomplete('new-password'),
+                            TextInput::make('new_password_confirmation')
+                                ->label('Confirm Password')
+                                ->password()
+                                ->rules([
+                                    'required_with:new_password',
+                                ])
+                                ->autocomplete('new-password'),
+                        ]),
                 ]),
         ];
     }
