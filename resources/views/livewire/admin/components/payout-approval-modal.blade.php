@@ -1,5 +1,5 @@
 <form wire:submit.prevent="confirm">
-    <div x-cloak x-data="{ isOpen: false }" x-on:open-payment-approval-modal.window="isOpen = true" x-on:close-payment-approval-modal.window="isOpen = false" role="dialog" aria-modal="true" class="block" aria-label="confirmation modal">
+    <div x-cloak x-data="{ isOpen: false }" x-on:open-payout-approval-modal.window="isOpen = true" x-on:close-payout-approval-modal.window="isOpen = false" role="dialog" aria-modal="true" class="block" aria-label="confirmation modal">
 
         <div x-show="isOpen" x-transition:enter="ease duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="fixed inset-0 z-40 flex items-center justify-center min-h-screen p-4 overflow-y-auto transition">
 
@@ -16,7 +16,7 @@
 
                             @if ($showForm)
                             <h3 class="text-gray-500">
-                                Add the Teller Code for this payment
+                                Add the Teller Code for this payout
                             </h3>
 
                             <div class="flex items-center justify-between space-x-2 rtl:space-x-reverse">
@@ -29,10 +29,10 @@
                             </div>
                             <div class="flex items-center space-x-1 group">
                                 <div class="flex-1">
-                                    <input type="text" wire:model.defer="payment.refcode" autocomplete="off" id="refcode" required class="block w-full h-10 duration-75 border-gray-300 rounded-lg shadow-sm focus:border-blue-600 focus:ring-1 focus:ring-inset focus:ring-blue-600 focus:ring-opacity-30" />
+                                    <input type="text" wire:model.defer="payout.refcode" autocomplete="off" id="refcode" required class="block w-full h-10 duration-75 border-gray-300 rounded-lg shadow-sm focus:border-blue-600 focus:ring-1 focus:ring-inset focus:ring-blue-600 focus:ring-opacity-30" />
                                 </div>
                             </div>
-                            @error('payment.refcode') <p class="text-xs text-red-500 error">{{ $message }}</p> @enderror
+                            @error('payout.refcode') <p class="text-xs text-red-500 error">{{ $message }}</p> @enderror
                             @endif
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                             <button x-on:click="isOpen = false" wire:click="$refresh" type="button" class="inline-flex items-center justify-center px-4 font-medium tracking-tight text-gray-800 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-inset h-9 hover:bg-gray-50 focus:ring-primary-600 focus:text-primary-600 focus:bg-primary-50 focus:border-primary-600">
                                 <span>Cancel</span>
                             </button>
-                            <button wire:loading.disabled type="submit" @error('paayment.refcode') 'disabled' @enderror class="inline-flex items-center justify-center px-4 font-medium tracking-tight text-white rounded-lg shadow disabled:bg-gray-800 focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-inset h-9 focus:ring-white bg-danger-600 hover:bg-danger-500 focus:bg-danger-700 focus:ring-offset-danger-700">
+                            <button wire:loading.disabled type="submit" @error('payout.refcode') 'disabled' @enderror class="inline-flex items-center justify-center px-4 font-medium tracking-tight text-white rounded-lg shadow disabled:bg-gray-800 focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-inset h-9 focus:ring-white bg-danger-600 hover:bg-danger-500 focus:bg-danger-700 focus:ring-offset-danger-700">
                                 <span>Confirm</span>
                             </button>
                         </div>

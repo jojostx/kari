@@ -9,9 +9,18 @@ class View extends Component
 {
     public User $customer;
 
+    protected $rules = [
+        'customer.location.address' => ['required', 'string'],
+        'customer.phone_number' => ['required', 'string'], 
+        'customer.email' => ['required', 'email'], 
+        'customer.first_name' => ['required', 'string', 'max:124'], 
+        'customer.middle_name' => ['required', 'string', 'max:124'], 
+        'customer.last_name' => ['required', 'string', 'max:124'], 
+    ];
+
     public function save()
     {
-        \sleep(3);
+        return redirect()->route('admin.investment.customers.index');
     }
 
     public function render()

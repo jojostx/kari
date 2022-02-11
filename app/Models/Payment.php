@@ -28,7 +28,7 @@ class Payment extends Model
         'status' => 'boolean',
     ];
 
-    
+
     /**
      * Scope a query to return the available roommates for the authenticated user.
      * @method availableRoommates()
@@ -65,14 +65,14 @@ class Payment extends Model
     }
 
     /**
-     * approve the payment abd create a subscription.
+     * approve the payment and create a subscription.
      */
     public function approve(): bool
     {
         if ($this->status) {
             return false;
         }
-        
+
         if (\is_null($this->refcode)) {
             return false;
         }
@@ -82,14 +82,16 @@ class Payment extends Model
         $saved = $this->save();
 
         $this->subscription()->create([
-           'refcode' => $this->refcode,
-           'principal' => $this->plan->principal,
-           'interest' => $this->plan->interest,
-           'user_id' => $this->user_id,
-           'plan_id' => $this->plan_id,
-           'payment_id' => $this->id,
-           'ends_at' => now()->addYear(),
-       ]);
+            'tag' => $this->tag,
+            'refcode' => $this->refcode,
+            'principal' => $this->plan->principal,
+            'interest' => $this->plan->interest,
+            'user_id' => $this->user_id,
+            'plan_id' => $this->plan_id,
+            'payment_id' => $this->id,
+            'ends_at' => now()->addYear(),
+            'next_payout_at' => now()->addMonths(\config('app.payout_period', 6)),
+        ]);
 
         return $saved;
     }

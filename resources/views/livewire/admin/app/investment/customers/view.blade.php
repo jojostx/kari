@@ -37,7 +37,7 @@
 
                                                     <div class="flex items-center space-x-1 group">
                                                         <div class="flex-1">
-                                                            <input wire:model.defer="data.name" type="text" id="data.name" required="" class="block w-full h-10 transition duration-75 border-gray-300 rounded-lg shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600">
+                                                            <input wire:model.defer="customer.first_name" type="text" id="data.name" required="" class="block w-full h-10 transition duration-75 border-gray-300 rounded-lg shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -57,7 +57,7 @@
 
                                                     <div class="flex items-center space-x-1 group">
                                                         <div class="flex-1">
-                                                            <input wire:model.defer="data.name" type="text" id="data.name" required="" class="block w-full h-10 transition duration-75 border-gray-300 rounded-lg shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600">
+                                                            <input wire:model.defer="customer.middle_name" type="text" id="data.name" required="" class="block w-full h-10 transition duration-75 border-gray-300 rounded-lg shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -77,7 +77,7 @@
 
                                                     <div class="flex items-center space-x-1 group">
                                                         <div class="flex-1">
-                                                            <input wire:model.defer="data.name" type="text" id="data.name" required="" class="block w-full h-10 transition duration-75 border-gray-300 rounded-lg shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600">
+                                                            <input wire:model.defer="customer.last_name" type="text" id="data.name" required="" class="block w-full h-10 transition duration-75 border-gray-300 rounded-lg shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -97,7 +97,7 @@
 
                                                     <div class="flex items-center space-x-1 group">
                                                         <div class="flex-1">
-                                                            <input wire:model.defer="data.email" type="email" id="data.email" required="" class="block w-full h-10 transition duration-75 border-gray-300 rounded-lg shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600">
+                                                            <input wire:model.defer="customer.email" type="email" id="data.email" required="" class="block w-full h-10 transition duration-75 border-gray-300 rounded-lg shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -116,7 +116,7 @@
 
                                                     <div class="flex items-center space-x-1 group">
                                                         <div class="flex-1">
-                                                            <input wire:model.defer="data.phone" type="text" id="data.phone" class="block w-full h-10 transition duration-75 border-gray-300 rounded-lg shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600">
+                                                            <input wire:model.defer="customer.phone_number" type="text" id="data.phone" class="block w-full h-10 transition duration-75 border-gray-300 rounded-lg shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -137,69 +137,7 @@
 
                                                             <div class="flex items-center space-x-1 group">
                                                                 <div class="flex-1">
-                                                                    <input wire:model.defer="data.address.street" type="text" id="data.address.street" class="block w-full h-10 transition duration-75 border-gray-300 rounded-lg shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-span-full">
-                                                    <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
-                                                        <div class="col-span-1 ">
-                                                            <div>
-                                                                <div class="space-y-2">
-                                                                    <div class="flex items-center justify-between space-x-2 rtl:space-x-reverse">
-                                                                        <label class="inline-flex items-center space-x-3 rtl:space-x-reverse" for="data.address.city">
-                                                                            <span class="text-sm font-medium leading-4 text-gray-700">
-                                                                                City
-                                                                            </span>
-                                                                        </label>
-                                                                    </div>
-
-                                                                    <div class="flex items-center space-x-1 group">
-                                                                        <div class="flex-1">
-                                                                            <input wire:model.defer="data.address.city" type="text" id="data.address.city" class="block w-full h-10 transition duration-75 border-gray-300 rounded-lg shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-span-1 ">
-                                                            <div>
-                                                                <div class="space-y-2">
-                                                                    <div class="flex items-center justify-between space-x-2 rtl:space-x-reverse">
-                                                                        <label class="inline-flex items-center space-x-3 rtl:space-x-reverse" for="data.address.state">
-                                                                            <span class="text-sm font-medium leading-4 text-gray-700">
-                                                                                State / Province
-                                                                            </span>
-                                                                        </label>
-                                                                    </div>
-
-                                                                    <div class="flex items-center space-x-1 group">
-                                                                        <div class="flex-1">
-                                                                            <input wire:model.defer="data.address.state" type="text" id="data.address.state" class="block w-full h-10 transition duration-75 border-gray-300 rounded-lg shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="col-span-1 ">
-                                                            <div>
-                                                                <div class="space-y-2">
-                                                                    <div class="flex items-center justify-between space-x-2 rtl:space-x-reverse">
-                                                                        <label class="inline-flex items-center space-x-3 rtl:space-x-reverse" for="data.address.zip">
-                                                                            <span class="text-sm font-medium leading-4 text-gray-700">
-                                                                                Zip / Postal code
-                                                                            </span>
-                                                                        </label>
-                                                                    </div>
-
-                                                                    <div class="flex items-center space-x-1 group">
-                                                                        <div class="flex-1">
-                                                                            <input wire:model.defer="data.address.zip" type="text" id="data.address.zip" class="block w-full h-10 transition duration-75 border-gray-300 rounded-lg shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600">
-                                                                        </div>
-                                                                    </div>
+                                                                    <input wire:model.defer="customer.location.address" type="text" id="data.address.street" class="block w-full h-10 transition duration-75 border-gray-300 rounded-lg shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600">
                                                                 </div>
                                                             </div>
                                                         </div>

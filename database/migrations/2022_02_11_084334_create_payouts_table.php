@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreatePayoutsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('payments', function (Blueprint $table) {
+        Schema::create('payouts', function (Blueprint $table) {
             $table->id();
             $table->string('tag');
-            $table->string('refcode')->nullable();
-            $table->boolean('status')->default(false); // approved {use model event to create a subscription when status is change to approved} | pending //
+            $table->float('amount', 8, 3, true);
+            $table->uuid('refcode')->nullable();
+            $table->unsignedInteger('status')->default(0); // approved {use model event to create a subscription when status is change to approved} | pending //
             $table->foreignId('user_id')->constrained();
-            $table->foreignId('plan_id')->constrained();
+            $table->foreignId('subscription_id')->constrained();
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('payments');
+        Schema::dropIfExists('payouts');
     }
-};
+}

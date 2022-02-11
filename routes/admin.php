@@ -52,10 +52,6 @@ Route::middleware(['auth', 'admin'])
 
       Route::name('payouts.')->prefix('payouts')->group(function () {
         Route::get('/', PayoutsIndex::class)->name('index');
-
-        Route::get('/{payout}/edit', Edit::class)->name('edit');
-
-        Route::get('/{payout}/view', SubscribersView::class)->name('view');
       });
     });
 

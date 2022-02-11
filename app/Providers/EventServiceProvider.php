@@ -4,9 +4,11 @@ namespace App\Providers;
 
 use App\Events\Admin\PaymentApprovedEvent;
 use App\Events\Customer\PaymentRefcodeUpdatedByCustomerForApprovalEvent;
+use App\Events\Customer\PayoutCreatedEvent;
 use App\Listeners\Admin\SendPaymentApprovedNotification;
 use App\Listeners\Admin\SendSubsriptionCreatedNotification;
 use App\Listeners\Customer\SendPaymentApprovalRequestNotification;
+use App\Listeners\Customer\SendPayoutCreatedNotification;
 use App\Models\PendingUserPhoneNumber;
 use App\Models\User;
 use App\Observers\PendingUserPhoneNumberObserver;
@@ -30,6 +32,10 @@ class EventServiceProvider extends ServiceProvider
 
         PaymentApprovedEvent::class => [
             SendPaymentApprovedNotification::class,
+        ],
+       
+        PayoutCreatedEvent::class => [
+            SendPayoutCreatedNotification::class,
         ],
 
         PaymentRefcodeUpdatedByCustomerForApprovalEvent::class => [

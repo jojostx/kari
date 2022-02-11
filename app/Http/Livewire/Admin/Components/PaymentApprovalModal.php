@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire\Admin\Components;
 
-use App\Events\Admin\PaymentApprovedEvent;
+use App\Events\Admin\PayoutApprovedEvent;
 use App\Models\Payment;
 use App\Models\Subscription;
 use Illuminate\Support\Facades\DB;
@@ -15,7 +15,7 @@ class PaymentApprovalModal extends Component
     public $showForm = false;
 
     protected $rules = [
-        'payment.refcode' => ['required', 'string', 'min:8', 'unique:subscriptions,refcode'],
+        'payment.refcode' => ['required', 'string', 'min:8', 'unique:payouts,refcode', 'unique:subscriptions,refcode'],
     ];
 
     protected $validationAttributes = [
@@ -46,7 +46,7 @@ class PaymentApprovalModal extends Component
     
                 $this->dispatchBrowserEvent('close-payment-approval-modal');
                 
-                PaymentApprovedEvent::dispatch($this->payment, $this->payment->subscription);
+                PayoutApprovedEvent::dispatch($this->payment, $this->payment->subscription);
             }
         });
     }

@@ -8,10 +8,8 @@ use App\Http\Livewire\Customer\App\History;
 use App\Http\Livewire\Customer\App\InvestmentApprove;
 use App\Http\Livewire\Customer\App\InvestmentCreate;
 use App\Http\Livewire\Customer\App\Investments;
-use App\Http\Livewire\Customer\App\Payments;
-use App\Http\Livewire\Customer\App\Payouts;
+use App\Http\Livewire\Customer\App\Payouts\Index;
 use App\Http\Livewire\Customer\App\Profile;
-use App\Http\Livewire\Customer\App\Subscriptions;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['seenCookiePolicyAlert'])->group(function () {
@@ -62,7 +60,7 @@ Route::middleware(['auth', 'customer'])
             Route::get('/{payment}/approve', InvestmentApprove::class)->name('approve');
         });
 
-        Route::get('/payouts', Payouts::class)->name('payouts');
+        Route::get('/payouts', Index::class)->name('payouts');
 
         Route::get('/history', History::class)->name('history');
 

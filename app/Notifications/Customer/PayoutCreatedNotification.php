@@ -2,7 +2,6 @@
 
 namespace App\Notifications\Customer;
 
-use App\Models\Payment;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
@@ -10,16 +9,19 @@ use Illuminate\Notifications\Notification;
 use NotificationChannels\AfricasTalking\AfricasTalkingChannel;
 use NotificationChannels\AfricasTalking\AfricasTalkingMessage;
 
-class PaymentApprovalRequestNotification extends Notification implements ShouldQueue
+class PayoutCreatedNotification extends Notification implements ShouldQueue
 {
     use Queueable;
- 
+
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct(public Payment $payment){}
+    public function __construct()
+    {
+        //
+    }
 
     /**
      * Get the notification's delivery channels.
@@ -40,7 +42,7 @@ class PaymentApprovalRequestNotification extends Notification implements ShouldQ
      */
     public function toAfricasTalking($notifiable)
     {
-        $Url = $this->paymentUrl();
+        $Url = $this->payoutUrl();
 
         $message = $this->buildSMSMessage($Url, $notifiable);
 
@@ -58,9 +60,11 @@ class PaymentApprovalRequestNotification extends Notification implements ShouldQ
      */
     protected function buildSMSMessage($url, $notifiable)
     {
-        return "Kariinvestment: [Payment Approval Request] 
-                \n A payment approval has been requested, 
-                \n click the link below to begin approval process 
+        $name = (string) $notifiable->first_name ?? '';
+
+        return "Kariinvestment: [Payment Approved & Subscription Created] 
+                \n Hello {$name}, 
+                \n Your Payment & Subscription has been approved 
                 \n {$url}";
     }
 
@@ -68,9 +72,9 @@ class PaymentApprovalRequestNotification extends Notification implements ShouldQ
      * Get the verification URL for the given notifiable.
      * @return string
      */
-    protected function paymentUrl()
+    protected function payoutUrl()
     {
-        return route('admin.investment.payments.index');
+        return route('dashboard');
     }
 
     /**
@@ -81,13 +85,12 @@ class PaymentApprovalRequestNotification extends Notification implements ShouldQ
      */
     public function toMail($notifiable)
     {
-        $user = $this->payment->customer;
-
         return (new MailMessage)
-            ->subject('Kariinvestment: [Payment Approval Request]')
-            ->greeting("Hello!")
-            ->line("A payment approval has been requested by { $user->full_name } - { $user->email }")
-            ->action('View payment', $this->paymentUrl());
+            ->subject('Kariinvestment: [Payout Created]')
+            ->greeting("Hello,")
+            ->line('You have a new Payout that you can withdraw')
+            ->action('View Payout', $this->payoutUrl())
+            ->line('Thank you for using our application!');
     }
 
     /**
@@ -99,8 +102,7 @@ class PaymentApprovalRequestNotification extends Notification implements ShouldQ
     public function toArray($notifiable)
     {
         return [
-            'payment_id' => $this->payment->id,
-            'payment_refcode' => $this->payment->refcode,
+            //
         ];
     }
 }

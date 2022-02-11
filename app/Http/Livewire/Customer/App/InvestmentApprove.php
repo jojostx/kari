@@ -7,19 +7,18 @@ use App\Models\Payment;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Livewire\Component;
 
 class InvestmentApprove extends Component implements HasForms
 {
-    use InteractsWithForms;
+    use InteractsWithForms, AuthorizesRequests;
 
     public Payment $payment;
 
     public function mount()
     {
-        if ($this->payment->customer()->isNot(auth()->user())) {
-            abort(403, 'unauthorized action');
-        }
+        $this->authorize('view', $this->payment);
       
         if ($this->payment->refcode && !$this->payment->status) {
             abort(403, 'unauthorized action');

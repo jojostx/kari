@@ -3,6 +3,7 @@
 use App\Models\Newsfeed;
 use App\Models\NewsfeedSubscription;
 use App\Models\Payment;
+use App\Models\Payout;
 use App\Models\Subscription;
 use App\Models\User;
 use Illuminate\Foundation\Inspiring;
@@ -32,27 +33,58 @@ Artisan::command('setup:prod', function () {
         ->count(50)
         ->create();
 
-
+    // creates approved payments, subscription and payouts
     $users->each(function (User $user) {
         $payment = Payment::factory()->create(['user_id' => $user->id]);
-
-        $subscription = Subscription::factory()->create(['user_id' => $user->id, 'payment_id' => $payment->id, 'refcode' => $payment->refcode, 'ends_at' => now()->addYear()]);
-
+        $subscription = Subscription::factory()->create([
+            'user_id' => $user->id,
+            'tag'=> $payment->tag,
+            'payment_id' => $payment->id,
+            'refcode' => $payment->refcode,
+        ]);
         $subscription->customer()->associate($user);
-
         $payment->customer()->associate($user);
+
+
+        $payment_2 = Payment::factory()->create(['user_id' => $user->id]);
+        $subscription_2 = Subscription::factory()->create([
+            'tag'=> $payment->tag,
+            'user_id' => $user->id,
+            'payment_id' => $payment_2->id,
+            'refcode' => $payment_2->refcode,
+        ]);
+        $payment_2->customer()->associate($user);
+        $subscription_2 ->customer()->associate($user);
+         
+        Payout::factory()->create([
+            'tag' => $subscription_2->tag,
+            'amount' => 4000.00,
+            'subscription_id' => $subscription_2->id,
+            'status' => Payout::REQUESTED,
+            'refcode' => null,
+            'user_id' => $user->id,
+        ]);
+        
+        Payout::factory()->create([
+            'tag' => $subscription_2->tag,
+            'amount' => 4000.00,
+            'subscription_id' => $subscription_2->id,
+            'refcode' => null,
+            'status' => Payout::CREATED,
+            'user_id' => $user->id,
+        ]);
+
+        Payout::factory()->create([
+            'tag' => $subscription_2->tag,
+            'amount' => 4000.00,
+            'subscription_id' => $subscription_2->id,
+            'refcode' => $subscription_2->refcode,
+            'status' => Payout::WITHDRAWN,
+            'user_id' => $user->id,
+        ]);
     });
 
-    $users->each(function (User $user) {
-        $payment = Payment::factory()->create(['user_id' => $user->id]);
-
-        $subscription = Subscription::factory()->create(['user_id' => $user->id, 'payment_id' => $payment->id, 'refcode' => $payment->refcode, 'ends_at' => now()->addYear()]);
-
-        $subscription->customer()->associate($user);
-
-        $payment->customer()->associate($user);
-    });
-
+    //creates unapproved payments
     $users->each(function (User $user) {
         $payment = Payment::factory()->create(['user_id' => $user->id, 'status' => false, 'refcode' => null]);
 

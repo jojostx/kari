@@ -133,20 +133,9 @@ class User extends Authenticatable implements MustVerifyPhoneNumber, MustVerifyE
     /**
      * The payments for a user.
      */
-    public function payments(bool|null $status = null): HasMany
+    public function payments(): HasMany
     {
-        //payment model
-        $instance = $this->newRelatedInstance(Payment::class);
-
-        //user_id
-        $foreignKey = $this->getForeignKey();
-
-        // =id {user}
-        $localKey = $this->getKeyName();
-
-        $query = is_null($status) ? $instance->newQuery() : $instance->newQuery()->where('payments.status', $status);
-
-        return $this->newHasMany($query, $this, $instance->getTable() . '.' . $foreignKey, $localKey);
+        return $this->HasMany(Payment::class);
     }
 
     /**
@@ -155,6 +144,14 @@ class User extends Authenticatable implements MustVerifyPhoneNumber, MustVerifyE
     public function subscriptions(): HasMany
     {
         return $this->hasMany(Subscription::class);
+    }
+
+    /**
+     * The payouts for a user.
+     */
+    public function payouts(): HasMany
+    {
+        return $this->hasMany(Payout::class);
     }
 
     /**
@@ -171,5 +168,12 @@ class User extends Authenticatable implements MustVerifyPhoneNumber, MustVerifyE
     public function pendingPhoneNumber(): HasOne
     {
         return $this->hasOne(PendingUserPhoneNumber::class, 'user_id');
+    }
+
+    public function hasPayment(Payment $payment)
+    {
+        return $this->payments()
+            ->where('id', $payment->getKey())
+            ->exists();
     }
 }

@@ -21,6 +21,8 @@ class SubscriptionFactory extends Factory
             'interest' => $plan->interest,
             'principal'=>  $plan->principal,
             'plan_id' => $plan->id,
+            'ends_at' => now()->addYear(),
+            'next_payout_at' => now()->addMonths(\config('app.payout_period', 6)),
         ];
 
     }

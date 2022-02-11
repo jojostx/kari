@@ -8,25 +8,26 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Livewire\Component;
 
 class InvestmentCreate extends Component implements HasForms
 {
-    use InteractsWithForms;
+    use InteractsWithForms, AuthorizesRequests;
 
-    public $payment;
+    public $tag;
+    
+    public $plan_id;
+
 
     public function mount(): void
     {
-        $this->form->fill([
-            'type' => '',
-            'title' => '',
-        ]);
+        $this->authorize('create', Payment::class);
     }
 
     protected function getFormModel()
     {
-        return $this->payment;
+        return Payment::class;
     }
 
     protected function getFormSchema(): array
@@ -38,23 +39,24 @@ class InvestmentCreate extends Component implements HasForms
                 ->required(),
 
             TextInput::make('tag')
-            ->label('Title')
-            ->helperText('The title will be used to uniquely identify the investment')
-            ->required()->rules(['between:12,32'])->unique(table: Payment::class, column: 'tag'),
+                ->label('Title')->hint("examples: my child's uni investment")
+                ->helperText('The title will be used to uniquely identify the investment subcription')
+                ->required()->rules(['between:12,32'])->unique(table: Payment::class, column: 'tag'),
         ];
     }
 
     public function create()
-    {        
-        if (auth()->user()->payments()->count() <= 5) {
+    {
+        try {
+            $this->authorize('create', Payment::class);
+
             $payment_pending = auth()->user()->payments()->create([
                 'tag' => $this->form->getState()['tag'],
                 'plan_id' => $this->form->getState()['plan_id'],
             ]);
 
             return redirect()->route('investments.approve', ['payment' => $payment_pending->refresh()]);
-        }
-        else {
+        } catch (\Throwable $th) {
             return redirect()->route('investments.index');
         }
     }

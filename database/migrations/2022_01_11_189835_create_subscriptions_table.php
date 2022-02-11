@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('subscriptions', function (Blueprint $table) {
             $table->id();
+            $table->string('tag');
             $table->uuid('refcode');
             $table->unsignedInteger(column: 'principal');
             $table->float(column: 'interest', total: 4, places: 3, unsigned: true);
@@ -22,6 +23,7 @@ return new class extends Migration
             $table->foreignId('plan_id')->constrained();
             $table->foreignId('payment_id')->constrained();
             $table->timestamp('ends_at');
+            $table->timestamp('next_payout_at');
             $table->timestamps();
             $table->softDeletes();
         });

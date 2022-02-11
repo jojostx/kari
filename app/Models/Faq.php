@@ -19,7 +19,8 @@ class Faq extends Model
      */
     protected $fillable = [
         'question',
-        'answer'
+        'answer',
+        'faq_category_id'
     ];
 
     public function category(): BelongsTo

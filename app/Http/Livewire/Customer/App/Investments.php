@@ -26,14 +26,15 @@ class Investments extends Component implements HasTable
     ];
 
     public function mount()
-    {
+    {  
         $this->subscriptions = auth()->user()->subscriptions;
+        
         $this->payments = auth()->user()->payments;
     }
 
     protected function getTableQuery(): Builder
     {
-        return Auth::user()->payments(false)->getQuery();
+        return Auth::user()->payments()->where('status', false)->getQuery();
     }
 
     protected function getTableColumns(): array

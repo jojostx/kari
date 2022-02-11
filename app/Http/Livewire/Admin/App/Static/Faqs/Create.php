@@ -28,8 +28,10 @@ class Create extends Component implements HasForms
     protected function getFormSchema(): array
     {
         return [
-            Forms\Components\BelongsToSelect::make('category')->relationship('category', 'name')->searchable(),
+            Forms\Components\BelongsToSelect::make('category_id')->label('category')->relationship('category', 'name'),
+            
             Forms\Components\TextInput::make('question')->required(),
+            
             Forms\Components\MarkdownEditor::make('answer')
                 ->toolbarButtons([
                     'bold',
@@ -43,13 +45,13 @@ class Create extends Component implements HasForms
         ];
     }
 
-    public function create(): void
-    {
-        \dd('ok');
-
+    public function create()
+    {     
         $faq = Faq::create($this->form->getState());
  
-        $this->form->model($faq)->saveRelationships(); 
+        session()->flash('message', 'FAQ created successfully');
+
+        return redirect()->route('admin.static.faqs.index');
     }
 
     public function render()
