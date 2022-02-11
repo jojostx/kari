@@ -2,19 +2,19 @@
 
 namespace App\Listeners\Customer;
 
-use App\Events\Customer\PaymentRefcodeUpdatedByCustomerForApprovalEvent;
+use App\Events\Customer\PayoutRequestedEvent;
 use App\Models\User;
-use App\Notifications\Customer\PaymentApprovalRequestNotification;
+use App\Notifications\Customer\PayoutRequestedNotification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Notification;
 
-class SendPaymentApprovalRequestNotification implements ShouldQueue
+class SendPayoutRequestedNotification implements ShouldQueue
 {
     use InteractsWithQueue;
 
     public $tries = 5;
-    
+
     /**
      * Create the event listener.
      *
@@ -28,13 +28,13 @@ class SendPaymentApprovalRequestNotification implements ShouldQueue
     /**
      * Handle the event.
      *
-     * @param  PaymentRefcodeUpdatedByCustomerForApprovalEvent  $event
+     * @param  PayoutRequestedEvent  $event
      * @return void
      */
-    public function handle(PaymentRefcodeUpdatedByCustomerForApprovalEvent $event)
+    public function handle(PayoutRequestedEvent $event)
     {
         $admins = User::admins()->get();
 
-        Notification::send($admins, new PaymentApprovalRequestNotification($event->payment));
+        Notification::send($admins, new PayoutRequestedNotification($event->payment));
     }
 }

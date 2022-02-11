@@ -110,7 +110,7 @@ class AccountSettings extends Component implements HasForms
                         ]
                     ),
 
-                    TextInput::make('phone_number')->label('Phone Number')->required(),
+                    TextInput::make('phone_number')->label('Phone Number')->rules(['unique:users,phone_number'])->required(),
 
                     Select::make('state_id')
                         ->label('State')

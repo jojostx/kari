@@ -10,6 +10,8 @@ class SendPayoutCreatedNotification implements ShouldQueue
 {
     use InteractsWithQueue;
 
+    public $tries = 5;
+    
     /**
      * Create the event listener.
      *
