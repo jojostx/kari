@@ -39,6 +39,10 @@
                                 <span class="inline-flex items-center justify-center px-2 py-0.5 text-xs tracking-tight text-blue-600 bg-blue-200 rounded-full">
                                     Verified
                                 </span>
+                                @else
+                                <span class="inline-flex items-center justify-center px-2 py-0.5 text-xs tracking-tight text-red-600 bg-red-200 rounded-full">
+                                    Unverified
+                                </span>
                                 @endif
                             </dt>
                             <dd class="mt-1 font-medium leading-5">{{ auth()->user()->email }}</dd>
@@ -48,6 +52,10 @@
                                 @if (auth()->user()->hasVerifiedPhoneNumber())
                                 <span class="inline-flex items-center justify-center px-2 py-0.5 text-xs tracking-tight text-blue-600 bg-blue-200 rounded-full">
                                     Verified
+                                </span>
+                                @else
+                                <span class="inline-flex items-center justify-center px-2 py-0.5 text-xs tracking-tight text-red-600 bg-red-200 rounded-full">
+                                    Unverified
                                 </span>
                                 @endif
                             </dt>

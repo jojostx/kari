@@ -17,7 +17,7 @@ class Contact extends Component
     {
         return [
             'fullname' => ['required', 'max:255'],
-            'phone' => ['required_without:email', 'size:11', new StartsWith()],
+            'phone' => ['required_without:email', 'size:11'],
             'email' => ['required_without:phone', 'email'],
             'message' => ['required', 'string', 'max:1024'],
         ];

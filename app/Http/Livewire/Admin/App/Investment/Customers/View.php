@@ -8,7 +8,7 @@ use Livewire\Component;
 class View extends Component
 {
     public User $customer;
-
+    
     protected $rules = [
         'customer.location.address' => ['required', 'string'],
         'customer.phone_number' => ['required', 'string'], 

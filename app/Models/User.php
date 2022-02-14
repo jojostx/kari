@@ -90,7 +90,7 @@ class User extends Authenticatable implements MustVerifyPhoneNumber, MustVerifyE
 
     public function admin()
     {
-        return $this->is_admin;
+        return \boolval($this->is_admin);
     }
 
     public function getFullNameAttribute($value): string

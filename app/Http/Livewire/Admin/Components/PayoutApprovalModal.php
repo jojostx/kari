@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Admin\Components;
 
 use App\Events\Admin\PaymentApprovedEvent;
+use App\Events\Admin\PayoutApprovedEvent;
 use App\Models\Payout;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
@@ -45,7 +46,7 @@ class PayoutApprovalModal extends Component
     
                 $this->dispatchBrowserEvent('close-payout-approval-modal');
                 
-                PaymentApprovedEvent::dispatch($this->payout);
+                PayoutApprovedEvent::dispatch($this->payout);
             }
         });
     }
