@@ -48,7 +48,7 @@ Route::middleware(['throttle:xhrFormRequest'])->group(function () {
     Route::post('cookie/accept', [SeenCookiePolicyController::class, 'accept'])->name('cookie.accept');
 });
 
-Route::middleware(['auth', 'customer'])
+Route::middleware(['auth', 'customer', 'verified', 'verifiedPhoneNumber'])
     ->group(function () {
         Route::get('/dashboard', Dashboard::class)->name('dashboard');
 
