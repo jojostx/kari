@@ -24,7 +24,7 @@
 		</section>
 
 		<!-- why you should invest -->
-		<section class="container py-16">
+		<section class="container py-16 px-6">
 			<div class="flex justify-center w-full py-12 mb-10 text-center lg:mb-14">
 				<h1 class="text-3xl font-bold tracking-wide text-black md:text-4xl font-vesp lg:tracking-wider">Why You Should Invest With Us</h1>
 			</div>
