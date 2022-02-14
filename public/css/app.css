@@ -6389,6 +6389,11 @@ a:hover:after{
   border-color: rgb(31 41 55 / var(--tw-border-opacity));
 }
 
+.border-blue-600{
+  --tw-border-opacity: 1;
+  border-color: rgb(37 99 235 / var(--tw-border-opacity));
+}
+
 .border-gray-900{
   --tw-border-opacity: 1;
   border-color: rgb(17 24 39 / var(--tw-border-opacity));
