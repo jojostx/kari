@@ -24,7 +24,7 @@
 		</section>
 
 		<!-- why you should invest -->
-		<section class="container py-16 px-6">
+		<section class="container px-6 py-16">
 			<div class="flex justify-center w-full py-12 mb-10 text-center lg:mb-14">
 				<h1 class="text-3xl font-bold tracking-wide text-black md:text-4xl font-vesp lg:tracking-wider">Why You Should Invest With Us</h1>
 			</div>
@@ -44,7 +44,7 @@
 					</a>
 				</div>
 				<div class="flex justify-center w-full">
-					<img class="max-w-md" src="{{ asset('images/london-desk.jpg') }}" alt="photo of london city">
+					<img class="w-full max-w-md" src="{{ asset('images/london-desk.jpg') }}" alt="photo of london city">
 				</div>
 			</article>
 
@@ -67,7 +67,7 @@
 				</div>
 
 				<div class="flex justify-center order-1 w-full md:order-2">
-					<img class="max-w-md" src="{{ asset('images/house-1.jpg') }}" alt="">
+					<img class="w-full max-w-md" src="{{ asset('images/house-1.jpg') }}" alt="">
 				</div>
 			</article>
 
@@ -86,7 +86,7 @@
 					</a>
 				</div>
 				<div class="flex justify-center w-full">
-					<img class="max-w-md" src="{{ asset('images/graph-desk.jpg') }}" alt="">
+					<img class="w-full max-w-md" src="{{ asset('images/graph-desk.jpg') }}" alt="">
 				</div>
 			</article>
 		</section>

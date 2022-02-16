@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Admin\App\Investment\Payouts;
 
 use App\Models\Payout;
 use App\Models\User;
+use Filament\Tables\Actions\ButtonAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Concerns\InteractsWithTable;
 use Filament\Tables\Contracts\HasTable;
@@ -39,13 +40,7 @@ class Index extends Component implements HasTable
         return [
             TextColumn::make('status')
                 ->formatStateUsing(fn (string $state): View => view('components.partials.payout-status', compact('state')))
-                ->action(function (Payout $record): void {
-                    if ($record->status === Payout::REQUESTED) {
-                        $this->dispatchBrowserEvent('open-payout-approval-modal');
-
-                        $this->emit('open-payout-approval-modal', [$record->getKey()]);
-                    }
-                })->extraAttributes(['style' => 'cursor: text;']),
+                ->extraAttributes(['style' => 'cursor: text; padding:0.75rem 0.4rem 0.75rem 0.4rem; overflow-wrap: break-word; white-space: normal;']),
 
             TextColumn::make('tag')
                 ->label('Tag')
@@ -60,11 +55,26 @@ class Index extends Component implements HasTable
             TextColumn::make('customer.email')
                 ->label('Customer Email')
                 ->extraAttributes(['style' => 'max-width:180px; overflow-wrap: break-word; white-space: normal;']),
-                
+
             TextColumn::make('created_at')
                 ->label('Created at')
                 ->date('M j, Y')
                 ->extraAttributes(['style' => 'max-width: 80px;']),
+        ];
+    }
+
+    protected function getTableActions(): array
+    {
+        return [
+            ButtonAction::make('Approve')
+                ->action(function (Payout $record): void {
+                    if ($record->status === Payout::REQUESTED) {
+                        $this->dispatchBrowserEvent('open-payout-approval-modal');
+
+                        $this->emit('open-payout-approval-modal', [$record->getKey()]);
+                    }
+                })
+                ->hidden(fn ($record): bool => $record->status !== Payout::REQUESTED),
         ];
     }
 
