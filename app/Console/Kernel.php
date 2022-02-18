@@ -15,7 +15,10 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('create:payouts')->dailyAt('1:00');
+        $schedule->command('create:payouts')
+        ->dailyAt('1:00')
+        ->runInBackground()
+        ->emailOutputOnFailure('ikuskid7@gmail.com');
     }
 
     /**
