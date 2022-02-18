@@ -78,7 +78,7 @@ class Subscription extends Model
     ##### Scopes #######
 
     /**
-     * Scope a query to return only mature subscriptions authenticated user.
+     * Scope a query to return only mature subscriptions for the authenticated user.
      * 
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @return \Illuminate\Database\Eloquent\Builder
@@ -88,8 +88,27 @@ class Subscription extends Model
         return $query->where('ends_at', '<=', now());
     }
 
-    ##### Accessors #######
+    /**
+     * Scope a query to return only subscriptions that has pending payouts.
+     * 
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeHasUncreatedPayouts(Builder $query)
+    {
+        $period = config('app.payout_period', 6);
 
+        return $query->where('next_payout_at', '<=', now())
+        ->has(
+            'payouts',
+            '<',
+            function ($query) use ($period) {
+                $query->selectRaw("FLOOR(TIMESTAMPDIFF(MONTH, subscriptions.created_at, subscriptions.next_payout_at)/$period)");
+            }
+        );
+    }
+
+    ##### Accessors #######
     public function getTotalPayoutAttribute()
     {
         $period = $this->ends_at->diffInMonths($this->created_at);
@@ -103,7 +122,7 @@ class Subscription extends Model
 
     public function getBiannualPayoutAmountAttribute()
     {
-        $payout = $this->principal * (1 + ($this->interest/2));
+        $payout = $this->principal * (1 + ($this->interest / 2));
 
         return $payout;
     }
@@ -116,7 +135,7 @@ class Subscription extends Model
         return $this->next_payout_at->lessThanOrEqualTo(now()) && ($this->payouts()->count() < $max_payout_count);
     }
 
-    public function ceatePayout()
+    public function createPayout()
     {
         if (!$this->canCreatePayout()) {
             return false;
@@ -136,8 +155,8 @@ class Subscription extends Model
                 'next_payout_at' => $this->next_payout_at->addMonths(config('app.payout_period', 6)),
             ]);
 
-            PayoutCreatedEvent::dispatchIf($ran, $payout);
             //send email to user to notify them of an available payout
+            PayoutCreatedEvent::dispatchIf($ran, $payout);
         });
     }
 }
