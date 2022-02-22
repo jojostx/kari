@@ -139,8 +139,7 @@ class User extends Authenticatable implements MustVerifyPhoneNumber, MustVerifyE
     public function scopeVerified($query)
     {
         return $query
-            ->where('email_verified_at', '<>', null)
-            ->where('phone_verified_at', '<>', null);
+            ->where('email_verified_at', '<>', null);
     }
 
     /**
@@ -152,8 +151,7 @@ class User extends Authenticatable implements MustVerifyPhoneNumber, MustVerifyE
     public function scopeUnverified($query)
     {
         return $query
-            ->where('email_verified_at', null)
-            ->where('phone_verified_at', null);
+            ->where('email_verified_at', null);
     }
 
     /**
