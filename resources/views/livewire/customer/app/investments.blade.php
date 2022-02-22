@@ -39,7 +39,6 @@
             <x-payment-warning/>
         </div>
 
-
         <div class="mt-8">
             <p class="mb-4 font-bold tracking-wide sm:text-lg">Pending Payments</p>
             {{ $this->table }}
