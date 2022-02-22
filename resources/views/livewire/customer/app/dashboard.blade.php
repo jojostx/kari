@@ -27,7 +27,7 @@
                 </div>
                 <div class="m-2">
                     <p class="text-sm font-semibold text-gray-500">Total Expected Amount</p>
-                    <h2 class="text-xl font-semibold text-gray-800">£ {{ $total_roi }}</h2>
+                    <h2 class="text-xl font-semibold text-gray-800">£ {{ $total_roi ?? 0 }}</h2>
                 </div>
             </div>
             <div class="w-full p-4 m-2 sm:w-min ">

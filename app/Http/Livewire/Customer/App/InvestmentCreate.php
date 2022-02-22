@@ -55,7 +55,6 @@ class InvestmentCreate extends Component implements HasForms
 
             return redirect()->route('investments.approve', ['payment' => $payment_pending->refresh()]);
         } catch (\Throwable $th) {
-            \dd('failed');
             return redirect()->route('investments.index');
         }
     }
