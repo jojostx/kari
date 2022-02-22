@@ -1,5 +1,5 @@
 <div class="grid min-h-screen grid-cols-2">
-    <div class="relative">
+    <div class="relative hidden lg:block">
     </div>
 
     <div class="fixed inset-y-0 flex-row justify-center hidden w-1/2 h-full bg-center bg-cover lg:flex pb-14 pt-28 md:py-24 bg-point-mobile md:bg-point">

@@ -41,8 +41,7 @@ class PaymentPolicy
      */
     public function create(User $user)
     {
-        return ($user->hasVerifiedEmail() &&
-            $user->payments()->where('status', false)->count() <= 4);
+        return $user->hasVerifiedEmail() && $user->payments()->where('status', false)->count() < 5;
     }
 
     /**

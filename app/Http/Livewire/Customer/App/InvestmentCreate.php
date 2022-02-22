@@ -48,8 +48,6 @@ class InvestmentCreate extends Component implements HasForms
     public function create()
     {
         try {
-            $this->authorize('create', Payment::class);
-
             $payment_pending = auth()->user()->payments()->create([
                 'tag' => $this->form->getState()['tag'],
                 'plan_id' => $this->form->getState()['plan_id'],
@@ -57,6 +55,7 @@ class InvestmentCreate extends Component implements HasForms
 
             return redirect()->route('investments.approve', ['payment' => $payment_pending->refresh()]);
         } catch (\Throwable $th) {
+            \dd('failed');
             return redirect()->route('investments.index');
         }
     }

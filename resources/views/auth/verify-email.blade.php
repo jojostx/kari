@@ -6,8 +6,18 @@
             </a>
         </x-slot>
 
-        <div class="mb-4 text-sm text-gray-600">
-            {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}
+        @livewire('customer.app.redirect-to-dashboard-when-authenticated')
+
+        <div class="mb-4">
+            <p class="text-base font-medium text-gray-600">
+                We've sent a verification email to: &nbsp; {{ auth()->user()?->email }}
+            </p>
+        </div>
+
+        <div class="mb-4">
+            <p class="text-sm text-gray-600">
+                Click the link in your email to verify your account. If you can't find the email check your spam folder or click the button below to resend.
+            </p>
         </div>
 
         @if (session('status') == 'verification-link-sent')
