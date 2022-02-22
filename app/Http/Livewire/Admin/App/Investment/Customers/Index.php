@@ -10,6 +10,7 @@ use Filament\Tables\Columns\BooleanColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Concerns\InteractsWithTable;
 use Filament\Tables\Contracts\HasTable;
+use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Contracts\Pagination\Paginator;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
@@ -35,7 +36,12 @@ class Index extends Component implements HasTable
     {
         // send email notification to verify their email & activate account.
         return [
-            BulkAction::make('notify')->action(fn (Collection $records) => $records->each->delete())->deselectRecordsAfterCompletion(),
+            BulkAction::make('notify')->action(fn (Collection $records) => $records->each(function (User $user)
+            {
+                if (!$user->hasVerifiedEmail()) {    
+                    $user->sendEmailVerificationNotification();
+                }
+            }))->deselectRecordsAfterCompletion(),
         ];
     }
 
