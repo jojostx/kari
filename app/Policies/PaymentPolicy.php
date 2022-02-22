@@ -18,7 +18,7 @@ class PaymentPolicy
      */
     public function viewAny(User $user)
     {
-        return ($user->hasVerifiedEmail() && $user->hasVerifiedPhoneNumber()) || $user->admin();
+        return $user->hasVerifiedEmail() || $user->admin();
     }
 
     /**
@@ -30,7 +30,7 @@ class PaymentPolicy
      */
     public function view(User $user, Payment $payment)
     {
-        return ($user->hasVerifiedEmail() && $user->hasVerifiedPhoneNumber() && $user->hasPayment($payment)) || $user->admin();
+        return ($user->hasVerifiedEmail() && $user->hasPayment($payment)) || $user->admin();
     }
 
     /**
@@ -42,7 +42,6 @@ class PaymentPolicy
     public function create(User $user)
     {
         return ($user->hasVerifiedEmail() &&
-            $user->hasVerifiedPhoneNumber() &&
             $user->payments()->where('status', false)->count() <= 4);
     }
 
@@ -55,7 +54,7 @@ class PaymentPolicy
      */
     public function update(User $user, Payment $payment)
     {
-        return ($user->hasVerifiedEmail() && $user->hasVerifiedPhoneNumber() && $user->hasPayment($payment)) || $user->admin();
+        return ($user->hasVerifiedEmail() && $user->hasPayment($payment)) || $user->admin();
     }
 
     /**
