@@ -30,14 +30,25 @@ class Payment extends Model
 
 
     /**
-     * Scope a query to return the available roommates for the authenticated user.
-     * @method availableRoommates()
+     * Scope a query to return payments pending approval.
+     * 
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function scopePendingPayments($query)
+    public function scopePending($query)
     {
         return $query->where('status', false);
+    }
+
+    /**
+     * Scope a query to return approved payments.
+     * 
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeApproved($query)
+    {
+        return $query->where('status', true);
     }
 
     /**

@@ -37,6 +37,8 @@ module.exports = {
                 'pent-mobile': "url('/images/bg-penthouse-mobile.jpg')",
                 'point': "url('/images/bg-point-mobile.jpg')",
                 'point-mobile': "url('/images/bg-point-mobile.jpg')",
+                'bridge': "url('/images/london-bridge.jpg')",
+                'bridge-mobile': "url('/images/london-bridge-mobile.jpg')",
                 'prism': "url('/images/subtle-prism.svg')",
             },
             screens: {

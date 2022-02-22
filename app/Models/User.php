@@ -109,8 +109,8 @@ class User extends Authenticatable implements MustVerifyPhoneNumber, MustVerifyE
     }
 
     /**
-     * Scope a query to return the available roommates for the authenticated user.
-     * @method availableRoommates()
+     * Scope a query to return customers.
+     * 
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @return \Illuminate\Database\Eloquent\Builder
      */
@@ -120,14 +120,40 @@ class User extends Authenticatable implements MustVerifyPhoneNumber, MustVerifyE
     }
 
     /**
-     * Scope a query to return the available roommates for the authenticated user.
-     * @method availableRoommates()
+     * Scope a query to return only admins.
+     * 
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeAdmins($query)
     {
         return $query->where('is_admin', true);
+    }
+
+    /**
+     * Scope a query to return only verified users.
+     * 
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeVerified($query)
+    {
+        return $query
+            ->where('email_verified_at', '<>', null)
+            ->where('phone_verified_at', '<>', null);
+    }
+
+    /**
+     * Scope a query to return only unverified users.
+     * 
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeUnverified($query)
+    {
+        return $query
+            ->where('email_verified_at', null)
+            ->where('phone_verified_at', null);
     }
 
     /**

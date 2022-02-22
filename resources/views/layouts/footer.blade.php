@@ -31,5 +31,14 @@
             </svg></a></div>
       </div>
     </footer>
+    <footer class="px-10 py-4 text-xs bg-gray-200 border-t border-gray-300 footer text-base-content">
+      <div class="md:place-self-center md:justify-self-end">
+        <p>Illustration by
+          <a class="underline underline-offset-1" href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6">Icons 8</a>
+          from
+          <a class="underline underline-offset-1" href="https://icons8.com/illustrations">Ouch!</a>
+        </p>
+      </div>
+    </footer>
   </div>
 </div>

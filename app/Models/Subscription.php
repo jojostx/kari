@@ -78,7 +78,7 @@ class Subscription extends Model
     ##### Scopes #######
 
     /**
-     * Scope a query to return only mature subscriptions for the authenticated user.
+     * Scope a query to return only mature subscriptions.
      * 
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @return \Illuminate\Database\Eloquent\Builder
@@ -86,6 +86,17 @@ class Subscription extends Model
     public function scopeMatured(Builder $query)
     {
         return $query->where('ends_at', '<=', now());
+    }
+
+    /**
+     * Scope a query to return only ongoing subscriptions.
+     * 
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeOngoing(Builder $query)
+    {
+        return $query->where('ends_at', '>', now());
     }
 
     /**

@@ -30,18 +30,18 @@ class Payout extends Model
 
     /**
      * Scope a query to return the available roommates for the authenticated user.
-     * @method availableRoommates()
+     * 
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function scopeCreated($query)
+    public function scopeGenerated($query)
     {
         return $query->where('status', self::CREATED);
     }
 
     /**
      * Scope a query to return the available roommates for the authenticated user.
-     * @method availableRoommates()
+     * 
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @return \Illuminate\Database\Eloquent\Builder
      */

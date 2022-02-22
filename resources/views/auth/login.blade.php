@@ -23,7 +23,7 @@
             </div>
 
             <!-- Password -->
-           <x-password-input/>
+            <x-password-input />
 
             <!-- Remember Me -->
             <div class="block mt-4">
@@ -33,16 +33,23 @@
                 </label>
             </div>
 
-            <div class="flex items-center justify-end mt-4 text-xs">
+            <div class="flex flex-col items-end mt-4 col-span-full">
                 @if (Route::has('password.request'))
                 <a class="text-sm text-gray-600 underline hover:text-gray-900" href="{{ route('password.request') }}">
                     {{ __('Forgot your password?') }}
                 </a>
                 @endif
 
-                <x-button class="ml-3">
+                <x-button class="justify-center w-full mt-2 hover:bg-blue-600">
                     {{ __('Log in') }}
                 </x-button>
+
+                <p class="self-start mt-4">
+                    <span class="font-medium">{{ __('Not registered?') }}</span>
+                    <a class="text-sm text-blue-500 underline hover:text-blue-900" href="{{ route('register') }}">
+                        Sign up
+                    </a>
+                </p>
             </div>
         </form>
     </x-auth-card>

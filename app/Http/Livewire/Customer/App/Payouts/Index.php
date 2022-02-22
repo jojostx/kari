@@ -12,7 +12,7 @@ class Index extends Component
 
     public function getCreatedPayoutsProperty()
     {
-        return Auth::user()->payouts()->created()->get();
+        return Auth::user()->payouts()->generated()->get();
     }
    
     public function getRequestedPayoutsProperty()
