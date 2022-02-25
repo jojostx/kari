@@ -31,10 +31,12 @@ class SendPaymentApprovedNotification implements ShouldQueue
      */
     public function handle(PaymentApprovedEvent $event)
     {        
-        try {
-            $event->payment->user->notify(new SubscriptionCreatedNotification($event->subscription));                
-        } catch (\Throwable $e) {
-            \logger("\n \n {$e}");
+        if ($event->payment->customer) {
+            try {
+                $event->payment->customer->notify(new SubscriptionCreatedNotification($event->subscription));                
+            } catch (\Throwable $e) {
+                \logger("\n \n {$e}");
+            }
         }
     }
 }
