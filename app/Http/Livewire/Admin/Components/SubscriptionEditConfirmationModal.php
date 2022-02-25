@@ -4,10 +4,9 @@ namespace App\Http\Livewire\Admin\Components;
 
 use App\Models\Subscription;
 use Illuminate\Support\Facades\Hash;
-use InvalidArgumentException;
 use Livewire\Component;
 
-class SubscriptionDeleteConfirmationModal extends Component
+class SubscriptionEditConfirmationModal extends Component
 {
     public Subscription $subscription;
 
@@ -19,7 +18,7 @@ class SubscriptionDeleteConfirmationModal extends Component
 
     protected function getListeners()
     {
-        return ['open-subscription-delete-modal' => 'hydrateProperties'];
+        return ['open-subscription-edit-modal' => 'hydrateProperties'];
     }
 
     public function hydrateProperties(Subscription $subscription)
@@ -38,15 +37,15 @@ class SubscriptionDeleteConfirmationModal extends Component
 
         $this->subscription->delete();
 
-        $this->dispatchBrowserEvent('close-subscription-delete-modal');
+        $this->dispatchBrowserEvent('close-subscription-edit-modal');
         
-        session()->flash('message', 'Subscription successfully deleted.');
+        session()->flash('message', 'Subscription successfully updated.');
 
         return redirect()->route('admin.investment.subscriptions.index');
     }
 
     public function render()
     {
-        return view('livewire.admin.components.subscription-delete-confirmation-modal');
+        return view('livewire.admin.components.subscription-edit-confirmation-modal');
     }
 }

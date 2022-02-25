@@ -8,8 +8,8 @@ use App\Http\Livewire\Admin\App\Investment\Payments\Index as PaymentsIndex;
 use App\Http\Livewire\Admin\App\Investment\Payouts\Index as PayoutsIndex;
 use App\Http\Livewire\Admin\App\Investment\Plans\Edit as PlansEdit;
 use App\Http\Livewire\Admin\App\Investment\Plans\Index as PlansIndex;
-use App\Http\Livewire\Admin\App\Investment\Subscriptions\Edit as SubscriptionsEdit;
 use App\Http\Livewire\Admin\App\Investment\Subscriptions\Index as SubscriptionsIndex;
+use App\Http\Livewire\Admin\App\Investment\Subscriptions\View as SubscriptionsView;
 use App\Http\Livewire\Admin\App\Static\Faqs\Create;
 use App\Http\Livewire\Admin\App\Static\Faqs\Edit;
 use App\Http\Livewire\Admin\App\Static\Faqs\Index;
@@ -42,8 +42,8 @@ Route::middleware(['auth', 'admin'])
 
       Route::name('subscriptions.')->prefix('subscriptions')->group(function () {
         Route::get('/', SubscriptionsIndex::class)->name('index');
-
-        Route::get('/{subscription}/edit', SubscriptionsEdit::class)->name('edit');
+       
+        Route::get('/{subscription}/view', SubscriptionsView::class)->name('view');
       });
 
       Route::name('payments.')->prefix('payments')->group(function () {

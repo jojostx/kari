@@ -31,6 +31,7 @@ class AccountSettings extends Component implements HasForms
     public $savedPersonalInfo = false;
     public $savedContactInfo = false;
     public $savedPasswordInfo = false;
+    public $savedBankAccountInfo = false;
 
     public $first_name;
     public $middle_name;
@@ -47,6 +48,10 @@ class AccountSettings extends Component implements HasForms
     public $current_password;
     public $new_password;
     public $new_password_confirmation;
+
+    public $account_name;
+    public $account_number;
+    public $bank_name;
 
     public function mount()
     {
@@ -65,13 +70,19 @@ class AccountSettings extends Component implements HasForms
             'state_id' => strval($this->authUser->location?->state?->id ?? ""),
             'city_id' => $this->authUser->location?->city?->id ?? "",
             'postcode' => $this->authUser->location?->postcode,
-            'address' => $this->authUser->location?->address
+            'address' => $this->authUser->location?->address,
+        ]);
+
+        $this->bankAccountInfoForm->fill([
+            'bank_name' => $this->authUser->account?->bank_name ?? "",
+            'account_name' => $this->authUser->account?->account_name ?? "",
+            'account_number' => $this->authUser->account?->account_number ?? "",
         ]);
 
         $this->passwordInfoForm->fill([
             'current_password' => '',
             'new_password' => '',
-            'new_password_confirmation' => ''
+            'new_password_confirmation' => '',
         ]);
     }
 
@@ -167,6 +178,54 @@ class AccountSettings extends Component implements HasForms
         ];
     }
 
+    protected function getBankAccountInfoFormSchema(): array
+    {
+        return [
+            Grid::make([
+                'default' => 1,
+                'md' => 2,
+            ])
+                ->schema([
+                    TextInput::make('bank_name')
+                        ->label('Bank Name')
+                        ->required()
+                        ->rules([
+                            'max:255'
+                        ])
+                        ->columnSpan(
+                            [
+                                'md' => 1,
+                            ]
+                        ),
+
+                    TextInput::make('account_name')
+                        ->label('Account Name')
+                        ->required()
+                        ->rules([
+                            'max:255'
+                        ])
+                        ->columnSpan(
+                            [
+                                'md' => 1,
+                            ]
+                        ),
+
+                    TextInput::make('account_number')
+                        ->label('Account Number')
+                        ->rules([
+                            'digits_between:8,14',
+                            Rule::unique('bank_accounts', 'account_number')->ignore($this->authUser->id),
+                        ])
+                        ->required()
+                        ->columnSpan(
+                            [
+                                'md' => 1,
+                            ]
+                        ),
+                ]),
+        ];
+    }
+
     protected function getPasswordInfoFormSchema(): array
     {
         return [
@@ -212,6 +271,10 @@ class AccountSettings extends Component implements HasForms
                 ->schema($this->getContactInfoFormSchema())
                 ->model($this->authUser),
 
+            'bankAccountInfoForm' => $this->makeForm()
+                ->schema($this->getBankAccountInfoFormSchema())
+                ->model($this->authUser),
+
             'passwordInfoForm' => $this->makeForm()
                 ->schema($this->getPasswordInfoFormSchema())
                 ->model($this->authUser),
@@ -230,13 +293,13 @@ class AccountSettings extends Component implements HasForms
     public function saveContactInfo(): void
     {
         // (new PendingUserPhoneNumber())->newPhoneNumber($this->authUser, $this->contactInfoForm->getState()['phone_number']); 
-       $success = DB::transaction(function (){
+        $success = DB::transaction(function () {
             $this->authUser->phone_number = $this->contactInfoForm->getState()['phone_number'];
-            
+
             $updated = $this->authUser->save();
-            
+
             $result = $this->authUser->newEmail($this->contactInfoForm->getState()['email']);
-    
+
             $model = $this->authUser->location()->updateOrCreate(
                 [
                     'user_id' => $this->authUser->getKey()
@@ -248,12 +311,35 @@ class AccountSettings extends Component implements HasForms
                     'postcode' => $this->contactInfoForm->getState()['postcode'],
                 ]
             );
-            
+
             return $updated && (is_null($result) || $result instanceof Model) && !is_null($model);
         });
-        
+
         if ($success) {
             $this->savedContactInfo = true;
+        }
+    }
+    
+    public function saveBankAccountInfo(): void
+    {
+        // (new PendingUserPhoneNumber())->newPhoneNumber($this->authUser, $this->contactInfoForm->getState()['phone_number']); 
+        $success = DB::transaction(function () {
+            $model = $this->authUser->account()->updateOrCreate(
+                [
+                    'user_id' => $this->authUser->getKey()
+                ],
+                [
+                    'bank_name' => $this->bankAccountInfoForm->getState()['bank_name'],
+                    'account_name' => $this->bankAccountInfoForm->getState()['account_name'],
+                    'account_number' => $this->bankAccountInfoForm->getState()['account_number'],
+                ]
+            );
+
+            return !is_null($model);
+        });
+
+        if ($success) {
+            $this->savedBankAccountInfo = true;
         }
     }
 

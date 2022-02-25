@@ -14,7 +14,7 @@ class PaymentApprovalModal extends Component
     public $showForm = false;
 
     protected $rules = [
-        'payment.refcode' => ['required', 'string', 'min:8', 'unique:payouts,refcode', 'unique:subscriptions,refcode'],
+        'payment.refcode' => ['required', 'string', 'min:8', 'unique:payments,refcode', 'unique:payouts,refcode', 'unique:subscriptions,refcode'],
     ];
 
     protected $validationAttributes = [

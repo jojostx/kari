@@ -12,11 +12,13 @@ class Created extends Component
 
     public function withdraw()
     {
-        DB::transaction(function () {
-            if ($this->payout->withdraw()) {
-                $this->emit('refreshParent');
-            }
-        });
+        if (auth()->user()->account()->exists()) {
+            DB::transaction(function () {
+                if ($this->payout->withdraw()) {
+                    $this->emit('refreshParent');
+                }
+            });
+        }
     }
     public function render()
     {

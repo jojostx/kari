@@ -11,9 +11,11 @@
                 <p>Available Payouts</p>
                 <p class="max-w-sm mt-3 text-sm font-normal text-gray-500">These are payouts that are available for withdrawal</p>
             </div>
+
+            @if (auth()->user()->account()->exists())
             <div class="grid gap-4 sm:grid-cols-2">
                 @forelse ($this->created_payouts as $created_payout)
-                    @livewire('customer.app.payouts.cards.created', ['payout' => $created_payout],  key($created_payout->id))
+                @livewire('customer.app.payouts.cards.created', ['payout' => $created_payout], key($created_payout->id))
                 @empty
                 <div class="flex flex-col items-center justify-center p-24 bg-white border rounded-lg shadow-sm col-span-full">
                     <div class="w-24 p-6 text-gray-400 rounded-full bg-slate-100">
@@ -29,6 +31,28 @@
                 </div>
                 @endforelse
             </div>
+            @else
+            <div class="grid grid-cols-1 gap-4 p-6 bg-white border rounded-lg shadow-sm md:grid-cols-2">
+                <x-payout-warning />
+
+                <div class="col-span-1 mb-2 py-2 text-gray-600">
+                    <ul class="font-semibold leading-5 text-gray-500">
+                        <p>You have {{ $this->created_payouts->count() }} available {{ Str::plural('payout', $this->created_payouts->count()) }}.</p>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col items-center justify-center col-span-1">
+                    <x-button-link href="{{ route('account-settings') }}#bank-account-settings" class="flex items-center gap-3 px-3 py-2 font-medium text-white transition bg-gray-800 rounded-lg hover:text-white hover:bg-gray-700 focus:bg-gray-700">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                        </svg>
+                        <span>
+                            Update Bank Account Details
+                        </span>
+                    </x-button-link>
+                </div>
+            </div>
+            @endif
         </div>
 
         <div class="mt-8">
@@ -39,7 +63,7 @@
             <div class="grid gap-4 sm:grid-cols-2">
                 @forelse ($this->requested_payouts as $requested_payout)
                 <div class="col-span-1 flex items-center px-3 py-3 bg-white border-b border-gray-300 rounded-md shadow-md sm:px-4 sm:pt-4">
-                <div class="grid w-full grid-cols-2 gap-2 ml-3">
+                    <div class="grid w-full grid-cols-2 gap-2 ml-3">
                         <div>
                             <p class="text-xs font-semibold text-gray-500 ">Tag </p>
                             <h2 class="text-sm font-semibold text-gray-800">{{ $requested_payout->tag }}</h2>
@@ -47,7 +71,7 @@
                         <div>
                             <p class="text-xs font-semibold text-gray-500 ">Amount </p>
                             <h2 class="text-sm font-semibold text-gray-800">£{{ number_format($requested_payout->amount) }}</h2>
-                        </div>  
+                        </div>
                         <div>
                             <p class="text-xs font-semibold text-gray-500 ">Requested at</p>
                             <h2 class="text-sm font-semibold text-gray-800">{{ $requested_payout->updated_at->format('M jS, Y') }}</h2>
@@ -93,7 +117,7 @@
                             <p class="text-xs font-semibold text-gray-500 ">Amount </p>
                             <h2 class="text-sm font-semibold text-gray-800">£{{ number_format($withdrawn_payout->amount) }}</h2>
                         </div>
-                        @if (!is_null($withdrawn_payout->withdrawn_at))    
+                        @if (!is_null($withdrawn_payout->withdrawn_at))
                         <div>
                             <p class="text-xs font-semibold text-gray-500 ">Withdrawn at </p>
                             <h2 class="text-sm font-semibold text-gray-800">{{ $withdrawn_payout->withdrawn_at->format('M jS, Y') }}</h2>

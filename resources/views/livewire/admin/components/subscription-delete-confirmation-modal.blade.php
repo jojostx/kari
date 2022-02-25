@@ -23,7 +23,7 @@
                             </div>
                             <div class="flex items-center space-x-1 group">
                                 <div class="flex-1">
-                                    <input type="password" wire:model.defer="password" autocomplete="off" id="refcode" required class="block w-full h-10 duration-75 border-gray-300 rounded-lg shadow-sm focus:border-blue-600 focus:ring-1 focus:ring-inset focus:ring-blue-600 focus:ring-opacity-30" />
+                                    <input type="password" wire:model.defer="password" autocomplete="off" id="password" required class="block w-full h-10 duration-75 border-gray-300 rounded-lg shadow-sm focus:border-blue-600 focus:ring-1 focus:ring-inset focus:ring-blue-600 focus:ring-opacity-30" />
                                 </div>
                             </div>
                             @error('password') <p class="text-xs text-red-500 error">{{ $message }}</p> @enderror
@@ -40,7 +40,7 @@
                             <button x-on:click="isOpen = false" wire:click="$refresh" type="button" class="inline-flex items-center justify-center px-4 font-medium tracking-tight text-gray-800 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-inset h-9 hover:bg-gray-50 focus:ring-primary-600 focus:text-primary-600 focus:bg-primary-50 focus:border-primary-600">
                                 <span>Cancel</span>
                             </button>
-                            <button @error('admin_password') disabled @enderror wire:loading.disabled type="submit" @error('refcode') 'disabled' @enderror class="inline-flex items-center justify-center px-4 font-medium tracking-tight text-white rounded-lg shadow disabled:bg-gray-800 focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-inset h-9 focus:ring-white bg-danger-600 hover:bg-danger-500 focus:bg-danger-700 focus:ring-offset-danger-700">
+                            <button @error('admin_password') disabled @enderror wire:loading.disabled type="submit" class="inline-flex items-center justify-center px-4 font-medium tracking-tight text-white rounded-lg shadow disabled:bg-gray-800 focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-inset h-9 focus:ring-white bg-danger-600 hover:bg-danger-500 focus:bg-danger-700 focus:ring-offset-danger-700">
                                 <span>Confirm</span>
                             </button>
                         </div>

@@ -184,6 +184,14 @@ class User extends Authenticatable implements MustVerifyPhoneNumber, MustVerifyE
     {
         return $this->hasOne(UserAddress::class, 'user_id');
     }
+    
+    /**
+     * The bank account for a user.
+     */
+    public function account(): HasOne
+    {
+        return $this->hasOne(BankAccount::class, 'user_id');
+    }
 
     /**
      * The pending Phone Number for a user.

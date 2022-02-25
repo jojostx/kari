@@ -36,7 +36,7 @@ class Index extends Component implements HasTable
                 ->label('')
                 ->extraAttributes(['style' => 'max-width: 50px;'])
                 ->default('View')
-                ->url(fn ($record): string => route('admin.investment.subscriptions.edit', ['subscription' => $record])),
+                ->url(fn ($record): string => route('admin.investment.subscriptions.view', ['subscription' => $record])),
 
             TextColumn::make('refcode')
                 ->label('Refcode (teller-code)')

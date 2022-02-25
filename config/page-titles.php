@@ -19,7 +19,7 @@ return [
 
       'subscriptions' => [
         'index' => 'Subscriptions',
-        'edit' => 'Edit Customer',
+        'view' => 'View Subscription',
       ],
 
       'payments' => [
