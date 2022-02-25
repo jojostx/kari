@@ -20,7 +20,7 @@
                 <div class="grid grid-cols-1 gap-6">
                     <div class="col-span-full">
                         <div class="grid grid-cols-1 gap-6 sm:grid-cols-3">
-                            @if ($updated)                                
+                            @if ($updated)
                             <div class="col-span-full font-medium text-lg bg-blue-200 text-blue-600 border-blue-600 border-2 p-6 rounded-md">
                                 <p>
                                     Updated
@@ -116,110 +116,97 @@
                     <div class="col-span-full">
                         <div class="grid grid-cols-1 gap-6 sm:grid-cols-3">
                             <div class="col-span-full sm:col-span-2 ">
-                                <div class="p-6 bg-white shadow rounded-xl">
-                                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                                        <div class="col-span-1 ">
-                                            <div>
-                                                <div class="space-y-1">
-
-                                                    <label class="inline-flex items-center space-x-3 rtl:space-x-reverse" for="data.name">
-                                                        <span class="text-sm font-medium leading-4 text-gray-700">
-                                                            First Name
-                                                        </span>
-                                                    </label>
-
-                                                    <div class="flex items-center space-x-1 group">
-                                                        <div class="flex-1">
-                                                            {{ $customer->first_name }}
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-span-1 ">
-                                            <div>
-                                                <div class="space-y-1">
-                                                    <label class="inline-flex items-center space-x-3 rtl:space-x-reverse" for="data.name">
-                                                        <span class="text-sm font-medium leading-4 text-gray-700">
-                                                            Middle Name
-                                                        </span>
-                                                    </label>
-                                                    <div class="flex items-center space-x-1 group">
-                                                        <div class="flex-1">
-                                                            {{ $customer->middle_name }}
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-span-1 ">
-                                            <div>
-                                                <div class="space-y-2">
-                                                    <div class="flex items-center justify-between space-x-2 rtl:space-x-reverse">
-                                                        <label class="inline-flex items-center space-x-3 rtl:space-x-reverse" for="data.name">
-                                                            <span class="text-sm font-medium leading-4 text-gray-700">
-                                                                Last Name
-                                                            </span>
-                                                        </label>
-                                                    </div>
-
-                                                    <div class="flex items-center space-x-1 group">
-                                                        <div class="flex-1">
-                                                            {{ $customer->first_name }}
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-span-1 ">
-                                            <div>
-                                                <div class="space-y-2">
-                                                    <div class="flex items-center justify-between space-x-2 rtl:space-x-reverse">
-                                                        <label class="inline-flex items-center space-x-3 rtl:space-x-reverse" for="data.email">
-                                                            <span class="text-sm font-medium leading-4 text-gray-700">
-                                                                Email
-
-                                                                @if ($customer->verified)
-                                                                <span class="inline-flex items-center justify-center h-5 px-2 text-xs font-medium tracking-tight bg-blue-200 rounded-full cursor-text">
-                                                                    verified
-                                                                </span>
-                                                                @endif
-                                                            </span>
-                                                        </label>
-                                                    </div>
-
-                                                    <div class="flex items-center space-x-1 group">
-                                                        <div class="flex-1">
-                                                            {{ $customer->email }}
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-span-1 ">
-                                            <div>
-                                                <div class="space-y-2">
-                                                    <div class="flex items-center justify-between space-x-2 rtl:space-x-reverse">
-                                                        <label class="inline-flex items-center space-x-3 rtl:space-x-reverse" for="data.phone">
-                                                            <span class="text-sm font-medium leading-4 text-gray-700">
-                                                                Phone
-                                                                @if ($customer->verifiedPhone)
-                                                                <span class="inline-flex items-center justify-center h-5 px-2 text-xs font-medium tracking-tight bg-blue-200 rounded-full cursor-text">
-                                                                    verified
-                                                                </span>
-                                                                @endif
-                                                            </span>
-                                                        </label>
-                                                    </div>
-
-                                                    <div class="flex items-center space-x-1 group">
-                                                        <div class="flex-1">
-                                                            {{ $customer->phone_number }}
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="p-6 bg-white border rounded-lg shadow-sm">
+                                    <div class="text-gray-600 col-span-full">
+                                        <p>Personal Information</p>
+                                    </div>
+                                    <div class="grid grid-cols-1 gap-6 mt-4 md:grid-cols-2">
+                                        <dl>
+                                            <dt class="text-sm font-medium leading-5 text-gray-500 ">First Name</dt>
+                                            <dd class="text-sm font-medium leading-5">{{ $customer->first_name }}</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt class="text-sm font-medium leading-5 text-gray-500 ">Middle Name</dt>
+                                            <dd class="text-sm font-medium leading-5">{{ $customer->middle_name }}</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt class="text-sm font-medium leading-5 text-gray-500 ">Last Name</dt>
+                                            <dd class="text-sm font-medium leading-5">{{ $customer->last_name }}</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt class="text-sm font-medium leading-5 text-gray-500 ">Birthday</dt>
+                                            <dd class="text-sm font-medium leading-5">{{ $customer->birthdate?->format('M j, Y') ?: 'Not Specified' }}</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="mt-6 p-6 bg-white border rounded-lg shadow-sm">
+                                    <div class="text-gray-600 col-span-full">
+                                        <p>Contact Information</p>
+                                    </div>
+                                    <div class="grid grid-cols-1 gap-6 mt-4 md:grid-cols-2">
+                                        <dl>
+                                            <dt class="text-sm font-medium leading-5 text-gray-500">Email Address
+                                                @if ($customer->hasVerifiedEmail())
+                                                <span class="inline-flex items-center justify-center px-2 py-0.5 text-xs tracking-tight text-blue-600 bg-blue-200 rounded-full">
+                                                    Verified
+                                                </span>
+                                                @else
+                                                <span class="inline-flex items-center justify-center px-2 py-0.5 text-xs tracking-tight text-red-600 bg-red-200 rounded-full">
+                                                    Unverified
+                                                </span>
+                                                @endif
+                                            </dt>
+                                            <dd class="mt-1 font-medium leading-5">{{ $customer->email }}</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt class="text-sm font-medium leading-5 text-gray-500">{{ __('Phone Number') }}
+                                                @if ($customer->hasVerifiedPhoneNumber())
+                                                <span class="inline-flex items-center justify-center px-2 py-0.5 text-xs tracking-tight text-blue-600 bg-blue-200 rounded-full">
+                                                    Verified
+                                                </span>
+                                                @else
+                                                <span class="inline-flex items-center justify-center px-2 py-0.5 text-xs tracking-tight text-red-600 bg-red-200 rounded-full">
+                                                    <!-- Unverified -->
+                                                </span>
+                                                @endif
+                                            </dt>
+                                            <dd class="mt-1 font-medium leading-5">{{ $customer->phone_number }}</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt class="text-sm font-medium leading-5 text-gray-500">{{ __('State') }}</dt>
+                                            <dd class="mt-1 leading-5">{{ $customer->location?->state?->name ?: 'Not Specified' }}</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt class="text-sm font-medium leading-5 text-gray-500">{{ __('City') }}</dt>
+                                            <dd class="mt-1 font-medium leading-5">{{ $customer->location?->city?->name ?: 'Not Specified' }}</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt class="text-sm font-medium leading-5 text-gray-500">{{ __('Address') }}</dt>
+                                            <dd class="mt-1 font-medium leading-5">{{ $customer->location?->address ?: 'Not Specified' }}</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt class="text-sm font-medium leading-5 text-gray-500">{{ __('Zip/postal-code') }}</dt>
+                                            <dd class="mt-1 font-medium leading-5">{{ $customer->location?->postcode ?: 'Not Specified' }}</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="mt-6 p-6 bg-white border rounded-lg shadow-sm">
+                                    <div class="text-gray-600 col-span-full">
+                                        <p>Bank Account Information</p>
+                                    </div>
+                                    <div class="grid grid-cols-1 gap-6 mt-4 md:grid-cols-2">
+                                        <dl>
+                                            <dt class="text-sm font-medium leading-5 text-gray-500">{{ __('Bank Name') }}</dt>
+                                            <dd class="mt-1 leading-5">{{ $customer->account?->bank_name ?: 'Not Specified' }}</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt class="text-sm font-medium leading-5 text-gray-500">{{ __('Account Name') }}</dt>
+                                            <dd class="mt-1 font-medium leading-5">{{ $customer->account?->account_name ?: 'Not Specified' }}</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt class="text-sm font-medium leading-5 text-gray-500">{{ __('Account Number') }}</dt>
+                                            <dd class="mt-1 font-medium leading-5">{{ $customer->account?->account_number ?: 'Not Specified' }}</dd>
+                                        </dl>
                                     </div>
                                 </div>
                             </div>
