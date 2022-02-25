@@ -18,7 +18,7 @@ class Kernel extends ConsoleKernel
         $schedule->command('create:payouts')
         ->dailyAt('1:00')
         ->runInBackground()
-        ->emailOutputOnFailure('ikuskid7@gmail.com');
+        ->emailOutputOnFailure('support@kariinvestment.com');
     }
 
     /**
