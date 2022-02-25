@@ -16,7 +16,6 @@ class Investments extends Component implements HasTable
     use InteractsWithTable;
 
     public $subscriptions;
-    public $payments;
 
     protected $queryString = [
         'tableFilters',
@@ -27,9 +26,7 @@ class Investments extends Component implements HasTable
 
     public function mount()
     {  
-        $this->subscriptions = auth()->user()->subscriptions;
-        
-        $this->payments = auth()->user()->payments;
+        $this->subscriptions = auth()->user()->subscriptions()->ongoing()->get();
     }
 
     protected function getTableQuery(): Builder
@@ -83,6 +80,10 @@ class Investments extends Component implements HasTable
         return $query->simplePaginate($this->getTableRecordsPerPage());
     }
 
+    public function getPendingPayoutCountProperty()
+    {
+        return Auth::user()->payments()->where('status', false)->exists();
+    }
 
     public function render()
     {

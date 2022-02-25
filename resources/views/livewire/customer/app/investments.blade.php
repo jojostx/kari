@@ -13,7 +13,7 @@
                     <li class="">4. Your subscription will be created when your payment is verified. (approval may take up to 7 days)</li>
                 </ul>
             </div>
-         
+
             <div class="flex flex-col items-center justify-center col-span-1">
                 @can('create', App\Models\Payment::class)
                 <a href="{{ route('investments.create') }}" class="flex items-center gap-3 px-3 py-2 font-medium text-white transition bg-gray-800 rounded-lg hover:text-white hover:bg-gray-700 focus:bg-gray-700">
@@ -36,17 +36,19 @@
                 <p class="mt-2 text-sm">You can create new investment when you have less than 5 unapproved subscriptions.</p>
                 @endcan
             </div>
-            <x-payment-warning/>
+            <x-payment-warning />
         </div>
 
+        @if ($this->pending_payout_count)    
         <div class="mt-8">
             <p class="mb-4 font-bold tracking-wide sm:text-lg">Pending Payments</p>
             {{ $this->table }}
         </div>
+        @endif
 
         <div class="mt-8">
             <p class="mb-4 font-bold tracking-wide sm:text-lg">Subscriptions</p>
-            <div class="grid gap-4 sm:grid-cols-2">
+            <div class="grid gap-4 md:grid-cols-2">
                 @foreach ($subscriptions as $subscription)
                 <div class="col-span-1 flex items-center px-3 py-3 bg-[#F1F1F1] border-b border-gray-300 rounded-md shadow-md sm:px-4 sm:pt-4">
                     <div class="flex items-center justify-center h-24 p-3 bg-white rounded-md shrink w-28">
@@ -58,6 +60,8 @@
                             <h2 class="text-sm font-semibold text-gray-800 uppercase">{{ $subscription->plan['name'] }}</h2>
                         </div>
                         <div>
+                            <p class="text-xs font-semibold text-gray-500">Next Payout Date</p>
+                            <h2 class="text-sm font-semibold text-gray-800">{{ $subscription['next_payout_at']->format('M jS, Y') }}</h2>
                         </div>
                         <div>
                             <p class="text-xs font-semibold text-gray-500 ">Principal</p>

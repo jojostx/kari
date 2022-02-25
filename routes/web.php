@@ -10,6 +10,7 @@ use App\Http\Livewire\Customer\App\InvestmentCreate;
 use App\Http\Livewire\Customer\App\Investments;
 use App\Http\Livewire\Customer\App\Payouts\Index;
 use App\Http\Livewire\Customer\App\Profile;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['seenCookiePolicyAlert'])->group(function () {

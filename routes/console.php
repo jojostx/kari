@@ -58,7 +58,7 @@ Artisan::command('setup:prod', function () {
          
         Payout::factory()->create([
             'tag' => $subscription_2->tag,
-            'amount' => 4000.00,
+            'amount' => $subscription_2->biannual_payout_amount,
             'subscription_id' => $subscription_2->id,
             'status' => Payout::REQUESTED,
             'refcode' => null,
@@ -67,7 +67,7 @@ Artisan::command('setup:prod', function () {
         
         Payout::factory()->create([
             'tag' => $subscription_2->tag,
-            'amount' => 4000.00,
+            'amount' => $subscription_2->biannual_payout_amount,
             'subscription_id' => $subscription_2->id,
             'refcode' => null,
             'status' => Payout::CREATED,
@@ -76,7 +76,7 @@ Artisan::command('setup:prod', function () {
 
         Payout::factory()->create([
             'tag' => $subscription_2->tag,
-            'amount' => 4000.00,
+            'amount' => $subscription_2->biannual_payout_amount,
             'subscription_id' => $subscription_2->id,
             'refcode' => $subscription_2->refcode,
             'status' => Payout::WITHDRAWN,

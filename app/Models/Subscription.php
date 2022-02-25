@@ -109,7 +109,7 @@ class Subscription extends Model
     {
         $period = config('app.payout_period', 6);
 
-        return $query->where('next_payout_at', '<=', now())
+        return $query->where('ends_at', '>', now())->where('next_payout_at', '<=', now())
         ->has(
             'payouts',
             '<',
@@ -122,13 +122,13 @@ class Subscription extends Model
     ##### Accessors #######
     public function getTotalPayoutAttribute()
     {
-        $period = $this->ends_at->diffInMonths($this->created_at);
+        $period = $this->ends_at->diffInYears($this->created_at);
         // A = P(1 + r/100)t
         $payout = $this->principal * (1 + $this->interest) ** $period;
 
         $payout = $payout * (1 + $this->plan->bonus);
 
-        return $payout;
+        return floor($payout);
     }
 
     public function getBiannualPayoutAmountAttribute()
@@ -143,7 +143,7 @@ class Subscription extends Model
     {
         $max_payout_count = floor(($this->next_payout_at->diffInMonths($this->created_at)) / config('app.payout_period', 6));
 
-        return $this->next_payout_at->lessThanOrEqualTo(now()) && ($this->payouts()->count() < $max_payout_count);
+        return now()->lessThan($this->ends_at) && $this->next_payout_at->lessThanOrEqualTo(now()) && ($this->payouts()->count() < $max_payout_count);
     }
 
     public function createPayout()
