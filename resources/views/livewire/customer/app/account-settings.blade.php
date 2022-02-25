@@ -15,6 +15,9 @@
 
                     <div class="flex items-center mt-6">
                         <x-button wire:target="savePersonalInfo" wire:loading.attr="disabled" wire:click="savePersonalInfo">
+                            <svg wire:loading wire:target="savePersonalInfo" class="w-4 h-4 mr-1 animate-spin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z"></path>
+                            </svg>
                             Update
                         </x-button>
 
@@ -42,6 +45,9 @@
 
                     <div class="flex items-center mt-6">
                         <x-button wire:target="saveContactInfo" wire:loading.attr="disabled" wire:click="saveContactInfo">
+                            <svg wire:loading wire:target="saveContactInfo" class="w-4 h-4 mr-1 animate-spin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z"></path>
+                            </svg>
                             Update
                         </x-button>
 
@@ -79,6 +85,9 @@
 
                     <div class="flex items-center mt-6">
                         <x-button wire:target="savePasswordInfo" wire:loading.attr="disabled" wire:click="savePasswordInfo">
+                            <svg wire:loading wire:target="savePasswordInfo" class="w-4 h-4 mr-1 animate-spin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z"></path>
+                            </svg>
                             Update
                         </x-button>
 

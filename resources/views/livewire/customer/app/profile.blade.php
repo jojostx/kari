@@ -55,7 +55,7 @@
                                 </span>
                                 @else
                                 <span class="inline-flex items-center justify-center px-2 py-0.5 text-xs tracking-tight text-red-600 bg-red-200 rounded-full">
-                                    Unverified
+                                    <!-- Unverified -->
                                 </span>
                                 @endif
                             </dt>

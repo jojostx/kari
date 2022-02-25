@@ -6,6 +6,7 @@ use App\Models\PendingUserPhoneNumber;
 use App\Models\State;
 use App\Models\User;
 use App\Models\UserAddress;
+use Closure;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Select;
@@ -13,8 +14,12 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Illuminate\Auth\Events\PasswordReset;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use Illuminate\Validation\Rule;
+use Illuminate\Validation\Rules\Exists;
 use Livewire\Component;
 
 class AccountSettings extends Component implements HasForms
@@ -57,8 +62,8 @@ class AccountSettings extends Component implements HasForms
         $this->contactInfoForm->fill([
             'email' => $this->authUser->email,
             'phone_number' => $this->authUser->phone_number,
-            'state' => $this->authUser->location?->state?->id,
-            'city' => $this->authUser->location?->city?->id,
+            'state_id' => strval($this->authUser->location?->state?->id ?? ""),
+            'city_id' => $this->authUser->location?->city?->id ?? "",
             'postcode' => $this->authUser->location?->postcode,
             'address' => $this->authUser->location?->address
         ]);
@@ -106,20 +111,35 @@ class AccountSettings extends Component implements HasForms
                 'md' => 2,
             ])
                 ->schema([
-                    TextInput::make('email')->label('Email Address')->required()->columnSpan(
-                        [
-                            'md' => 1,
-                        ]
-                    ),
+                    TextInput::make('email')->label('Email Address')->required()
+                        ->rules([
+                            'unique:pending_user_emails,email',
+                            'email',
+                            Rule::unique('users', 'email')->ignore($this->authUser->id),
+                            'max:255'
+                        ])->columnSpan(
+                            [
+                                'md' => 1,
+                            ]
+                        ),
 
-                    TextInput::make('phone_number')->label('Phone Number')->rules(['unique:users,phone_number'])->required(),
+                    TextInput::make('phone_number')->label('Phone Number')
+                        ->rules([
+                            'digits_between:9,12',
+                            Rule::unique('users', 'phone_number')->ignore($this->authUser->id),
+                            'phone:NG'
+                        ]),
 
                     Select::make('state_id')
                         ->label('State')
                         ->searchable()
                         ->getSearchResultsUsing(fn (string $query) => State::where('name', 'like', "%{$query}%")->limit(50)->pluck('name', 'id'))
                         ->reactive()
-                        ->afterStateUpdated(fn (callable $set) => $set('city_id', null)),
+                        ->getOptionLabelUsing(fn ($value): ?string => State::find($value)?->name)
+                        ->afterStateUpdated(fn (callable $set) => $set('city_id', null))
+                        ->rules([
+                            Rule::in(State::all('id')->pluck('id')->toArray()),
+                        ]),
 
                     Select::make('city_id')
                         ->label('City')
@@ -131,12 +151,17 @@ class AccountSettings extends Component implements HasForms
                             }
 
                             return [];
-                        }),
+                        })->exists(table: 'cities', column: 'id', callback: function (Exists $rule, callable $get) {
+                            return $rule->where('state_id', $get('state_id'));
+                        })
+                        ->rules([
+                            'required_with:state_id'
+                        ]),
 
-                    TextInput::make('location.address')
+                    TextInput::make('address')
                         ->label('Address')->rules(['between:5,255', 'string'])->reactive(),
 
-                    TextInput::make('location.postcode')
+                    TextInput::make('postcode')
                         ->label('Zip/Postcode')->rules(['max:7', 'string'])->reactive()
                 ]),
         ];
@@ -204,20 +229,30 @@ class AccountSettings extends Component implements HasForms
 
     public function saveContactInfo(): void
     {
-        (new PendingUserPhoneNumber())->newPhoneNumber($this->authUser, $this->contactInfoForm->getState()['phone_number']);
-
-        $this->authUser->newEmail($this->contactInfoForm->getState()['email']);
-
-        UserAddress::where('user_id', $this->authUser->id)->delete();
-
-        $location = $this->authUser->location()->updateOrCreate([
-            'state_id' => $this->contactInfoForm->getState()['state_id'],
-            'city_id' => $this->contactInfoForm->getState()['city_id'],
-            'address' => $this->contactInfoForm->getState()['location']['address'],
-            'postcode' => $this->contactInfoForm->getState()['location']['postcode'],
-        ]);
-
-        if ($location) {
+        // (new PendingUserPhoneNumber())->newPhoneNumber($this->authUser, $this->contactInfoForm->getState()['phone_number']); 
+       $success = DB::transaction(function (){
+            $this->authUser->phone_number = $this->contactInfoForm->getState()['phone_number'];
+            
+            $updated = $this->authUser->save();
+            
+            $result = $this->authUser->newEmail($this->contactInfoForm->getState()['email']);
+    
+            $model = $this->authUser->location()->updateOrCreate(
+                [
+                    'user_id' => $this->authUser->getKey()
+                ],
+                [
+                    'state_id' => $this->contactInfoForm->getState()['state_id'],
+                    'city_id' => $this->contactInfoForm->getState()['city_id'],
+                    'address' => $this->contactInfoForm->getState()['address'],
+                    'postcode' => $this->contactInfoForm->getState()['postcode'],
+                ]
+            );
+            
+            return $updated && (is_null($result) || $result instanceof Model) && !is_null($model);
+        });
+        
+        if ($success) {
             $this->savedContactInfo = true;
         }
     }
