@@ -14,12 +14,14 @@ class UserFactory extends Factory
      */
     public function definition()
     {
+        $phone = '080340' . strval($this->faker->unique()->randomNumber(5, true));
+
         return [
             'first_name' => $this->faker->firstName(),
             'middle_name' => $this->faker->firstName(),
             'last_name' => $this->faker->lastName(),
-            'phone_number' => '08034081360',
-            'phone_number_e164' => null,
+            'phone_number' => $phone,
+            'phone_number_e164' => phone($phone, 'NG')->formatE164(),
             'email' => $this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
@@ -42,7 +44,7 @@ class UserFactory extends Factory
             ];
         });
     }
- 
+
     /**
      * Indicate that the model's email address should be verified.
      *
@@ -56,7 +58,7 @@ class UserFactory extends Factory
             ];
         });
     }
-  
+
     /**
      * Indicate that the model's phone should be unverified.
      *
@@ -70,7 +72,7 @@ class UserFactory extends Factory
             ];
         });
     }
-    
+
     /**
      * Indicate that the model's phone should be verified.
      *
@@ -84,7 +86,7 @@ class UserFactory extends Factory
             ];
         });
     }
- 
+
     /**
      * Indicate that the model's is an admin.
      *
