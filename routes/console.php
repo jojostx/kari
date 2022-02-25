@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\BankAccount;
 use App\Models\Newsfeed;
 use App\Models\NewsfeedSubscription;
 use App\Models\Payment;
@@ -35,7 +36,14 @@ Artisan::command('setup:prod', function () {
 
     // creates approved payments, subscription and payouts
     $users->each(function (User $user) {
+
+        //assign bank account to users whose first name start with 'a'
+        if (str_starts_with($user->first_name, 'a')) {
+            $bank_account = BankAccount::factory()->create(['user_id' => $user->id]);
+        }
+
         $payment = Payment::factory()->create(['user_id' => $user->id]);
+
         $subscription = Subscription::factory()->create([
             'user_id' => $user->id,
             'tag'=> $payment->tag,
@@ -47,6 +55,7 @@ Artisan::command('setup:prod', function () {
 
 
         $payment_2 = Payment::factory()->create(['user_id' => $user->id]);
+
         $subscription_2 = Subscription::factory()->create([
             'tag'=> $payment->tag,
             'user_id' => $user->id,
