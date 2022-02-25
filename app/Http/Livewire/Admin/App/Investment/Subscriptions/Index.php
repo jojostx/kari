@@ -7,6 +7,7 @@ use Filament\Tables\Actions\BulkAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Concerns\InteractsWithTable;
 use Filament\Tables\Contracts\HasTable;
+use Filament\Tables\Filters\Filter;
 use Illuminate\Contracts\Pagination\Paginator;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
@@ -63,6 +64,17 @@ class Index extends Component implements HasTable
                 ->date('M j, Y')
                 ->sortable()
                 ->extraAttributes(['style' => 'max-width: 80px;']),
+        ];
+    }
+
+    protected function getTableFilters(): array
+    {
+        return [
+            Filter::make('Ongoing')
+                ->query(fn (Builder $query): Builder => $query->ongoing()),
+
+            Filter::make('Expired')
+                ->query(fn (Builder $query): Builder => $query->matured()),
         ];
     }
 
