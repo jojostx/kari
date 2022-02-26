@@ -1,7 +1,9 @@
 <div class="flex flex-col items-center w-full mt-6">
     <div class="w-full max-w-[840px] mx-auto px-4 md:px-6 lg:px-8">
         <div class="mb-4 font-bold tracking-wide sm:text-base">
-            <p>PAYOUTS</p>
+            <p class="mb-4 font-bold tracking-wide sm:text-lg">
+                PAYOUTS
+            </p>
             <p class="max-w-sm mt-3 text-sm font-normal text-gray-500">This page shows all your Investments thet have reached maturity and have payouts/ROIs that can be withdrawn</p>
         </div>
         <!-- desktop summary card -->
@@ -35,7 +37,7 @@
             <div class="grid grid-cols-1 gap-4 p-6 bg-white border rounded-lg shadow-sm md:grid-cols-2">
                 <x-payout-warning />
 
-                <div class="col-span-1 mb-2 py-2 text-gray-600">
+                <div class="col-span-1 py-2 mb-2 text-gray-600">
                     <ul class="font-semibold leading-5 text-gray-500">
                         <p>You have {{ $this->created_payouts->count() }} available {{ Str::plural('payout', $this->created_payouts->count()) }}.</p>
                     </ul>
@@ -62,7 +64,7 @@
             </div>
             <div class="grid gap-4 sm:grid-cols-2">
                 @forelse ($this->requested_payouts as $requested_payout)
-                <div class="col-span-1 flex items-center px-3 py-3 bg-white border-b border-gray-300 rounded-md shadow-md sm:px-4 sm:pt-4">
+                <div class="flex items-center col-span-1 px-3 py-3 bg-white border-b border-gray-300 rounded-md shadow-md sm:px-4 sm:pt-4">
                     <div class="grid w-full grid-cols-2 gap-2 ml-3">
                         <div>
                             <p class="text-xs font-semibold text-gray-500 ">Tag </p>
@@ -77,7 +79,7 @@
                             <h2 class="text-sm font-semibold text-gray-800">{{ $requested_payout->updated_at->format('M jS, Y') }}</h2>
                         </div>
                         <div class="flex items-center">
-                            <span class="inline-flex items-center justify-center h-6 px-2 text-sm font-medium tracking-tight bg-primary-100 rounded-full cursor-text hover:no-underline text-primary-600 focus:no-underline">
+                            <span class="inline-flex items-center justify-center h-6 px-2 text-sm font-medium tracking-tight rounded-full bg-primary-100 cursor-text hover:no-underline text-primary-600 focus:no-underline">
                                 Pending
                             </span>
                         </div>
@@ -107,7 +109,7 @@
             </div>
             <div class="grid gap-4 sm:grid-cols-2">
                 @forelse ($this->withdrawn_payouts as $withdrawn_payout)
-                <div class="col-span-1 flex items-center px-3 py-3 bg-white border-b border-gray-300 rounded-md shadow-md sm:px-4 sm:pt-4">
+                <div class="flex items-center col-span-1 px-3 py-3 bg-white border-b border-gray-300 rounded-md shadow-md sm:px-4 sm:pt-4">
                     <div class="grid w-full grid-cols-2 gap-2 ml-3">
                         <div>
                             <p class="text-xs font-semibold text-gray-500 ">Tag </p>
@@ -124,7 +126,7 @@
                         </div>
                         @endif
                         <div class="flex items-center">
-                            <span class="inline-flex items-center justify-center h-6 px-2 text-sm font-medium tracking-tight bg-success-100 rounded-full cursor-text hover:no-underline text-success-600 focus:no-underline">
+                            <span class="inline-flex items-center justify-center h-6 px-2 text-sm font-medium tracking-tight rounded-full bg-success-100 cursor-text hover:no-underline text-success-600 focus:no-underline">
                                 withdrawn
                             </span>
                         </div>

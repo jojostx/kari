@@ -15,7 +15,7 @@ class PhoneVerificationTest extends TestCase
 {
     use RefreshDatabase;
 
-    /** @test */
+    
     public function it_doesnt_send_a_verification_mail_if_the_email_didnt_change()
     {
         Queue::fake();
@@ -32,7 +32,7 @@ class PhoneVerificationTest extends TestCase
         Queue::assertNothingPushed();
     }
 
-    /** @test */
+   
     public function it_can_generate_a_token_and_sms_it_to_the_new_phone_number()
     {
         Queue::fake();
@@ -61,7 +61,7 @@ class PhoneVerificationTest extends TestCase
         $this->assertEquals($newPhoneNumber, $user->pendingPhoneNumber->phone_number);
     }
 
-    /** @test */
+    
     public function it_can_regenerate_a_token_and_sms_it()
     {
         Queue::fake();
@@ -102,7 +102,7 @@ class PhoneVerificationTest extends TestCase
         $this->assertEquals($newPhoneNumber, $user->pendingPhoneNumber->phone_number);
     }
 
-    /** @test */
+    
     public function it_deletes_previous_attempts_of_the_user_trying_to_verify_a_new_phone_number()
     {
         Queue::fake();
