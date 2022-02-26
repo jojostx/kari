@@ -3,7 +3,6 @@
 namespace App\Http\Livewire\Static\Forms;
 
 use App\Models\ContactMessage;
-use App\Rules\StartsWith;
 use Livewire\Component;
 
 class Contact extends Component
@@ -17,15 +16,10 @@ class Contact extends Component
     {
         return [
             'fullname' => ['required', 'max:255'],
-            'phone' => ['required_without:email', 'size:11'],
+            'phone' => ['required_without:email', 'string' , 'min:11'],
             'email' => ['required_without:phone', 'email'],
             'message' => ['required', 'string', 'max:1024'],
         ];
-    }
-
-    public function updated($propertyName)
-    {
-        $this->validateOnly($propertyName);
     }
 
     public function submit()

@@ -90,7 +90,7 @@
                         </li>
                     </ul>
                 </li>
-<!-- 
+
                 <li>
                     <div class="-mr-6 border-t"></div>
                 </li>
@@ -110,6 +110,17 @@
                                 </span>
                             </a>
                         </li>
+                        <li>
+                            <a href="{{ route('admin.static.contact-inbox.messages.index') }}" class="flex items-center gap-3 px-3 py-2 font-medium @if (request()->routeIs('admin.static.contact-inbox.messages.index'))  bg-gray-800 text-white hover:text-white @else hover:bg-gray-500/5 focus:bg-gray-500/5 @endif transition rounded-lg">
+                                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                                </svg>
+                                <span>
+                                    Contact Inbox
+                                </span>
+                            </a>
+                        </li>
+
                         <li x-data="{ open: false }" x-on:click.outside="open = false" class="font-medium transition rounded-lg hover:bg-gray-500/5 focus:bg-gray-500/5">
                             <button wire:click="$emit('changeTitle', 'Newsfeeds')" x-on:click="open = !open" class="flex items-center w-full gap-3 px-3 py-2 font-medium transition rounded-lg hover:bg-gray-500/5 focus:bg-gray-500/5">
                                 <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -132,50 +143,18 @@
                                         Feeds
                                     </span>
                                 </a>
-                                <a href="{{ route('admin.static.newsfeeds.subscribers.index') }}" class="flex items-center gap-3 px-3 py-2 transition rounded-lg hover:bg-gray-500/5 focus:bg-gray-500/5">
+                                <!-- <a href="{{ route('admin.static.newsfeeds.subscribers.index') }}" class="flex items-center gap-3 px-3 py-2 transition rounded-lg hover:bg-gray-500/5 focus:bg-gray-500/5">
                                     <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
                                     </svg>
                                     <span>
                                         Subscribers
                                     </span>
-                                </a>
+                                </a> -->
                             </div>
                         </li>
-                        <li>
-                            <a href="#" class="flex items-center gap-3 px-3 py-2 font-medium transition rounded-lg hover:bg-gray-500/5 focus:bg-gray-500/5">
-                                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                                </svg>
-                                <span>
-                                    Contact Inbox
-                                </span>
-                            </a>
-                        </li>
                     </ul>
-                </li> -->
-
-                <!-- <li>
-                    <div class="-mr-6 border-t"></div>
                 </li>
-                <li>
-                    <p class="text-xs font-bold tracking-wider text-gray-600 uppercase">
-                        Settings
-                    </p>
-
-                    <ul class="mt-2 -mx-3 space-y-1 text-sm">
-                        <li>
-                            <a href="" class="flex items-center gap-3 px-3 py-2 font-medium transition rounded-lg hover:bg-gray-500/5 focus:bg-gray-500/5">
-                                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                                </svg>
-                                <span>
-                                    Application Health
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </li> -->
             </ul>
         </nav>
 

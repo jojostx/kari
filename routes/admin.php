@@ -10,6 +10,11 @@ use App\Http\Livewire\Admin\App\Investment\Plans\Edit as PlansEdit;
 use App\Http\Livewire\Admin\App\Investment\Plans\Index as PlansIndex;
 use App\Http\Livewire\Admin\App\Investment\Subscriptions\Index as SubscriptionsIndex;
 use App\Http\Livewire\Admin\App\Investment\Subscriptions\View as SubscriptionsView;
+use App\Http\Livewire\Admin\App\Static\ContactInbox\Messages\Index as MessagesIndex;
+use App\Http\Livewire\Admin\App\Static\ContactInbox\Messages\View as MessagesView;
+use App\Http\Livewire\Admin\App\Static\ContactInbox\Replies\Create as RepliesCreate;
+use App\Http\Livewire\Admin\App\Static\ContactInbox\Replies\Edit as RepliesEdit;
+use App\Http\Livewire\Admin\App\Static\ContactInbox\Replies\Index as RepliesIndex;
 use App\Http\Livewire\Admin\App\Static\Faqs\Create;
 use App\Http\Livewire\Admin\App\Static\Faqs\Edit;
 use App\Http\Livewire\Admin\App\Static\Faqs\Index;
@@ -82,18 +87,18 @@ Route::middleware(['auth', 'admin'])
 
       Route::name('contact-inbox.')->prefix('contact-inbox')->group(function () {
         Route::name('messages.')->prefix('messages')->group(function () {
-          Route::get('/', FeedsIndex::class)->name('index');
+          Route::get('/', MessagesIndex::class)->name('index');
 
-          Route::get('/{message}/view', Edit::class)->name('view');
+          Route::get('/{message}/view', MessagesView::class)->name('view');
         });
 
-        Route::name('replies.')->prefix('replies')->group(function () {
-          Route::get('/', FeedsIndex::class)->name('index');
+        // Route::name('replies.')->prefix('replies')->group(function () {
+        //   Route::get('/', RepliesIndex::class)->name('index');
 
-          Route::get('/{reply}/create', Index::class)->name('create');
+        //   Route::get('/create', RepliesCreate::class)->name('create');
 
-          Route::get('/{reply}/edit', Index::class)->name('edit');
-        });
+        //   Route::get('/{reply}/edit', RepliesEdit::class)->name('edit');
+        // });
       });
     });
 

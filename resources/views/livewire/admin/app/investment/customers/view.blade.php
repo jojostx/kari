@@ -8,9 +8,6 @@
 
                 <div class="flex flex-wrap items-center justify-start gap-4 shrink-0">
                     <button x-show="!show_edit_form" type="button" x-on:click="show_edit_form = true" wire:loading.attr="disabled" class="inline-flex items-center justify-center px-4 font-medium tracking-tight text-white rounded-lg shadow focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-inset h-9 focus:ring-white bg-danger-600 hover:bg-danger-500 focus:bg-danger-700 focus:ring-offset-danger-700">
-                        <svg wire:loading="" wire:target="mountAction('delete')" class="w-6 h-6 mr-1 -ml-2 rtl:ml-1 rtl:-mr-2 animate-spin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z"></path>
-                        </svg>
                         <span>Edit</span>
                     </button>
                 </div>
@@ -21,17 +18,17 @@
                     <div class="col-span-full">
                         <div class="grid grid-cols-1 gap-6 sm:grid-cols-3">
                             @if ($updated)
-                            <div class="col-span-full font-medium text-lg bg-blue-200 text-blue-600 border-blue-600 border-2 p-6 rounded-md">
+                            <div class="p-6 text-lg font-medium text-blue-600 bg-blue-200 border-2 border-blue-600 rounded-md col-span-full">
                                 <p>
                                     Updated
                                 </p>
                             </div>
                             @endif
-                            <div class="p-6  col-span-full bg-white shadow rounded-xl sm:col-span-2 ">
+                            <div class="p-6 bg-white shadow col-span-full rounded-xl sm:col-span-2 ">
                                 <div class="">
                                     {{ $this->form }}
                                 </div>
-                                <div class="mt-4 flex flex-wrap items-center justify-start gap-4">
+                                <div class="flex flex-wrap items-center justify-start gap-4 mt-4">
                                     <button type="submit" wire:loading.attr="disabled" class="inline-flex items-center justify-center px-4 font-medium tracking-tight text-white rounded-lg shadow focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-inset bg-primary-600 hover:bg-primary-500 focus:bg-primary-700 focus:ring-offset-primary-700 h-9 focus:ring-white">
                                         <svg wire:loading="" wire:target="save" class="w-6 h-6 mr-1 -ml-2 rtl:ml-1 rtl:-mr-2 animate-spin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                             <path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z"></path>
@@ -39,7 +36,7 @@
                                         <span>Save</span>
                                     </button>
 
-                                    <button x-on:click="show_edit_form = false" type="button" wire:loading.attr="disabled" class="inline-flex items-center justify-center px-4 font-medium tracking-tight text-gray-800 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-inset h-9 hover:bg-gray-50 focus:ring-primary-600 focus:text-primary-600 focus:bg-primary-50 focus:border-primary-600">
+                                    <button x-on:click="show_edit_form = false" type="button" class="inline-flex items-center justify-center px-4 font-medium tracking-tight text-gray-800 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-inset h-9 hover:bg-gray-50 focus:ring-primary-600 focus:text-primary-600 focus:bg-primary-50 focus:border-primary-600">
                                         <span>Cancel</span>
                                     </button>
                                 </div>
@@ -139,7 +136,7 @@
                                         </dl>
                                     </div>
                                 </div>
-                                <div class="mt-6 p-6 bg-white border rounded-lg shadow-sm">
+                                <div class="p-6 mt-6 bg-white border rounded-lg shadow-sm">
                                     <div class="text-gray-600 col-span-full">
                                         <p>Contact Information</p>
                                     </div>
@@ -190,7 +187,7 @@
                                         </dl>
                                     </div>
                                 </div>
-                                <div class="mt-6 p-6 bg-white border rounded-lg shadow-sm">
+                                <div class="p-6 mt-6 bg-white border rounded-lg shadow-sm">
                                     <div class="text-gray-600 col-span-full">
                                         <p>Bank Account Information</p>
                                     </div>
