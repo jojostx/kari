@@ -36,7 +36,6 @@ Artisan::command('setup:prod', function () {
 
     // creates approved payments, subscription and payouts
     $users->each(function (User $user) {
-
         //assign bank account to users whose first name start with 'a'
         if (str_starts_with($user->first_name, 'a')) {
             $bank_account = BankAccount::factory()->create(['user_id' => $user->id]);
@@ -95,7 +94,7 @@ Artisan::command('setup:prod', function () {
 
     //creates unapproved payments
     $users->each(function (User $user) {
-        $payment = Payment::factory()->create(['user_id' => $user->id, 'status' => false, 'refcode' => null]);
+        $payment = Payment::factory()->create(['user_id' => $user->id, 'status' => false]);
 
         $payment->customer()->associate($user);
     });
