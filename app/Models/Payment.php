@@ -83,7 +83,7 @@ class Payment extends Model
         if ($this->status) {
             return false;
         }
-
+        
         if (\is_null($this->refcode)) {
             return false;
         }

@@ -3,6 +3,8 @@
 namespace App\Http\Livewire\Admin\App\Investment\Payments;
 
 use App\Models\Payment;
+use Filament\Tables\Actions\ButtonAction;
+use Filament\Tables\Columns\BadgeColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Concerns\InteractsWithTable;
 use Filament\Tables\Contracts\HasTable;
@@ -36,15 +38,14 @@ class Index extends Component implements HasTable
     protected function getTableColumns(): array
     {
         return [
-             TextColumn::make('status')
-                ->formatStateUsing(fn (string $state): View => view('components.partials.subscription-status', compact('state')))
-                ->action(function (Payment $record): void {
-                    if (!$record->status) {
-                        $this->dispatchBrowserEvent('open-payment-approval-modal');
-
-                        $this->emit('open-payment-approval-modal', [$record->getKey()]);
-                    }
-                })->extraAttributes(['style' => 'cursor: text;']),
+            BadgeColumn::make('status')
+            ->enum([
+                true => 'Approved',
+                false => 'Unapproved'
+            ])    ->colors([
+                'primary' => fn ($state): bool => $state === true,
+                'danger' => fn ($state): bool => $state === false,
+            ]),
 
             TextColumn::make('tag')
                 ->label('Tag')
@@ -54,7 +55,7 @@ class Index extends Component implements HasTable
             TextColumn::make('refcode')
                 ->label('Refcode (teller-code)')
                 ->default('non-specified')
-                ->extraAttributes(['style' => 'padding:0.75rem 0rem 0.75rem 0.75rem; overflow-wrap: break-word; white-space: normal;'])
+                ->extraAttributes(['style' => 'max-width:220px; padding:0.75rem 0rem 0.75rem 0.75rem; overflow-wrap: break-word; white-space: normal;'])
                 ->searchable(),
 
             TextColumn::make('customer.email')
@@ -65,7 +66,25 @@ class Index extends Component implements HasTable
             TextColumn::make('created_at')
                 ->label('Created at')
                 ->date('M j, Y')
+                ->sortable()
                 ->extraAttributes(['style' => 'max-width: 80px;']),
+        ];
+    }
+
+    protected function getTableActions(): array
+    {
+        return [
+            ButtonAction::make('approve')
+                ->label('Approve')
+                ->action(function (Payment $record): void {
+                    if (!$record->status) {
+                        $this->dispatchBrowserEvent('open-payment-approval-modal');
+
+                        $this->emit('open-payment-approval-modal', [$record->getKey()]);
+                    }
+                })
+                ->hidden(fn (Payment $record): bool => ($record->status || is_null($record->refcode)))
+                ->icon('heroicon-o-pencil')
         ];
     }
 

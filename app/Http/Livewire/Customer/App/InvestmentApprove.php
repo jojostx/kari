@@ -62,6 +62,11 @@ class InvestmentApprove extends Component implements HasForms
         return false;
     }
 
+    public function cancel()
+    {        
+        return redirect()->route('investments.index');
+    }
+
     public function render()
     {
         return view('livewire.customer.app.investment-approve');

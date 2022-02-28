@@ -39,7 +39,7 @@
             <x-payment-warning />
         </div>
 
-        @if ($this->pending_payout_count)    
+        @if ($this->pending_payments_count)    
         <div class="mt-8">
             <p class="mb-4 font-bold tracking-wide sm:text-lg">Pending Payments</p>
             {{ $this->table }}

@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Customer\App;
 
+use App\Models\User;
 use Filament\Tables\Actions\LinkAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Concerns\InteractsWithTable;
@@ -80,9 +81,9 @@ class Investments extends Component implements HasTable
         return $query->simplePaginate($this->getTableRecordsPerPage());
     }
 
-    public function getPendingPayoutCountProperty()
+    public function getPendingPaymentsCountProperty()
     {
-        return Auth::user()->payments()->where('status', false)->exists();
+        return User::find(Auth::id())?->payments()->pending()->exists();
     }
 
     public function render()
