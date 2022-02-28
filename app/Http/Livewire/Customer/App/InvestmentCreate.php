@@ -40,8 +40,8 @@ class InvestmentCreate extends Component implements HasForms
 
             TextInput::make('tag')
                 ->label('Title')
-                ->hint("NB: between 6 to 56 characters, eg: my child's-uni-investment")
-                ->helperText('The title will be used to uniquely identify the investment subcription')
+                ->hint("eg: my child's-uni-investment")
+                ->helperText('The title will be used to uniquely identify the investment. NB: must be between 6 to 56 characters')
                 ->required()
                 ->rules(['between:6,56'])
                 ->unique(table: Payment::class, column: 'tag'),
@@ -58,6 +58,11 @@ class InvestmentCreate extends Component implements HasForms
         if (isset($payment_pending)) {
             return redirect()->route('investments.approve', ['payment' => $payment_pending->refresh()]);
         }
+    }
+
+    public function cancel()
+    {        
+        return redirect()->route('investments.index');
     }
 
     public function render()

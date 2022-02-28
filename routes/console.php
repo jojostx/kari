@@ -34,6 +34,12 @@ Artisan::command('setup:prod', function () {
         ->count(50)
         ->create();
 
+    $users_2 = User::factory()
+        ->verified()
+        ->verified_phone()
+        ->count(4)
+        ->create();
+
     // creates approved payments, subscription and payouts
     $users->each(function (User $user) {
 
@@ -46,7 +52,7 @@ Artisan::command('setup:prod', function () {
 
         $subscription = Subscription::factory()->create([
             'user_id' => $user->id,
-            'tag'=> $payment->tag,
+            'tag' => $payment->tag,
             'payment_id' => $payment->id,
             'refcode' => $payment->refcode,
         ]);
@@ -57,14 +63,14 @@ Artisan::command('setup:prod', function () {
         $payment_2 = Payment::factory()->create(['user_id' => $user->id]);
 
         $subscription_2 = Subscription::factory()->create([
-            'tag'=> $payment->tag,
+            'tag' => $payment->tag,
             'user_id' => $user->id,
             'payment_id' => $payment_2->id,
             'refcode' => $payment_2->refcode,
         ]);
         $payment_2->customer()->associate($user);
-        $subscription_2 ->customer()->associate($user);
-         
+        $subscription_2->customer()->associate($user);
+
         Payout::factory()->create([
             'tag' => $subscription_2->tag,
             'amount' => $subscription_2->biannual_payout_amount,
@@ -73,7 +79,7 @@ Artisan::command('setup:prod', function () {
             'refcode' => null,
             'user_id' => $user->id,
         ]);
-        
+
         Payout::factory()->create([
             'tag' => $subscription_2->tag,
             'amount' => $subscription_2->biannual_payout_amount,

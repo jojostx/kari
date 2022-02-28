@@ -39,9 +39,12 @@
             <x-payment-warning />
         </div>
 
-        @if ($this->pending_payments_count)    
+        @if ($this->pending_payments_count)
         <div class="mt-8">
-            <p class="mb-4 font-bold tracking-wide sm:text-lg">Pending Payments</p>
+            <div class="mb-4">
+                <p class="mb-4 font-bold tracking-wide sm:text-lg">Pending Payments</p>
+                <p class="max-w-sm mt-3 text-sm font-normal text-gray-500">Click the "approve" link to complete you payment for approval</p>
+            </div>
             {{ $this->table }}
         </div>
         @endif
@@ -49,7 +52,7 @@
         <div class="mt-8">
             <p class="mb-4 font-bold tracking-wide sm:text-lg">Subscriptions</p>
             <div class="grid gap-4 md:grid-cols-2">
-                @foreach ($subscriptions as $subscription)
+                @forelse ($subscriptions as $subscription)
                 <div class="col-span-1 flex items-center px-3 py-3 bg-[#F1F1F1] border-b border-gray-300 rounded-md shadow-md sm:px-4 sm:pt-4">
                     <div class="flex items-center justify-center h-24 p-3 bg-white rounded-md shrink w-28">
                         {!! $subscription->plan->icon !!}
@@ -81,7 +84,11 @@
                         </div>
                     </div>
                 </div>
-                @endforeach
+                @empty
+                <x-empty-state>
+                    You currently have no available Subscriptions.
+                </x-empty-state>
+                @endforelse
             </div>
         </div>
 
