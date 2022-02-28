@@ -39,9 +39,12 @@ class InvestmentCreate extends Component implements HasForms
                 ->required(),
 
             TextInput::make('tag')
-                ->label('Title')->hint("examples: my child's uni investment")
+                ->label('Title')
+                ->hint("minimum: 12 characters, eg: my child's-uni-investment")
                 ->helperText('The title will be used to uniquely identify the investment subcription')
-                ->required()->rules(['between:6,56'])->unique(table: Payment::class, column: 'tag'),
+                ->required()
+                ->rules(['between:6,56'])
+                ->unique(table: Payment::class, column: 'tag'),
         ];
     }
 
