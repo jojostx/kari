@@ -41,21 +41,19 @@ class InvestmentCreate extends Component implements HasForms
             TextInput::make('tag')
                 ->label('Title')->hint("examples: my child's uni investment")
                 ->helperText('The title will be used to uniquely identify the investment subcription')
-                ->required()->rules(['between:12,32'])->unique(table: Payment::class, column: 'tag'),
+                ->required()->rules(['between:6,56'])->unique(table: Payment::class, column: 'tag'),
         ];
     }
 
     public function create()
     {
-        try {
-            $payment_pending = auth()->user()->payments()->create([
-                'tag' => $this->form->getState()['tag'],
-                'plan_id' => $this->form->getState()['plan_id'],
-            ]);
+        $payment_pending = auth()->user()->payments()->create([
+            'tag' => $this->form->getState()['tag'],
+            'plan_id' => $this->form->getState()['plan_id'],
+        ]);
 
+        if (isset($payment_pending)) {
             return redirect()->route('investments.approve', ['payment' => $payment_pending->refresh()]);
-        } catch (\Throwable $th) {
-            return redirect()->route('investments.index');
         }
     }
 
