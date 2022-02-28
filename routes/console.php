@@ -95,7 +95,7 @@ Artisan::command('setup:prod', function () {
 
     //creates unapproved payments
     $users->each(function (User $user) {
-        $payment = Payment::factory()->create(['user_id' => $user->id, 'status' => false, 'refcode' => null]);
+        $payment = Payment::factory()->create(['user_id' => $user->id, 'status' => false]);
 
         $payment->customer()->associate($user);
     });
