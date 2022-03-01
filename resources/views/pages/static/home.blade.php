@@ -34,7 +34,7 @@
 					<p class="font-semibold text-gray-400 uppercase opacity-75">Stable and Transparant</p>
 					<h2 class="mt-6 text-2xl font-extrabold text-gray-900 font-vesp lg:mt-2">Currency Hedging</h2>
 					<p class="max-w-md mx-auto text-gray-600">Investing in the UK; one of the world’s largest economies ensures the security of investment. The fluctuation in the foreign market does not have an impact on your funds. We have developed measures to mitigate volatility.</p>
-					<a href="/how-it-works" class="inline-flex justify-center py-2 text-blue-900 uppercase hover:text-blue-700">
+					<a href="{{ route('investment.plans') }}" class="inline-flex justify-center py-2 text-blue-900 uppercase hover:text-blue-700">
 						Learn More
 						<svg version="1.1" viewBox="0 0 16 16" class="w-4 ml-2">
 							<g stroke="currentColor" fill="none" fill-rule="evenodd">
@@ -56,7 +56,7 @@
 						Kari Properties Limited operates with integrity and openness following the UK government compliance standards.
 						We assure top safety of all investors’ funds under our investment cycle.
 					</p>
-					<a href="/how-it-works" class="inline-flex justify-center py-2 text-blue-900 uppercase hover:text-blue-700">
+					<a href="{{ route('investment.plans') }}" class="inline-flex justify-center py-2 text-blue-900 uppercase hover:text-blue-700">
 						Learn More
 						<svg version="1.1" viewBox="0 0 16 16" class="w-4 ml-2">
 							<g stroke="currentColor" fill="none" fill-rule="evenodd">
@@ -76,7 +76,7 @@
 					<p class="font-semibold text-gray-400 uppercase opacity-75">Guaranteed and Safe</p>
 					<h2 class="mt-6 text-2xl font-extrabold text-gray-900 font-vesp lg:mt-2">Excellent Annual Returns</h2>
 					<p class="max-w-md mx-auto text-gray-600">Unlike most private real estate investment companies, we offer our investors between 7% to 8.5% annual ROI and bonus payout.</p>
-					<a href="/how-it-works" class="inline-flex justify-center py-2 text-blue-900 uppercase hover:text-blue-700">
+					<a href="{{ route('investment.plans') }}" class="inline-flex justify-center py-2 text-blue-900 uppercase hover:text-blue-700">
 						Learn More
 						<svg version="1.1" viewBox="0 0 16 16" class="w-4 ml-2">
 							<g stroke="currentColor" fill="none" fill-rule="evenodd">
@@ -242,15 +242,6 @@
 					</div>
 					<div class="flex flex-col justify-between col-span-1 row-span-3 row-start-2 py-8 font-medium text-center text-gray-600 border-r-2 border-gray-800">
 						<p class="text-[20px] font-bold"><span class="text-lg font-semibold">£</span> 25,000</p>
-						<p class="text-lg font-semibold">7%</p>
-						<p class="inline-flex justify-center text-red-600">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="w-5" fill="currentColor">
-								<path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
-							</svg>
-						</p>
-					</div>
-					<div class="flex flex-col justify-between col-span-1 row-span-3 row-start-2 py-8 font-medium text-center text-gray-600 border-r-2 border-gray-800">
-						<p class="text-[20px] font-bold"><span class="text-lg font-semibold">£</span> 50,000</p>
 						<p class="text-lg font-semibold">7.5%</p>
 						<p class="inline-flex justify-center text-red-600">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="w-5" fill="currentColor">
@@ -259,8 +250,17 @@
 						</p>
 					</div>
 					<div class="flex flex-col justify-between col-span-1 row-span-3 row-start-2 py-8 font-medium text-center text-gray-600 border-r-2 border-gray-800">
-						<p class="text-[20px] font-bold"><span class="text-lg font-semibold">£</span> 100,000</p>
+						<p class="text-[20px] font-bold"><span class="text-lg font-semibold">£</span> 50,000</p>
 						<p class="text-lg font-semibold">8%</p>
+						<p class="inline-flex justify-center text-red-600">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="w-5" fill="currentColor">
+								<path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+							</svg>
+						</p>
+					</div>
+					<div class="flex flex-col justify-between col-span-1 row-span-3 row-start-2 py-8 font-medium text-center text-gray-600 border-r-2 border-gray-800">
+						<p class="text-[20px] font-bold"><span class="text-lg font-semibold">£</span> 100,000</p>
+						<p class="text-lg font-semibold">8.5%</p>
 						<p class="inline-flex justify-center text-green-500">
 							<svg xmlns="http://www.w3.org/2000/svg" class="w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
@@ -269,7 +269,7 @@
 					</div>
 					<div class="flex flex-col justify-between col-span-1 row-span-3 row-start-2 py-8 font-medium text-center text-gray-600">
 						<p class="text-[20px] font-bold"><span class="text-lg font-semibold">£</span> 200,000</p>
-						<p class="text-lg font-semibold">8.5%</p>
+						<p class="text-lg font-semibold">9%</p>
 						<p class="inline-flex justify-center text-green-500">
 							<svg xmlns="http://www.w3.org/2000/svg" class="w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
@@ -370,7 +370,7 @@
 							<p class="font-bold md:text-lg">25,000</p>
 						</div>
 						<div class="flex items-center justify-center h-full">
-							<p class="font-semibold">7%</p>
+							<p class="font-semibold">7.5%</p>
 						</div>
 						<div class="flex items-center justify-center h-full">
 							<p class="inline-flex justify-center text-red-600">
@@ -385,7 +385,7 @@
 							<p class="font-bold md:text-lg">50,000</p>
 						</div>
 						<div class="flex items-center justify-center h-full">
-							<p class="text-sm font-semibold">7.5%</p>
+							<p class="text-sm font-semibold">8%</p>
 						</div>
 						<div class="flex items-center justify-center h-full">
 							<p class="inline-flex justify-center text-red-600">
@@ -400,7 +400,7 @@
 							<p class="font-bold md:text-lg">100,000</p>
 						</div>
 						<div class="flex items-center justify-center h-full">
-							<p class="font-semibold">8%</p>
+							<p class="font-semibold">8.5%</p>
 						</div>
 						<div class="flex items-center justify-center h-full">
 							<p class="inline-flex justify-center text-green-500">
@@ -415,7 +415,7 @@
 							<p class="font-bold md:text-lg">200,000</p>
 						</div>
 						<div class="flex items-center justify-center h-full">
-							<p class="font-semibold">8.5%</p>
+							<p class="font-semibold">9%</p>
 						</div>
 						<div class="flex items-center justify-center h-full">
 							<p class="inline-flex justify-center text-green-500">

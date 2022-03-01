@@ -67,7 +67,7 @@
           <div class="col-span-1 -mt-8 lg:mt-0 sm:col-span-2" x-data="{ show: false }">
             <p class="max-w-md text-justify sm:text-lg">Richard E. Keshi is the CEO of Kari Properties Limited, also a top business executive and investment strategist.
               He possesses over 10 years of cognate experience in Large-scale property management in the United Kingdom, and a great commitment to redefining the real estate sector.
-              Richard is currently Managing over a 50 million pounds of investment portfolios. <br>
+              Richard is currently managing numerous high-value investment portfolios. <br>
               <button class="text-sm font-semibold text-gray-500 hover:text-gray-800" x-show="!show" x-on:click="show = !show">Read More</button>
               <span x-show="show" x-on:click.outside="show = false" x-cloak>
                 He has executive management experience spanning several years and covers investing, property management, and large-scale project coordination. Richard earned his Post Graduate Degree in Business Management at London. He enjoys watching football and touring.

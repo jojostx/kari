@@ -19,8 +19,8 @@ class PlanSeeder extends Seeder
             'tag' => \uniqid('bronze_', \true),
             'name' => 'bronze',
             'principal' => 25000.00,
-            'interest' => 0.07,
-            'bonus' => 0.02,
+            'interest' => 0.075,
+            'bonus' => 0,
             'description' => 'Rerum reiciendis beatae tenetur excepturi aut pariatur est eos. Sit sit necessitatibus veritatis sed molestiae voluptates incidunt iure sapiente.'
         ]);
 
@@ -29,8 +29,8 @@ class PlanSeeder extends Seeder
             'tag' => \uniqid('silver_', \true),
             'name' => 'silver',
             'principal' => 50000.00,
-            'interest' => 0.075,
-            'bonus' => 0.025,
+            'interest' => 0.08,
+            'bonus' => 0,
             'description' => 'Rerum reiciendis beatae tenetur excepturi aut pariatur est eos. Sit sit necessitatibus veritatis sed molestiae voluptates incidunt iure sapiente.'
         ]);
 
@@ -39,8 +39,8 @@ class PlanSeeder extends Seeder
             'tag' => \uniqid('gold_', \true),
             'name' => 'gold',
             'principal' => 100000.00,
-            'interest' => 0.08,
-            'bonus' => 0.03,
+            'interest' => 0.085,
+            'bonus' => 0.02,
             'description' => 'Rerum reiciendis beatae tenetur excepturi aut pariatur est eos. Sit sit necessitatibus veritatis sed molestiae voluptates incidunt iure sapiente.'
         ]);
 
@@ -49,8 +49,8 @@ class PlanSeeder extends Seeder
             'tag' => \uniqid('platinum_', \true),
             'name' => 'platinum',
             'principal' => 200000.00,
-            'interest' => 0.085,
-            'bonus' => 0.035,
+            'interest' => 0.09,
+            'bonus' => 0.03,
             'description' => 'Rerum reiciendis beatae tenetur excepturi aut pariatur est eos. Sit sit necessitatibus veritatis sed molestiae voluptates incidunt iure sapiente.'
         ]);
     }

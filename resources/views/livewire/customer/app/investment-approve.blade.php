@@ -8,12 +8,16 @@
                 /
             </span>
             <span>
-                APPROVE {{ $payment->tag }}
+                APPROVE &nbsp;
+                <span class="text-blue-600">
+                    {{ $payment->tag }}
+                </span>
             </span>
         </p>
         <!-- desktop summary card -->
         <div class="grid p-6 bg-white border rounded-lg shadow-sm md:grid-cols-5 gap-x-6">
-            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 col-span-full">
+            <x-payment-warning />
+            <div class="mt-4 grid grid-cols-1 gap-6 md:grid-cols-2 col-span-full">
                 <dl>
                     <dt class="text-sm font-medium leading-5 text-gray-500 ">Plan Type</dt>
                     <dd class="text-sm font-medium leading-5 uppercase">{{ $payment->plan->name }} </dd>
