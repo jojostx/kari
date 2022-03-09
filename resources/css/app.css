@@ -1,0 +1,178 @@
+@import '../../vendor/filament/forms/dist/module.esm.css';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@layer components {
+    .animated-a {
+        @apply text-white;
+        text-align: center;
+        position: relative;
+        transition: all .35s;
+    }
+    .animated-a span {
+        position: relative;
+        z-index: 2;
+    }
+    .animated-a::after {
+        @apply absolute top-0 left-0 w-0 h-full;
+        content: "";
+        background: #fff;
+        transition: all .35s;
+    }
+    a:hover {
+        @apply text-black;
+    }
+    a:hover:after {
+        @apply w-full;
+    }
+}
+
+.link-nav {
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+    white-space: nowrap;
+    color: #111;
+}
+
+.link-nav::before,
+.link-nav::after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    top: 100%;
+    left: 0;
+    pointer-events: none;
+}
+
+.link-nav::before {
+    content: '';
+    /* show by default */
+}
+
+.link--metis {
+    font-family: bely-display, sans-serif;
+    text-transform: lowercase;
+}
+
+.link--metis::before {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+}
+
+.link--metis:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+}
+
+.link--mont {
+    font-size: 14px;
+}
+
+.link--mont::before {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+}
+
+.link--mont:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+}
+
+.accordion-content {
+    display: none;
+}
+
+.accordion-input:checked~.accordion-content {
+    display: block;
+}
+
+.accordion-input:checked~.accordion-label {
+    @apply bg-gray-200;
+}
+
+.accordion-input:checked~.accordion-label>.plus-icon {
+    display: none;
+}
+
+.accordion-input:checked~.accordion-label>.minus-icon {
+    display: block;
+}
+
+.positive-feedback:checked~.positive-feedback-label {
+    color: rgba(245, 158, 11, 0.8);
+}
+
+.negative-feedback:checked~.negative-feedback-label {
+    color: rgba(233, 22, 22, 0.8);
+}
+
+
+/*Toast open/load animation*/
+
+.alert-toast {
+    -webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+/*Toast close animation*/
+
+.alert-toast input:checked~* {
+    -webkit-animation: fade-out-right 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: fade-out-right 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-right {
+    0% {
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
+        opacity: 0
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fade-out-right {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1
+    }
+    100% {
+        -webkit-transform: translateX(50px);
+        transform: translateX(50px);
+        opacity: 0
+    }
+}
+
+@keyframes fade-out-right {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1
+    }
+    100% {
+        -webkit-transform: translateX(50px);
+        transform: translateX(50px);
+        opacity: 0
+    }
+}
+
+input[type="radio"]:checked+label.positive-feedback-type {
+    @apply text-blue-600;
+}
+
+input[type="radio"]:checked+label.negative-feedback-type {
+    @apply text-red-600;
+}
+
+[x-cloak] {
+    display: hidden;
+}
