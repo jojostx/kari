@@ -2,11 +2,8 @@
 
 namespace App\Http\Livewire\Customer\App;
 
-use App\Models\PendingUserPhoneNumber;
 use App\Models\State;
 use App\Models\User;
-use App\Models\UserAddress;
-use Closure;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Select;
@@ -292,7 +289,6 @@ class AccountSettings extends Component implements HasForms
 
     public function saveContactInfo(): void
     {
-        // (new PendingUserPhoneNumber())->newPhoneNumber($this->authUser, $this->contactInfoForm->getState()['phone_number']); 
         $success = DB::transaction(function () {
             $this->authUser->phone_number = $this->contactInfoForm->getState()['phone_number'];
 
@@ -322,7 +318,6 @@ class AccountSettings extends Component implements HasForms
     
     public function saveBankAccountInfo(): void
     {
-        // (new PendingUserPhoneNumber())->newPhoneNumber($this->authUser, $this->contactInfoForm->getState()['phone_number']); 
         $success = DB::transaction(function () {
             $model = $this->authUser->account()->updateOrCreate(
                 [

@@ -3,7 +3,6 @@
 
 namespace App\Http\Livewire\Traits;
 
-
 use App\Exceptions\TooManyRequestsException;
 use Illuminate\Support\Facades\RateLimiter;
 

@@ -41,7 +41,6 @@ class View extends Component implements HasForms
 
     protected function getFormSchema(): array
     {
-
         return [
             Grid::make()
                 ->schema([

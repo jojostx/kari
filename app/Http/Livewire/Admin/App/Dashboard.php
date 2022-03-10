@@ -6,7 +6,6 @@ use App\Models\Payment;
 use App\Models\Payout;
 use App\Models\Subscription;
 use App\Models\User;
-use Illuminate\Support\Facades\Artisan;
 use Livewire\Component;
 
 class Dashboard extends Component
@@ -85,15 +84,5 @@ class Dashboard extends Component
         return view('livewire.admin.app.dashboard')
         ->extends('pages.admin.dashboard')
         ->section('body');
-    }
-
-    public function seedData()
-    {
-        $this->commandStatus = Artisan::call('setup:prod');      
-    }
-    
-    public function getCommandStatusProperty()
-    {
-        return 700;
     }
 }
