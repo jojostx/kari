@@ -15,10 +15,10 @@ class Login extends Component
     public $password = '';
     public $remember = false;
 
-    public function mount(): void
+    public function mount()
     {
         if (Auth::check()) {
-            redirect()->route('admin.dashboard');
+            return redirect()->route('admin.dashboard');
         }
     }
 

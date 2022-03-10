@@ -3,6 +3,17 @@
         Sign in to your account
     </h2>
 
+    @if (session()->has('status'))
+    <div class="text-green-700 bg-green-300 rounded-md shadow-lg alert">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span class="font-medium">{{ session('status') }}</span>
+        </div>
+    </div>
+    @endif
+
     <div class="grid grid-cols-1 gap-6">
         <div class="col-span-1 ">
             <div>
@@ -59,7 +70,15 @@
                 </div>
             </div>
         </div>
+        @if (Route::has('password.request'))
+        <a class="text-sm text-gray-600 underline hover:text-gray-900" href="{{ route('password.request') }}">
+            {{ __('Forgot your password?') }}
+        </a>
+        @endif
+
     </div>
+
+
     <button type="submit" class="inline-flex items-center justify-center w-full px-4 font-medium tracking-tight text-white bg-gray-900 rounded-lg shadow focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-inset hover:bg-gray-800 focus:bg-gray-700 focus:ring-offset-blue-700 h-9 focus:ring-white">
         <span>Log in</span>
     </button>

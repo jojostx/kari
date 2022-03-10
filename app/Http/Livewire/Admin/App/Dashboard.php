@@ -6,7 +6,6 @@ use App\Models\Payment;
 use App\Models\Payout;
 use App\Models\Subscription;
 use App\Models\User;
-use Illuminate\Support\Facades\Artisan;
 use Livewire\Component;
 
 class Dashboard extends Component
