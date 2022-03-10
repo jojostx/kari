@@ -4,6 +4,6 @@
     "username": "kari",
     "port": "22",
     "beforeHooks": "",
-    "afterHooks": "cd ${RELEASE_PATH} && php artisan migrate:fresh --force && php artisan db:seed --force && php artisan config:clear && php artisan config:cache && php artisan route:cache && php artisan view:cache && php artisan event:clear && php artisan event:cache && composer install --optimize-autoloader --no-dev && php artisan livewire:discover && php artisan queue:restart",
+    "afterHooks": "cd ${RELEASE_PATH} && php artisan db:seed --force && php artisan config:clear && php artisan config:cache && php artisan route:cache && php artisan view:cache && php artisan event:clear && php artisan event:cache && composer install --optimize-autoloader --no-dev && php artisan migrate:fresh --force && php artisan livewire:discover && php artisan queue:restart",
     "path": "/var/www/html"
 }]
