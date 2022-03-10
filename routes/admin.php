@@ -1,8 +1,6 @@
 <?php
 
 use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
-use App\Http\Controllers\Auth\NewPasswordController;
-use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Livewire\Admin\App\Account\Index as AccountIndex;
 use App\Http\Livewire\Admin\App\Dashboard;
 use App\Http\Livewire\Admin\App\Investment\Customers\Index as CustomersIndex;
@@ -15,9 +13,6 @@ use App\Http\Livewire\Admin\App\Investment\Subscriptions\Index as SubscriptionsI
 use App\Http\Livewire\Admin\App\Investment\Subscriptions\View as SubscriptionsView;
 use App\Http\Livewire\Admin\App\Static\ContactInbox\Messages\Index as MessagesIndex;
 use App\Http\Livewire\Admin\App\Static\ContactInbox\Messages\View as MessagesView;
-use App\Http\Livewire\Admin\App\Static\ContactInbox\Replies\Create as RepliesCreate;
-use App\Http\Livewire\Admin\App\Static\ContactInbox\Replies\Edit as RepliesEdit;
-use App\Http\Livewire\Admin\App\Static\ContactInbox\Replies\Index as RepliesIndex;
 use App\Http\Livewire\Admin\App\Static\Faqs\Create;
 use App\Http\Livewire\Admin\App\Static\Faqs\Edit;
 use App\Http\Livewire\Admin\App\Static\Faqs\Index;
@@ -27,8 +22,6 @@ use App\Http\Livewire\Admin\App\Static\NewsFeeds\Feeds\Index as FeedsIndex;
 use App\Http\Livewire\Admin\App\Static\NewsFeeds\Subscribers\Index as SubscribersIndex;
 use App\Http\Livewire\Admin\App\Static\NewsFeeds\Subscribers\View as SubscribersView;
 use App\Http\Livewire\Admin\Auth\ChangePassword;
-use App\Http\Livewire\Admin\Auth\NewPassword;
-use App\Http\Livewire\Admin\Auth\ResetEmail;
 use App\Http\Livewire\Admin\Auth\ResetPassword;
 use App\Http\Livewire\Admin\Auth\ResetPasswordLink;
 use Illuminate\Support\Facades\Route;
