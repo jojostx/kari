@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Auth\NewPasswordController;
+use App\Http\Controllers\Auth\PasswordResetLinkController;
+use App\Http\Livewire\Admin\App\Account\Index as AccountIndex;
 use App\Http\Livewire\Admin\App\Dashboard;
 use App\Http\Livewire\Admin\App\Investment\Customers\Index as CustomersIndex;
 use App\Http\Livewire\Admin\App\Investment\Customers\View;
@@ -23,6 +26,11 @@ use App\Http\Livewire\Admin\App\Static\NewsFeeds\Feeds\Edit as FeedsEdit;
 use App\Http\Livewire\Admin\App\Static\NewsFeeds\Feeds\Index as FeedsIndex;
 use App\Http\Livewire\Admin\App\Static\NewsFeeds\Subscribers\Index as SubscribersIndex;
 use App\Http\Livewire\Admin\App\Static\NewsFeeds\Subscribers\View as SubscribersView;
+use App\Http\Livewire\Admin\Auth\ChangePassword;
+use App\Http\Livewire\Admin\Auth\NewPassword;
+use App\Http\Livewire\Admin\Auth\ResetEmail;
+use App\Http\Livewire\Admin\Auth\ResetPassword;
+use App\Http\Livewire\Admin\Auth\ResetPasswordLink;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth', 'admin'])
@@ -47,7 +55,7 @@ Route::middleware(['auth', 'admin'])
 
       Route::name('subscriptions.')->prefix('subscriptions')->group(function () {
         Route::get('/', SubscriptionsIndex::class)->name('index');
-       
+
         Route::get('/{subscription}/view', SubscriptionsView::class)->name('view');
       });
 
@@ -91,14 +99,12 @@ Route::middleware(['auth', 'admin'])
 
           Route::get('/{message}/view', MessagesView::class)->name('view');
         });
+      });
+    });
 
-        // Route::name('replies.')->prefix('replies')->group(function () {
-        //   Route::get('/', RepliesIndex::class)->name('index');
-
-        //   Route::get('/create', RepliesCreate::class)->name('create');
-
-        //   Route::get('/{reply}/edit', RepliesEdit::class)->name('edit');
-        // });
+    Route::name('account.')->group(function () {
+      Route::name('settings.')->prefix('settings')->group(function () {
+        Route::get('/', AccountIndex::class)->name('index');
       });
     });
 
@@ -106,7 +112,12 @@ Route::middleware(['auth', 'admin'])
       Route::redirect('/', '/login')->name('home');
 
       Route::get('/login', [AuthenticatedSessionController::class, 'create'])->name('login');
+
+      Route::get('/forgot-password', ResetPasswordLink::class)->name('password.request');
+
+      Route::get('/reset-password/{token}', ResetPassword::class)->name('password.reset');
     });
 
+    Route::get('/change-password', ChangePassword::class)->name('password.update');
     Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
   });
